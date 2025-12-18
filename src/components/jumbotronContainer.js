@@ -54,10 +54,10 @@ export const JumbotronContainer = () => {
             <h3>Round, hot, irresistible, and always ready for another date night.</h3>
           </div>
           <p>
-          
-          Let’s be honest: nobody ever craved a salad at 9:00 PM on a Tuesday. At Mario Pizza, we believe that life is too short for mediocre crusts and "functional" fuel. We treat every dough ball like a high-stakes science experiment, where the only acceptable outcome is a perfect, leopard-spotted char and a cheese pull that defies the laws of physics. Our secret isn't just the imported flour or the tomatoes that sat in the Italian sun a little longer than the rest; it’s the fact that we refuse to take ourselves too seriously, even if we take our toppings very, very seriously.
-
-          If you’re looking for a "light snack," you’ve probably come to the wrong place—unless your definition of light involves an airy, fermented crust that shatters perfectly when you bite into it. 
+            Let’s be honest: nobody ever craved a salad at 9:00 PM on a Tuesday. At Mario Pizza, we believe that life is too short for mediocre crusts and "functional" fuel. 
+            We treat every dough ball like a high-stakes science experiment, where the only acceptable outcome is a perfect, leopard-spotted char and a cheese pull that defies the laws of physics. 
+            Our secret isn't just the imported flour or the tomatoes that sat in the Italian sun a little longer than the rest; it’s the fact that we refuse to take ourselves too seriously, even if we take our toppings very, very seriously.
+            If you’re looking for a "light snack," you’ve probably come to the wrong place unless your definition of light involves an airy, fermented crust that shatters perfectly when you bite into it. 
           </p>
           <div className="btn-container">
             <a href="#">READ MORE</a>

@@ -34,6 +34,7 @@
   --pizza-green: #3A5A40;    /* Olives / herbs */
   --pizza-beige: #F4E1C1;    /* Crust */
   --pizza-dark: #2E2E2E;     /* Text / contrast */
+  --color-jumbotron-overlay: rgba(0, 0, 0, 0.6);
 }
 
 /* DEFAULT CLASSES */
@@ -66,13 +67,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--pizza-red);
+  background: var(--pizza-yellow);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--pizza-green);
+  background-color: var(--pizza-dark);
   border-radius: 2px;
-  border: 2px solid var(--pizza-yellow);
+  border: 2px solid var(--pizza-green);
   transition:0.5s;
 }
 
@@ -127,7 +128,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .overflow-hidden {
-   overflow: hidden;
+  overflow: hidden;
 }
 
 /* ------------------------------------------- */
@@ -186,7 +187,7 @@ header nav ul {
 
 header nav ul li {
   font-size: 1.2em;
-  padding:0.7em 2.5em;
+  padding: 0.5em 1.5em;
   background-color: var(--pizza-yellow);
   border: 1px solid var(--pizza-dark);
 }
@@ -296,6 +297,98 @@ header nav section.searchBar-chart ol li i {
 /* MAIN START */
 /* MAIN START */
 
+/* UNDER HEADER START */
+/* UNDER HEADER START */
+/* UNDER HEADER START */
+/* UNDER HEADER START */
+/* UNDER HEADER START */
+
+.under-header {
+  height:calc(100vh - 150px);
+  margin-top:150px;
+  background-image: url('./img/super-mario.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end; 
+}
+
+.under-header .under-header-overlay {
+  background-color: var(--color-jumbotron-overlay);
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  color: white;
+}
+
+.under-header .under-header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.under-header .under-header-content h2 {
+  font-size: 6em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.under-header .under-header-content p.under-header-text {
+  font-size: 3em;
+  line-height: 1.6;
+  letter-spacing: 3px;
+  max-width: 800px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.under-header .under-header-content p.under-header-text .char {
+  visibility: hidden;
+  animation: animate 0s steps(2) forwards;
+  animation-delay: calc(0.05s * var(--char-index));
+}
+
+@keyframes animate {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.under-header .learn-more-btn {
+  background-color: var(--color-primary-blue);
+  color: var(--color-text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.under-header .learn-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* UNDER HEADER START */
+/* UNDER HEADER START */
+/* UNDER HEADER START */
+/* UNDER HEADER START */
+/* UNDER HEADER START */
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
 /* CONTAINER START*/
 /* CONTAINER START*/
 /* CONTAINER START*/
@@ -305,7 +398,7 @@ header nav section.searchBar-chart ol li i {
 main section.main-container {
   width:100%;
   height:100%;
-  margin: 200px 0px 100px 0px;
+  margin: 100px 0px 100px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1389,8 +1482,8 @@ footer section .scroll-top-btn ul:hover {
   /* FOOTER START */
   
   footer {
-    height: 1500px;
-    min-height: 1500px;
+    height: initial;
+    min-height: initial;
   }
   
   footer .top-footer,
@@ -1442,6 +1535,11 @@ footer section .scroll-top-btn ul:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
+  }
+  
+  footer .under-footer {
+    height: initial;
+    padding: 5em 0em;
   }
   
   footer .under-footer p {

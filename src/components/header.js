@@ -2,29 +2,30 @@ import React, { useState } from 'react';
 import logo from '../img/mario-pizza-logo.png';
 
 export const Header = () => {
-  // Create the state. 'isMenuOpen' is false by default.
+  // Created the state. open the menu (is false by default).
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // This replaces showAndHide()
+  // This replaces showAndHide() -> toggles the hook
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     
     // To handle the "blur" on the <main> tag (which is outside this component)
     const mainElement = document.querySelector("main");
-    if (mainElement) {
-      mainElement.classList.toggle("blur");
-    }
     const footerElement = document.querySelector("footer");
-    if (footerElement) {
-      footerElement.classList.toggle("blur");
-    }
     const logoElement = document.querySelector(".logo-container");
-    if (logoElement) {
+    const bannerElement = document.querySelector(".banner");
+    const jumbotronContainerElement = document.querySelector(".jumbotron-container");
+    
+    if (mainElement && footerElement && logoElement && bannerElement && jumbotronContainerElement) {
+      mainElement.classList.toggle("blur");
+      footerElement.classList.toggle("blur");
       logoElement.classList.toggle("blur");
+      bannerElement.classList.toggle("blur");
+      jumbotronContainerElement.classList.toggle("blur");
     }
   };
 
-  // This replaces leaveMenu()
+  // This replaces leaveMenu() -> removes blur
   const closeMenu = () => {
     setIsMenuOpen(false);
     document.querySelector("main")?.classList.remove("blur");
