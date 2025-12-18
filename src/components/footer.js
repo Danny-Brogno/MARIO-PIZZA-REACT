@@ -27,17 +27,29 @@ export const Footer = () => {
         </div>
 
         <div className="middle">
+        
           <div className="titles">
-            <h2>SITEMAP</h2>
-            <h3>ALL OUR PAGES</h3>
+            <div>
+              <h2>SITEMAP</h2>
+            </div>
           </div>
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about-us.html">ABOUT US</a></li>
-            <li><a href="features.html">FEATURES</a></li>
-            <li><a href="pricing.html">PRICING</a></li>
-            <li><a href="contact-us.html">CONTACT US</a></li>
-          </ul>
+          
+          <div className="unordered-lists-footer">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about-us.html">ABOUT US</a></li>
+              <li><a href="features.html">FEATURES</a></li>
+              <li><a href="pricing.html">PRICING</a></li>
+              <li><a href="contact-us.html">CONTACT US</a></li>
+            </ul>
+            <ul>
+              <li><a href="index.html">ORDER ONLINE</a></li>
+              <li><a href="about-us.html">ORDER ON THE PHONE</a></li>
+              <li><a href="features.html">DISCOUNTS &amp; VOUCHERS</a></li>
+              <li><a href="pricing.html">STORES</a></li>
+              <li><a href="contact-us.html">WORK WITH US</a></li>
+            </ul>
+          </div>
         </div>
 
         <div className="right">

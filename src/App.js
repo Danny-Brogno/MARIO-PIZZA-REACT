@@ -3,6 +3,7 @@ import favicon from './img/favicon.png';
 import {Header} from "./components/header.js";
 import {Jumbotron} from "./components/jumbotron.js";
 import {Banner} from "./components/banner.js";
+import {JumbotronContainer} from "./components/jumbotronContainer.js";
 import {Footer} from "./components/footer.js";
 import './App.css'; 
 
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Jumbotron />
       <Banner />
+      <JumbotronContainer />
       <Footer />
     </div>
   );

@@ -26,7 +26,7 @@ export const Jumbotron = () => {
   return (
     <main>
       <section className="main-container">
-        <h1> MARIO PIZZA </h1>
+        <h1> OUR &nbsp;MEN&Ugrave; </h1>
 
         {/* 4. THE OVERLAY (Only shows when an image is clicked) */}
         {enlargedImg && (
@@ -51,15 +51,15 @@ export const Jumbotron = () => {
           <div className="firstLine">
             <div className="box" onClick={() => handleImageClick(pizza1)}>
               <img src={pizza1} alt="pizza1" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>ORDER NOW</h3></div>
+              <div className="dark"><h3>Margherita</h3></div>
             </div>
             <div className="box" onClick={() => handleImageClick(pizza2)}>
               <img src={pizza2} alt="pizza2" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>ORDER NOW</h3></div>
+              <div className="dark"><h3>Salami</h3></div>
             </div>
             <div className="box" onClick={() => handleImageClick(pizza3)}>
               <img src={pizza3} alt="pizza3" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>ORDER NOW</h3></div>
+              <div className="dark"><h3>Sausage &amp; turnip greens</h3></div>
             </div>
           </div>
 
@@ -67,15 +67,15 @@ export const Jumbotron = () => {
           <div className="secondLine">
             <div className="box" onClick={() => handleImageClick(pizza4)}>
               <img src={pizza4} alt="pizza4" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>ORDER NOW</h3></div>
+              <div className="dark"><h3>Bufala mozzarella</h3></div>
             </div>
             <div className="box" onClick={() => handleImageClick(pizza5)}>
               <img src={pizza5} alt="pizza5" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>ORDER NOW</h3></div>
+              <div className="dark"><h3>Prosciutto crudo &amp; mozzarella</h3></div>
             </div>
             <div className="box" onClick={() => handleImageClick(pizza6)}>
               <img src={pizza6} alt="pizza6" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>ORDER NOW</h3></div>
+              <div className="dark"><h3>Garlic &amp; basil</h3></div>
             </div>
           </div>
 
@@ -83,15 +83,15 @@ export const Jumbotron = () => {
           <div className="thirdLine">
             <div className="box" onClick={() => handleImageClick(pizza7)}>
               <img src={pizza7} alt="pizza7" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>ORDER NOW</h3></div>
+              <div className="dark"><h3>Yellow tomatoes &amp; burrata</h3></div>
             </div>
             <div className="box" onClick={() => handleImageClick(pizza8)}>
               <img src={pizza8} alt="pizza8" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>ORDER NOW</h3></div>
+              <div className="dark"><h3>Sundried tomatoes &amp; bresaola</h3></div>
             </div>
             <div className="box" onClick={() => handleImageClick(pizza9)}>
               <img src={pizza9} alt="pizza9" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>ORDER NOW</h3></div>
+              <div className="dark"><h3>4 cheeses</h3></div>
             </div>
           </div>
 

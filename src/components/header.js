@@ -56,6 +56,10 @@ export const Header = () => {
             <a href="featured.html">Featured</a>
           </li>
           
+          <li class="gone">
+            <a href="contact-us.html">Contact us</a>
+          </li>
+          
           <li id="invisible-burger">
             {/* Logic for toggle based on state */}
             <section className={`drop-links ${isMenuOpen ? 'menu-off' : ''}`}>
