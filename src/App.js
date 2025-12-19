@@ -8,8 +8,6 @@ import {JumbotronContainer} from "./components/jumbotronContainer.js";
 import {Footer} from "./components/footer.js";
 import './App.css';
 
-
-
 const link = document.querySelector("link[rel~='icon']");
 if (link) {
   link.href = favicon;

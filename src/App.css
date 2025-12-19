@@ -145,11 +145,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 header {
   height: 150px;
-  width: 100%;
   position: fixed;
-  top:0;
-  left:0;
-  z-index: 1000;
+  top: -150px;
+  width: 100%;
+  z-index: 10;
+  transition: top 0.3s;
   border-bottom: 1px solid var(--pizza-green);
   background-color: var(--pizza-red);
 }
@@ -304,8 +304,7 @@ header nav section.searchBar-chart ol li i {
 /* UNDER HEADER START */
 
 .under-header {
-  height:calc(100vh - 150px);
-  margin-top:150px;
+  height:100vh;
   background-image: url('./img/super-mario.png');
   background-position: center;
   background-size: cover;
@@ -320,7 +319,7 @@ header nav section.searchBar-chart ol li i {
   background-color: var(--color-jumbotron-overlay);
   width: 100%;
   height: 100%;
-  padding: 30px;
+  position: relative;
   color: var(--pizza-beige);
 }
 
@@ -329,19 +328,44 @@ header nav section.searchBar-chart ol li i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.under-header .under-header-content #pizza-logo {
+  height: 200px;
+  width: 200px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start the rotation at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End the rotation at 360 degrees */
+  }
 }
 
 .under-header .under-header-content h2 {
-  font-size: 6em;
+  color: var(--pizza-yellow);
+  font-size: 5.5em;
   margin-bottom: 15px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.under-header .under-header-content .title-and-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .under-header .under-header-content p.under-header-text {
-  font-size: 3em;
-  line-height: 1.6;
+  font-size: 2.2em;
+  line-height: 1.4;
   letter-spacing: 3px;
-  max-width: 800px;
   margin-bottom: 20px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -361,27 +385,36 @@ header nav section.searchBar-chart ol li i {
   }
 }
 
-.under-header .learn-more-btn {
+.under-header .order-now-btn {
   background-color: var(--pizza-green);
   color: var(--pizza-yellow);
   border: none;
-  padding: 15px 25px;
+  padding: 20px 100px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
-.under-header .learn-more-btn:hover {
+.under-header .order-now-btn:hover {
   background-color: var(--pizza-red);
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
-/* UNDER HEADER START */
-/* UNDER HEADER START */
-/* UNDER HEADER START */
-/* UNDER HEADER START */
-/* UNDER HEADER START */
+/* UNDER HEADER END */
+/* UNDER HEADER END */
+/* UNDER HEADER END */
+/* UNDER HEADER END */
+/* UNDER HEADER END */
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -749,16 +782,14 @@ main section.main-container h1 {
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
-/* CONTAINER START*/
-/* CONTAINER START*/
-/* CONTAINER START*/
-/* CONTAINER START*/
-/* CONTAINER START*/
+/* jumbotron-container START*/
+/* jumbotron-container START*/
+/* jumbotron-container START*/
+/* jumbotron-container START*/
+/* jumbotron-container START*/
 
 .jumbotron-container {
   width: 100%;
-  /* height: 600px;
-  min-height: 600px; */
   margin: 101px 0px;
 }
 
@@ -860,6 +891,7 @@ main section.main-container h1 {
   background-color: var(--pizza-yellow);
   border-radius: 10px;
   transition:0.5s;
+  text-align: center;
 }
 
 .jumbotron-container section .container-right .btn-container a:hover {
@@ -867,17 +899,11 @@ main section.main-container h1 {
   color: var(--pizza-yellow);
 }
 
-/* CONTAINER END*/
-/* CONTAINER END*/
-/* CONTAINER END*/
-/* CONTAINER END*/
-/* CONTAINER END*/
-
-/* ------------------------------------------- */
-/* ------------------------------------------- */
-/* ------------------------------------------- */
-/* ------------------------------------------- */
-/* ------------------------------------------- */
+/* jumbotron-container END*/
+/* jumbotron-container END*/
+/* jumbotron-container END*/
+/* jumbotron-container END*/
+/* jumbotron-container END*/
 
 /* MAIN END */
 /* MAIN END */
@@ -898,11 +924,8 @@ main section.main-container h1 {
 /* FOOTER START */
 
 footer {
-  height:500px;
-  min-height:500px;
   display: flex;
   flex-direction: column;
-  /* debug */
   color: var(--pizza-yellow);
   background-color: var(--pizza-green);
   border-top: 1px solid var(--pizza-red);
@@ -910,44 +933,62 @@ footer {
 
 footer .top-footer {
   width: 90%;
-  height: 88%;
   margin: 0 auto;
   display: flex;
+}
+
+footer .top-footer .titles h2 {
+  font-size: 2em;
+}
+
+footer .top-footer .titles h3 {
+  font-size: 1.5em;
 }
 
 /* TOP IS DIVIDED INTO 3 */
 footer .top-footer .left,
 footer .top-footer .middle,
 footer .top-footer .right {
-  width:calc(100% / 3);
-  height:100%;
+  /* width:calc(100% / 3); */
 }
 
 /* (1) - LEFT */
 footer .top-footer .left {
-  padding-top: 20px;
+  margin: 20px 0px;
+  width: 40%;
 }
 
 footer .top-footer .left .titles {
   display: flex;
   flex-direction: column;
-  height: 20%;
   width:100%;
   justify-content: space-between;
 }
 
+footer .top-footer .left .titles.left h2 {
+  margin-bottom: 1em;
+}
+
 footer .top-footer .left form {
-  height: 80%;
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-bottom: 3em;
 }
 
 footer .top-footer .left form input,
 footer .top-footer .left textarea,
 footer .top-footer .left .form-submit-container {
-  width:50%;
+  width:70%;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  border:none;
+}
+
+footer .top-footer .left .form-submit-container {
+  margin-top: 2em;
 }
 
 footer .top-footer .left .form-submit-container input[type="submit"] {
@@ -963,44 +1004,63 @@ footer .top-footer .left .form-submit-container input[type="submit"] {
 }
 
 footer .top-footer .left .form-submit-container input[type="submit"]:hover {
-  background-color: var(--pizza-red);
+  background-color: var(--pizza-beige);
   color: var(--pizza-dark);
+}
+
+footer .top-footer .left .form #email-form {
+  margin: 2em 0em;
 }
 
 /* (2) - MIDDLE */
 footer .top-footer .middle {
-  padding-top: 20px;
+  width: 40%;
+  margin: 20px 0px;
   display: flex;
   flex-direction: column;
 }
 
 footer .top-footer .middle .titles {
-  height:20%;
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 footer .top-footer .middle .titles div:first-child {
-  height:100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  
+  margin-bottom: 2em;
+}
+
+footer .top-footer .middle .titles .under-titles {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .top-footer .middle .titles .under-titles h2 {
+  width: 50%;
 }
 
 footer .top-footer .middle ul {
   width:100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
+/* FIRST UNORDERED LIST */
+/* FIRST UNORDERED LIST */
+/* FIRST UNORDERED LIST */
 footer .top-footer .middle ul li {
   list-style-type:square;
   list-style-position: inside;
   transition: 0.4s;
+  font-size: 1.4em;
+}
+
+footer .top-footer .middle ul li i {
+  font-size: 1.4em;
 }
 
 footer .top-footer .middle ul li:hover {
@@ -1009,11 +1069,23 @@ footer .top-footer .middle ul li:hover {
 
 footer .top-footer .unordered-lists-footer {
   display: flex;
-  height: 80%;
+  height: 85%;
+}
+
+/* SECOND UNORDERED LIST */
+/* SECOND UNORDERED LIST */
+/* SECOND UNORDERED LIST */
+footer .top-footer .middle ul:nth-child(2) li {
+  list-style: none;
+}
+
+footer .top-footer .middle ul:nth-child(2) li a {
+  letter-spacing: 3px;
 }
 
 /* (3) - RIGHT */
 footer .top-footer .right {
+  width: 20%;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -1021,10 +1093,9 @@ footer .top-footer .right {
 
 /* THE PART WHERE THE LOGO IS (see below for details) */
 footer .top-footer .right .top {
-  width:100%;
-  height:70%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -1039,14 +1110,19 @@ footer .top-footer .right .top section {
 
 }
 
-/* THE PART WHERE THE LOGOS OF PHOEN AND EMAIL ARE */
+/* THE PART WHERE THE LOGOS OF PHONE AND EMAIL ARE */
 footer .top-footer .right .bottom {
-  width:100%;
-  height:30%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1.3em;
+}
+
+footer .top-footer .right .bottom .phone {
+  margin-bottom: 2em;
 }
 
 /* PHONE AND EMAIL TEXT (icon and text)*/
@@ -1062,10 +1138,8 @@ footer .top-footer .right .bottom .email span:last-of-type {
 }
 
 /* UNDER FOOTER (COPYRIGHT) */
-
 footer .under-footer {
   width:100%;
-  height:12%;
   margin: 0 auto;
   background-color: var(--pizza-red);
   position: relative;
@@ -1079,15 +1153,13 @@ footer .under-footer p {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
 footer section .scroll-top-btn {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  position: absolute;
-  top: 5px;
-  right:20px;
   margin: 0px auto 10px auto;
 }
 
@@ -1264,6 +1336,61 @@ footer section .scroll-top-btn ul:hover {
   /* ------------------------------------- */
   /* ------------------------------------- */
   
+  /* UNDER HEADER START */
+  /* UNDER HEADER START */
+  /* UNDER HEADER START */
+  /* UNDER HEADER START */
+  /* UNDER HEADER START */
+  
+  .under-header {
+    margin-top: 0;
+    height:initial;
+  }
+  
+  .under-header .under-header-overlay {
+    padding:0;
+  }
+  
+  .under-header .under-header-content {
+    position: initial;
+    transform: initial;
+  }
+  
+  .under-header .under-header-content .title-and-logo {
+    flex-direction: column;
+  }
+  
+  .under-header .under-header-content h2 {
+    font-size: 4em;
+    text-align: center;
+  }
+  
+  .under-header .under-header-content p.under-header-text {
+    font-size: 2em;
+    line-height: 1.4;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .under-header .order-now-btn {
+    margin: 2em 0em;
+    padding: 0;
+    width: 90%;
+    height:3em;
+  }
+  
+  /* UNDER HEADER END */
+  /* UNDER HEADER END */
+  /* UNDER HEADER END */
+  /* UNDER HEADER END */
+  /* UNDER HEADER END */
+  
+  /* ------------------------------------- */
+  /* ------------------------------------- */
+  /* ------------------------------------- */
+  /* ------------------------------------- */
+  /* ------------------------------------- */
+  
   /* CONTAINER / MAIN START */
   /* CONTAINER / MAIN START */
   /* CONTAINER / MAIN START */
@@ -1409,13 +1536,11 @@ footer section .scroll-top-btn ul:hover {
     margin-bottom: 2em;
   }
   
-  
   /* OVERLAY POPUP END */
   /* OVERLAY POPUP END */
   /* OVERLAY POPUP END */
   /* OVERLAY POPUP END */
   /* OVERLAY POPUP END */
-  
   
   /* BANNER END */
   /* BANNER END */
@@ -1429,11 +1554,11 @@ footer section .scroll-top-btn ul:hover {
   /* ------------------------------------- */
   /* ------------------------------------- */
   
-  /* JUMBOTRON CONTANER START */
-  /* JUMBOTRON CONTANER START */
-  /* JUMBOTRON CONTANER START */
-  /* JUMBOTRON CONTANER START */
-  /* JUMBOTRON CONTANER START */
+  /* JUMBOTRON CONTAINER START */
+  /* JUMBOTRON CONTAINER START */
+  /* JUMBOTRON CONTAINER START */
+  /* JUMBOTRON CONTAINER START */
+  /* JUMBOTRON CONTAINER START */
   
   .jumbotron-container section {
     flex-direction: column;
@@ -1462,11 +1587,11 @@ footer section .scroll-top-btn ul:hover {
     margin:1em 0em;
   }
   
-  /* JUMBOTRON CONTANER END */
-  /* JUMBOTRON CONTANER END */
-  /* JUMBOTRON CONTANER END */
-  /* JUMBOTRON CONTANER END */
-  /* JUMBOTRON CONTANER END */
+  /* JUMBOTRON CONTAINER END */
+  /* JUMBOTRON CONTAINER END */
+  /* JUMBOTRON CONTAINER END */
+  /* JUMBOTRON CONTAINER END */
+  /* JUMBOTRON CONTAINER END */
   
   
   /* ------------------------------------- */
@@ -1492,9 +1617,17 @@ footer section .scroll-top-btn ul:hover {
     flex-direction: column;
   }
   
+  footer .top-footer .left {
+    margin: 20px 0px 0px 0px;
+  }
+  
   footer .top-footer .left .titles,
   footer .top-footer .left form {
     height: initial;
+  }
+  
+  footer .top-footer .left form  {
+    margin-bottom: 0em;
   }
   
   footer .top-footer .left .titles {
@@ -1531,21 +1664,14 @@ footer section .scroll-top-btn ul:hover {
   }
   
   footer .top-footer .right .bottom {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
   }
   
-  footer .under-footer {
-    height: initial;
-    padding: 5em 0em;
-  }
-  
-  footer .under-footer p {
-    font-size: 1em;
-    letter-spacing: 1px;
-    text-align: center;
+  footer .top-footer .middle {
+    margin:0;
   }
   
   footer .top-footer .middle .titles {
@@ -1553,6 +1679,13 @@ footer section .scroll-top-btn ul:hover {
     margin-bottom: 2em;
   }
   
+  footer .top-footer .middle .titles div:first-child {
+    display: none;
+  }
+  
+  footer .top-footer .right .bottom {
+    font-size: 1em;
+  }
   
   footer .top-footer .unordered-lists-footer {
     flex-direction: column;
@@ -1563,11 +1696,23 @@ footer section .scroll-top-btn ul:hover {
     margin-bottom: 2em;
   }
   
+  footer .under-footer {
+    height: initial;
+    padding: 2em 0em 1em 0em;
+  }
+  
+  footer .under-footer p {
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  footer .under-footer p {
+    margin:0;
+  }
+  
   footer section .scroll-top-btn {
-    position: absolute;
-    top:initial;
-    bottom: 1px;
-    right: 5px;
+    margin: 10px 0px 10px 0px;
   }
   
   /* FOOTER END */
@@ -1575,7 +1720,6 @@ footer section .scroll-top-btn ul:hover {
   /* FOOTER END */
   /* FOOTER END */
   /* FOOTER END */
-  
 }
 
 /* SMALL - MEDIA QUERY END */

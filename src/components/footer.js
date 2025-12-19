@@ -12,7 +12,7 @@ export const Footer = () => {
     <footer>
       <section className="top-footer">
         <div className="left">
-          <div className="titles">
+          <div className="titles left">
             <h2>CONTACT US</h2>
             <h3>SEND US A MESSAGE</h3>
           </div>
@@ -28,9 +28,10 @@ export const Footer = () => {
 
         <div className="middle">
         
-          <div className="titles">
-            <div>
+          <div className="titles right">
+            <div className="under-titles">
               <h2>SITEMAP</h2>
+              <h2>SOCIALS</h2>
             </div>
           </div>
           
@@ -43,11 +44,11 @@ export const Footer = () => {
               <li><a href="contact-us.html">CONTACT US</a></li>
             </ul>
             <ul>
-              <li><a href="index.html">ORDER ONLINE</a></li>
-              <li><a href="about-us.html">ORDER ON THE PHONE</a></li>
-              <li><a href="features.html">DISCOUNTS &amp; VOUCHERS</a></li>
-              <li><a href="pricing.html">STORES</a></li>
-              <li><a href="contact-us.html">WORK WITH US</a></li>
+              <li><a href="index.html"><i className="fa-brands fa-square-facebook"></i>Facebook</a></li>
+              <li><a href="about-us.html"><i className="fa-brands fa-instagram"></i>Instagram</a></li>
+              <li><a href="features.html"><i className="fa-brands fa-linkedin"></i>Linkedin</a></li>
+              <li><a href="pricing.html"><i className="fa-brands fa-x-twitter"></i>Twitter</a></li>
+              <li><a href="contact-us.html"><i className="fa-brands fa-tiktok"></i>Tik Tok</a></li>
             </ul>
           </div>
         </div>

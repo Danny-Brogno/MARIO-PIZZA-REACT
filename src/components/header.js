@@ -1,39 +1,66 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../img/mario-pizza-logo.png';
 
 export const Header = () => {
-  // Created the state. open the menu (is false by default).
+  // State for the burger menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // State to control the header's top position (hidden at -150px by default)
+  const [headerTop, setHeaderTop] = useState("-150px");
 
-  // This replaces showAndHide() -> toggles the hook
+  // Logic to handle the navbar sliding down on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      // If user scrolls more than 20px, show the header at top: 0
+      if (window.scrollY > 20) {
+        setHeaderTop("0");
+      } else {
+        setHeaderTop("-150px");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener when the component is removed
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Toggles the burger menu and the blur effect on background elements
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    const newState = !isMenuOpen;
+    setIsMenuOpen(newState);
     
-    // To handle the "blur" on the <main> tag (which is outside this component)
-    const mainElement = document.querySelector("main");
-    const footerElement = document.querySelector("footer");
-    const logoElement = document.querySelector(".logo-container");
-    const bannerElement = document.querySelector(".banner");
-    const jumbotronContainerElement = document.querySelector(".jumbotron-container");
+    // Select all elements that need the blur effect
+    const elementsToBlur = [
+      ".under-header",
+      "main",
+      "footer",
+      ".logo-container",
+      ".banner",
+      ".jumbotron-container"
+    ];
     
-    if (mainElement && footerElement && logoElement && bannerElement && jumbotronContainerElement) {
-      mainElement.classList.toggle("blur");
-      footerElement.classList.toggle("blur");
-      logoElement.classList.toggle("blur");
-      bannerElement.classList.toggle("blur");
-      jumbotronContainerElement.classList.toggle("blur");
-    }
+    elementsToBlur.forEach(selector => {
+      const el = document.querySelector(selector);
+      if (el) {
+        el.classList.toggle("blur");
+      }
+    });
   };
 
-  // This replaces leaveMenu() -> removes blur
+  // Closes the menu and explicitly removes the blur from the main content
   const closeMenu = () => {
     setIsMenuOpen(false);
     document.querySelector("main")?.classList.remove("blur");
+    
+    // Also remove blur from other elements to be safe
+    const elements = document.querySelectorAll(".blur");
+    elements.forEach(el => el.classList.remove("blur"));
   };
 
   return (
-    <header>
-      <nav>
+    <header style={{ top: headerTop }}>
+      <nav id="navbar">
         <section className="logo-container">
           <a href="index.html">
             <img src={logo} alt="logo-here" />
@@ -41,34 +68,21 @@ export const Header = () => {
         </section>
         
         <ul>
-          <li className="gone">
-            <a href="index.html">Home</a>
-          </li>
-          
-          <li class="gone">
-            <a href="about-us.html">About us</a>
-          </li>
-          
-          <li class="gone">
-            <a href="purchase.html">Purchase</a>
-          </li>
-          
-          <li class="gone">
-            <a href="featured.html">Featured</a>
-          </li>
-          
-          <li class="gone">
-            <a href="contact-us.html">Contact us</a>
-          </li>
+          <li className="gone"><a href="index.html">Home</a></li>
+          <li className="gone"><a href="about-us.html">About us</a></li>
+          <li className="gone"><a href="purchase.html">Purchase</a></li>
+          <li className="gone"><a href="featured.html">Featured</a></li>
+          <li className="gone"><a href="contact-us.html">Contact us</a></li>
           
           <li id="invisible-burger">
-            {/* Logic for toggle based on state */}
             <section className={`drop-links ${isMenuOpen ? 'menu-off' : ''}`}>
-              <button onClick={toggleMenu} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <button 
+                onClick={toggleMenu} 
+                style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer' }}
+              >
                 <i className="fas fa-bars"></i>
               </button>
 
-              {/* If isMenuOpen is true, we show 'menu-on', otherwise 'hide' */}
               <ul className={`dropdown ${isMenuOpen ? 'menu-on' : 'hide'}`} onMouseLeave={closeMenu}>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -77,34 +91,22 @@ export const Header = () => {
               </ul>
             </section>
           </li>
-          
-          
         </ul>
-        <section class="searchBar-chart">
+
+        <section className="searchBar-chart">
           <ol>
-            
             <li>
-              <a href="#">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
+              <a href="#"><i className="fa-solid fa-magnifying-glass"></i></a>
             </li>
-            
             <li>
               <input id="input-header" type="text" placeholder="Search.."></input>
             </li>
-            
             <li>
-              <a href="#">
-                <i class="fa-solid fa-question"></i>
-              </a>
+              <a href="#"><i className="fa-solid fa-question"></i></a>
             </li>
-            
             <li>
-              <a href="#">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </a>
+              <a href="#"><i className="fa-solid fa-cart-shopping"></i></a>
             </li>
-            
           </ol>
         </section>
       </nav>
