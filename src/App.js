@@ -5,6 +5,7 @@ import {UnderHeader} from "./components/underHeader.js";
 import {Jumbotron} from "./components/jumbotron.js";
 import {Banner} from "./components/banner.js";
 import {JumbotronContainer} from "./components/jumbotronContainer.js";
+import {UnderGridContainer} from "./components/underGridContainer.js";
 import {Footer} from "./components/footer.js";
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
       <Jumbotron />
       <Banner />
       <JumbotronContainer />
+      <UnderGridContainer />
       <Footer />
     </div>
   );

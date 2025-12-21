@@ -917,6 +917,152 @@ main section.main-container h1 {
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
+
+/* INSIDE HERE THERE ARE 2 DIVS: TOP AND BOTTOM */
+.under-grid {
+  display: flex;
+  flex-direction: column;
+  margin: 8em 0em;
+}
+
+/* TOP */
+
+.under-grid h2#title {
+  display: flex;
+  justify-content: center;
+  font-size: 5em;
+  margin-bottom: 1em;
+}
+.under-grid .top {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.under-grid .top div {
+  background-color: var(--pizza-green);
+  color: var(--pizza-beige);
+  width: calc(24% - 20px);
+  margin: 0 10px 40px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 
+  0 -4px 6px -1px rgba(9, 23, 54, 0.15), 
+  0 4px 6px -1px rgba(9, 23, 54, 0.15), 
+  -4px 0 6px -1px rgba(9, 23, 54, 0.15), 
+  4px 0 6px -1px rgba(9, 23, 54, 0.15);
+}
+
+.under-grid .top div i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--normal-white);
+  color: var(--normal-black);
+  font-size: 2em;
+  border-radius: 50%;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.under-grid .top div h3 {
+  margin: 2em 0em;
+  font-size: 1.5em;
+}
+
+.under-grid .top div p {
+  width: 90%;
+  margin:0 auto 1em auto;
+  font-size: 1.2em;
+  line-height: 40px;
+}
+
+/* BOTTOM */
+.under-grid .bottom {
+  margin: 5em 0em 0em 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.under-grid .bottom h2 {
+  font-size: 5em;
+}
+
+.under-grid .bottom p {
+  width:80%;
+  margin: 2em auto 0em auto;
+  font-size: 1.5em;
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+section.wrapped-text-section {
+  position: relative;
+  width: 100%;
+  padding: 50px;
+}
+
+section.wrapped-text-section .circle {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 1 */
+section.wrapped-text-section .circle.circle1 {
+  height: 500px;
+  width: 500px;
+  float: left;
+  border-radius: 50%;
+  margin: 20px;
+  shape-outside: circle();
+}
+
+/* 2 */
+section.wrapped-text-section .circle.circle2 {
+  height: 300px;
+  width: 300px;
+  float: right;
+  border-radius: 50%;
+  margin: 20px;
+  shape-outside: circle();
+}
+
+section.wrapped-text-section .circle img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+section.wrapped-text-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+section.wrapped-text-section p {
+  letter-spacing: 4px;
+  line-height: 40px;
+}
+
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
 /* FOOTER START */
 /* FOOTER START */
 /* FOOTER START */
