@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import {Header} from "./components/header.js";
 import {HomePage} from "./pages/home/index.js";
 import {ContactPage} from "./pages/contact/index.js";
+import {AboutUs} from "./pages/aboutUs/index.js";
+import {OrderOnline} from "./pages/orderOnline/index.js";
 import {Footer} from "./components/footer.js";
 import './App.css';
 
@@ -21,6 +23,8 @@ function App() {
       <Header setCurrentPage={setCurrentPage} currentPage={currentPage}/>
       {currentPage == "home" && <HomePage />}
       {currentPage == "contact" && <ContactPage />}
+      {currentPage == "aboutUs" && <AboutUs />}
+      {currentPage == "orderOnline" && <OrderOnline />}
       <Footer />
     </div>
   );

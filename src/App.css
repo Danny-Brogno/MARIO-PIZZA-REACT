@@ -193,6 +193,7 @@ header nav ul li {
 }
 
 header nav ul li:hover {
+  cursor: pointer;
   color: var(--pizza-red);
   transition: 0.2s;
 }

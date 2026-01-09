@@ -68,10 +68,15 @@ export const Header = ({currentPage, setCurrentPage}) => {
         </section>
         
         <ul>
-          <li className="gone"><a href="">Home</a></li>
-          <li className="gone"><a href="">About us</a></li>
-          <li className="gone"><a href="">Purchase</a></li>
-          <li className="gone"><a href="">Featured</a></li>
+        <li className="gone" onClick={()=>setCurrentPage("home")}>
+          Home
+        </li>
+          <li className="gone" onClick={()=>setCurrentPage("aboutUs")}>
+            About us
+          </li>
+          <li className="gone" onClick={()=>setCurrentPage("orderOnline")}>
+            Order online
+          </li>
           <li className="gone" onClick={()=>setCurrentPage("contact")}>
             Contact us
           </li>

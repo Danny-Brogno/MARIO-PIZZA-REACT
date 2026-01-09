@@ -5,21 +5,21 @@ import {Banner} from "../../components/banner.js";
 import {JumbotronContainer} from "../../components/jumbotronContainer.js";
 import {UnderGridContainer} from "../../components/underGridContainer.js";
 
-export const ContactPage = () => {
+export const OrderOnline = () => {
   return (
     <div>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
-      <h1>CONTACT PAGE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
+      <h1>ORDER ONLINE</h1>
     </div>
   )
 }
