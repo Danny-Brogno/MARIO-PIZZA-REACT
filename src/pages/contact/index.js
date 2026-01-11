@@ -13,6 +13,11 @@ export const ContactPage = () => {
       <h1>CONTACT PAGE</h1>
       <h1>CONTACT PAGE</h1>
       <h1>CONTACT PAGE</h1>
+      <h1>CONTACT PAGE</h1>
+      <h1>CONTACT PAGE</h1>
+      <h1>CONTACT PAGE</h1>
+      <h1>CONTACT PAGE</h1>
+      <h1>CONTACT PAGE</h1>
       <Jumbotron />
       <Banner />
       <JumbotronContainer />

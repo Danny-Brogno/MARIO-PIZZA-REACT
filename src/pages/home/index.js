@@ -5,14 +5,6 @@ import {Banner} from "../../components/banner.js";
 import {JumbotronContainer} from "../../components/jumbotronContainer.js";
 import {UnderGridContainer} from "../../components/underGridContainer.js";
 
-
-const scrollToTheTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth' 
-  });
-};
-
 export const HomePage = () => {
   return (
     <div>

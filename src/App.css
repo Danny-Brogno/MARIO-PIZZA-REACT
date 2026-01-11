@@ -802,8 +802,6 @@ main section.main-container h1 {
 
 .jumbotron-container section {
   width:90%;
-  height:700px;
-  min-height: 700px;
   margin:0 auto;
   display: flex;
 }
