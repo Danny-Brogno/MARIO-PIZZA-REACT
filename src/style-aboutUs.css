@@ -115,6 +115,11 @@ body::-webkit-scrollbar-thumb:hover {
   display: block;
 }
 
+#about-us-page .about-us-container .set div img {
+  width: 100px;
+  height: 100px;
+}
+
 /* (1) */
 #about-us-page .about-us-container .set div:nth-child(1) {
   left: 20%;
@@ -170,12 +175,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 @keyframes falling {
   0%{
-    opacity:0;
     top:-10%;
     transform:translateX(20px)rotate(0deg);
   }
   10%{
-    opacity:1;
+    transform:translateX(20px)rotate(45deg);
   }
   20%{
     transform:translateX(-20px)rotate(90deg);
@@ -197,12 +201,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 #about-us-page .set2 {
   transform:scale(2) rotateY(180deg);
-  filter:blur(2px);
 }
 
 #about-us-page .set3 {
   transform:scale(0.8) rotateY(180deg);
-  filter:blur(4px);
 }
   
 /* ------------------------------------------- */
