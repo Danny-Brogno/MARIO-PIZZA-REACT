@@ -7,7 +7,7 @@ const scrollToTheTop = () => {
   });
 };
 
-export const Footer = () => {
+export const Footer = ({currentPage, setCurrentPage}) => {
   return (
     <footer>
       <section className="top-footer">
@@ -37,18 +37,17 @@ export const Footer = () => {
           
           <div className="unordered-lists-footer">
             <ul>
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="about-us.html">ABOUT US</a></li>
-              <li><a href="features.html">FEATURES</a></li>
-              <li><a href="pricing.html">PRICING</a></li>
-              <li><a href="contact-us.html">CONTACT US</a></li>
+              <li><a onClick={()=>setCurrentPage("homepage")}>HOME</a></li>
+              <li><a onClick={()=>setCurrentPage("aboutUs")}>ABOUT US</a></li>
+              <li><a onClick={()=>setCurrentPage("orderOnline")}>ORDER ONLINE</a></li>
+              <li><a onClick={()=>setCurrentPage("contact")}>CONTACT US</a></li>
             </ul>
             <ul>
-              <li><a href="index.html"><i className="fa-brands fa-square-facebook"></i>Facebook</a></li>
-              <li><a href="about-us.html"><i className="fa-brands fa-instagram"></i>Instagram</a></li>
-              <li><a href="features.html"><i className="fa-brands fa-linkedin"></i>Linkedin</a></li>
-              <li><a href="pricing.html"><i className="fa-brands fa-x-twitter"></i>Twitter</a></li>
-              <li><a href="contact-us.html"><i className="fa-brands fa-tiktok"></i>Tik Tok</a></li>
+              <li><a href=""><i className="fa-brands fa-square-facebook"></i>Facebook</a></li>
+              <li><a href=""><i className="fa-brands fa-instagram"></i>Instagram</a></li>
+              <li><a href=""><i className="fa-brands fa-linkedin"></i>Linkedin</a></li>
+              <li><a href=""><i className="fa-brands fa-x-twitter"></i>Twitter</a></li>
+              <li><a href=""><i className="fa-brands fa-tiktok"></i>Tik Tok</a></li>
             </ul>
           </div>
         </div>

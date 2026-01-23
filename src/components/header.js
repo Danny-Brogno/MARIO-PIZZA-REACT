@@ -62,7 +62,7 @@ export const Header = ({currentPage, setCurrentPage}) => {
     <header style={{ top: headerTop }}>
       <nav id="navbar">
         <section className="logo-container">
-          <a href="index.html">
+          <a href="">
             <img src={logo} alt="logo-here" />
           </a>
         </section>
@@ -99,23 +99,6 @@ export const Header = ({currentPage, setCurrentPage}) => {
             </section>
           </li>
         </ul>
-
-        <section className="searchBar-chart">
-          <ol>
-            <li>
-              <a href="#"><i className="fa-solid fa-magnifying-glass"></i></a>
-            </li>
-            <li>
-              <input id="input-header" type="text" placeholder="Search.."></input>
-            </li>
-            <li>
-              <a href="#"><i className="fa-solid fa-question"></i></a>
-            </li>
-            <li>
-              <a href="#"><i className="fa-solid fa-cart-shopping"></i></a>
-            </li>
-          </ol>
-        </section>
       </nav>
     </header>
   );

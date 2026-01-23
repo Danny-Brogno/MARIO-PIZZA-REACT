@@ -5,6 +5,7 @@ import { Banner } from "../../components/banner.js";
 import { JumbotronContainer } from "../../components/jumbotronContainer.js";
 import { UnderGridContainer } from "../../components/underGridContainer.js";
 // CSS
+import '../../style-global.css';
 import '../../style-homepage.css';
 // FAVICON
 import favicon from '../../img/favicon-homepage.png';
@@ -23,7 +24,7 @@ export const HomePage = () => {
   }
   
   return (
-    <div>
+    <div id="homepage">
       <UnderHeader />
       <Jumbotron />
       <Banner />

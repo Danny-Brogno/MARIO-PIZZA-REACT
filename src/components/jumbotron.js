@@ -24,7 +24,7 @@ export const Jumbotron = () => {
   };
 
   return (
-    <main>
+    <div className="jumbotron">
       <section className="main-container">
         <h1> OUR &nbsp;MEN&Ugrave; </h1>
 
@@ -97,6 +97,6 @@ export const Jumbotron = () => {
 
         </div>
       </section>
-    </main>
+    </div>
   );
 };

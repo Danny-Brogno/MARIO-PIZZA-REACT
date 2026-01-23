@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 // ELEMENTS THAT ARE IN EVERY PAGE
 import { Header } from './components/header.js';
 import { Footer } from './components/footer.js';
@@ -21,7 +20,7 @@ function App() {
       {currentPage === "contact" && <ContactPage />}
       {currentPage === "aboutUs" && <AboutUs />}
       {currentPage === "orderOnline" && <OrderOnline />}
-      <Footer />
+      <Footer setCurrentPage={setCurrentPage} currentPage={currentPage}/>
     </div>
   );
 }
