@@ -88,15 +88,43 @@ body::-webkit-scrollbar-thumb:hover {
 /* ------------------------------------------- */
 
 #about-us-page .about-us-container {
-  position: relative;
   width: 100%;
-  height: 100vh;
-  background: radial-gradient(#333, #000);
+  /* background: radial-gradient(#333, #000); */
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 2;
+  position: relative;
+}
+
+#about-us-page .about-us-container .central-container {
+  height: calc(70vh - 100px);
+  margin-top: 100px;
+  width: 90%;
+  border-radius: 10%;
+}
+
+#about-us-page .about-us-container .central-container div.top {
+  width: 100%;
+  height: 20%;
+  /* debug */
+  background-color: navy;
+}
+
+#about-us-page .about-us-container .central-container div.center {
+  width: 100%;
+  height: 60%;
+  /* debug */
+  background-color: blue;
+}
+
+#about-us-page .about-us-container .central-container div.bottom {
+  width: 100%;
+  height: 20%;
+  /* debug */
+  background-color: orange;
 }
 
 /* ANIMATION IN THE BACKGROUND */
@@ -116,8 +144,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #about-us-page .about-us-container .set div img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 /* (1) */
@@ -206,7 +234,91 @@ body::-webkit-scrollbar-thumb:hover {
 #about-us-page .set3 {
   transform:scale(0.8) rotateY(180deg);
 }
-  
+
+/* UNDER GRID SECTION START */
+/* UNDER GRID SECTION START */
+/* UNDER GRID SECTION START */
+
+/* INSIDE HERE THERE ARE 2 DIVS: TOP AND BOTTOM */
+#about-us-page .about-us-container .under-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 8em 0em;
+}
+
+/* TOP */
+#about-us-page .about-us-container .under-grid .top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#about-us-page .about-us-container .under-grid .top div {
+  flex: 1 1 300px; 
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 
+    0 -4px 6px -1px rgba(9, 23, 54, 0.15), 
+    0 4px 6px -1px rgba(9, 23, 54, 0.15), 
+    -4px 0 6px -1px rgba(9, 23, 54, 0.15), 
+    4px 0 6px -1px rgba(9, 23, 54, 0.15);
+}
+
+#about-us-page .about-us-container .under-grid .top div i {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-sidebar-top-box);
+  color: var(--normal-white);
+  font-size: 2em;
+  border-radius: 50%;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+#about-us-page .about-us-container .under-grid .top div h3 {
+  margin: 2em 0em;
+  font-size: 1.5em;
+}
+
+#about-us-page .about-us-container .under-grid .top div p {
+  width: 90%;
+  margin:0 auto 1em auto;
+  font-size: 1.2em;
+  line-height: 40px;
+}
+
+/* BOTTOM */
+#about-us-page .about-us-container .under-grid .bottom {
+  margin: 5em 0em 0em 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#about-us-page .about-us-container .under-grid .bottom h2 {
+  font-size: 2em;
+}
+
+#about-us-page .about-us-container .under-grid .bottom p {
+  width:80%;
+  margin: 2em auto 0em auto;
+  font-size: 1.5em;
+}
+
+/* UNDER GRID SECTION END */
+/* UNDER GRID SECTION END */
+/* UNDER GRID SECTION END */
+
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* ------------------------------------------- */

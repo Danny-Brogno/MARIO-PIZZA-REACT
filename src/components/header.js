@@ -68,18 +68,38 @@ export const Header = ({currentPage, setCurrentPage}) => {
         </section>
         
         <ul>
-        <li className="gone" onClick={()=>setCurrentPage("homepage")}>
-          Home
-        </li>
-          <li className="gone" onClick={()=>setCurrentPage("aboutUs")}>
-            About us
+
+          <li className="gone" onClick={()=>setCurrentPage("homepage")}>
+            <span><div></div></span>
+            <span><div></div></span>
+            <span><div></div></span>
+            <span><div></div></span>
+            <span><h2>HOME</h2></span>
           </li>
-          <li className="gone" onClick={()=>setCurrentPage("orderOnline")}>
-            Order online
-          </li>
-          <li className="gone" onClick={()=>setCurrentPage("contact")}>
-            Contact us
-          </li>
+
+            <li className="gone" onClick={()=>setCurrentPage("aboutUs")}>
+              <span><div></div></span>
+              <span><div></div></span>
+              <span><div></div></span>
+              <span><div></div></span>
+              <span><h2>ABOUT US</h2></span>
+            </li>
+
+            <li className="gone" onClick={()=>setCurrentPage("orderOnline")}>
+              <span><div></div></span>
+              <span><div></div></span>
+              <span><div></div></span>
+              <span><div></div></span>
+              <span><h2>ORDER ONLINE</h2></span>
+            </li>
+
+            <li className="gone" onClick={()=>setCurrentPage("contact")}>
+              <span><div></div></span>
+              <span><div></div></span>
+              <span><div></div></span>
+              <span><div></div></span>
+              <span><h2>CONTACT US</h2></span>
+            </li>
           
           <li id="invisible-burger">
             <section className={`drop-links ${isMenuOpen ? 'menu-off' : ''}`}>
