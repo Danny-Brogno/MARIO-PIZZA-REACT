@@ -28,7 +28,7 @@ export const UnderHeaderAboutUs = () => {
       <div className="under-grid">
         <div className="top">
           <div>
-            <i className="fa-solid fa-hotel"></i>
+            <i className="fa-solid fa-pizza-slice"></i>
             <h3>Hotelier's eye for details</h3>
             <p>
               We go beyond aesthetics. With years in hotel operations, Tricsy reviews staff training, maintenance standards, and true guest service—the details most tourists miss.
@@ -36,7 +36,7 @@ export const UnderHeaderAboutUs = () => {
           </div>
           
           <div>
-            <i className="fa-solid fa-wallet"></i>
+            <i className="fa-solid fa-car"></i>
             <h3>True value for your money</h3>
             <p>
               Understand what your booking truly covers. We break down the cost-to-quality ratio, evaluating if the price reflects the operational excellence and amenities offered.
@@ -44,7 +44,7 @@ export const UnderHeaderAboutUs = () => {
           </div>
           
           <div>
-            <i className="fa-solid fa-clipboard-check"></i>
+            <i className="fa-solid fa-globe"></i>
             <h3>Behind-the-scenes insights</h3>
             <p>
               Get an honest look at the operational efficiency and management. Tricsy provides the critical perspective only an insider can offer, ensuring you book with confidence.
