@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { UnderHeaderAboutUs } from "../../components/underHeaderAboutUs.js";
+import { MeetOurStaffContainer } from "../../components/meetOurStaffContainer.js";
 import { Banner } from "../../components/banner.js";
+import { ThreeBoxContainer } from "../../components/threeBoxContainer.js";
 
-import { JumbotronContainerAboutUs } from "../../components/jumbotronContainerAboutUs.js";
 // CSS
 import '../../style-global.css';
 import '../../style-aboutUs.css';
@@ -26,7 +27,8 @@ export const AboutUs = () => {
     <div id="about-us-page">
       <UnderHeaderAboutUs />
       <Banner />
-      <JumbotronContainerAboutUs />
+      <MeetOurStaffContainer />
+      <ThreeBoxContainer />
     </div>
   )
 }

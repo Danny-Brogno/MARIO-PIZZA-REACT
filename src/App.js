@@ -4,9 +4,9 @@ import { Header } from './components/header.js';
 import { Footer } from './components/footer.js';
 // OTHER PAGES
 import { HomePage } from './pages/homepage/homepage.js';
-import {ContactPage} from "./pages/contact/contact.js";
-import {AboutUs} from "./pages/aboutUs/aboutUs.js";
-import {OrderOnline} from "./pages/orderOnline/orderOnline.js";
+import { ContactPage } from "./pages/contact/contact.js";
+import { AboutUs } from "./pages/aboutUs/aboutUs.js";
+import { OrderOnline } from "./pages/orderOnline/orderOnline.js";
 
 // LOGIC
 function App() {

@@ -132,10 +132,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg); /* Start the rotation at 0 degrees */
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg); /* End the rotation at 360 degrees */
+    transform: rotate(360deg); 
   }
 }
 
@@ -320,41 +320,41 @@ body::-webkit-scrollbar-thumb:hover {
 /* jumbotron-container START*/
 /* jumbotron-container START*/
 
-#homepage .jumbotron-container {
+#homepage .jumbotron-scrolling-carousel {
   width: 100%;
   margin: 8em 0em
 }
 
-#homepage .jumbotron-container section {
+#homepage .jumbotron-scrolling-carousel section {
   width:90%;
   margin:0 auto;
   display: flex;
 }
 
-#homepage .jumbotron-container section .container-left {
+#homepage .jumbotron-scrolling-carousel section .container-left {
   width:50%;
   height: 100%;
 }
 
 /* just in one section */
-#homepage .jumbotron-container section .container-left img {
+#homepage .jumbotron-scrolling-carousel section .container-left img {
   height:100%;
   width: 100%;
   border-radius: 10px;
 }
 
-#homepage .jumbotron-container section .container-left #slider {
+#homepage .jumbotron-scrolling-carousel section .container-left #slider {
   width:100%;
   height:100%;
   padding:5px;
   position:relative;
  }
  
-#homepage .jumbotron-container section .container-left #slider .slide {
+#homepage .jumbotron-scrolling-carousel section .container-left #slider .slide {
   list-style:none;
 }
 
-#homepage .jumbotron-container section .container-left #slider > li {
+#homepage .jumbotron-scrolling-carousel section .container-left #slider > li {
   position:absolute;
   top:5px;
   left:5px;
@@ -362,17 +362,17 @@ body::-webkit-scrollbar-thumb:hover {
   bottom:5px;
 }
 
-#homepage .jumbotron-container section .container-left #slider > li {
+#homepage .jumbotron-scrolling-carousel section .container-left #slider > li {
   height:100%;
 }
 
-#homepage .jumbotron-container section .container-left #slider .slide img {
+#homepage .jumbotron-scrolling-carousel section .container-left #slider .slide img {
   height: 100%;
   width:100%;
   border-radius: 10px;
 }
 
-#homepage .jumbotron-container section .container-right {
+#homepage .jumbotron-scrolling-carousel section .container-right {
   width: 50%;
   height: 100%;
   display: flex;
@@ -380,7 +380,7 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: space-between;
 }
 
-#homepage .jumbotron-container section .container-right .text {
+#homepage .jumbotron-scrolling-carousel section .container-right .text {
   width: 90%;
   height: initial;
   display: flex;
@@ -389,16 +389,16 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 0em auto 3em auto;
 }
 
-#homepage .jumbotron-container section .container-right .text h2 {
+#homepage .jumbotron-scrolling-carousel section .container-right .text h2 {
   font-size: 50px;
   margin-bottom: 20px;
 }
 
-#homepage .jumbotron-container section .container-right .text h3 {
+#homepage .jumbotron-scrolling-carousel section .container-right .text h3 {
   font-size: 30px;
 }
 
-#homepage .jumbotron-container section .container-right p {
+#homepage .jumbotron-scrolling-carousel section .container-right p {
   width:90%;
   height:initial;
   margin:0 auto;
@@ -408,7 +408,7 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 1.6em;
 }
 
-#homepage .jumbotron-container section .container-right .btn-container {
+#homepage .jumbotron-scrolling-carousel section .container-right .btn-container {
   width:90%;
   height:10%;
   display: flex;
@@ -416,7 +416,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 2em auto 0em auto;
 }
 
-#homepage .jumbotron-container section .container-right .btn-container a {
+#homepage .jumbotron-scrolling-carousel section .container-right .btn-container a {
   padding:1em 6em;
   background-color: var(--pizza-yellow);
   border-radius: 10px;
@@ -424,7 +424,7 @@ body::-webkit-scrollbar-thumb:hover {
   text-align: center;
 }
 
-#homepage .jumbotron-container section .container-right .btn-container a:hover {
+#homepage .jumbotron-scrolling-carousel section .container-right .btn-container a:hover {
   background-color: var(--pizza-green);
   color: var(--pizza-yellow);
 }
@@ -435,132 +435,131 @@ body::-webkit-scrollbar-thumb:hover {
 /* jumbotron-container END*/
 /* jumbotron-container END*/
 
-/* MAIN END */
-/* MAIN END */
-/* MAIN END */
-/* MAIN END */
-/* MAIN END */
-
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
+/* JUMBOTRON STATIC IMAGE - START*/
+/* JUMBOTRON STATIC IMAGE - START*/
+/* JUMBOTRON STATIC IMAGE - START*/
+/* JUMBOTRON STATIC IMAGE - START*/
+/* JUMBOTRON STATIC IMAGE - START*/
 
-/* INSIDE HERE THERE ARE 2 DIVS: TOP AND BOTTOM */
-#homepage .under-grid {
+#homepage .jumbotron-static-image {
+  width: 100%;
+  height: 600px;
+  min-height: 600px;
+  margin: 100px 0px;
+}
+
+#homepage .jumbotron-static-image section {
+  width:90%;
+  height:100%;
+  margin:0 auto;
+  display: flex;
+}
+
+#homepage .jumbotron-static-image section .container-left {
+  width:50%;
+  height: 100%;
+}
+
+/* just in one section */
+#homepage .jumbotron-static-image section .container-left img {
+  height:100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#homepage .jumbotron-static-image section .container-left #slider {
+  width:100%;
+  height:100%;
+  padding:5px;
+  box-shadow: 0 0 20px rgba(0,0,0,1);
+  position:relative;
+ }
+ 
+#homepage .jumbotron-static-image section .container-left #slider .slide {
+  list-style:none;
+}
+
+#homepage .jumbotron-static-image section .container-left #slider > li {
+  position:absolute;
+  top:5px;
+  left:5px;
+  right:5px;
+  bottom:5px;
+}
+
+#homepage .jumbotron-static-image section .container-left #slider .slide img {
+  height: 100%;
+  width:100%;
+  border-radius: 10px;
+}
+
+#homepage .jumbotron-static-image section .container-right {
+  width:50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  margin: 8em 0em;
 }
 
-/* TOP */
-
-#homepage .under-grid h2#title {
+#homepage .jumbotron-static-image section .container-right .text {
+  width: 90%;
+  height: 10%;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  font-size: 5em;
-  margin-bottom: 1em;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#homepage .under-grid .top {
-  display: flex;
-  justify-content: space-evenly;
+#homepage .jumbotron-static-image section .container-right .text h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#homepage .jumbotron-static-image section .container-right .text h3 {
+  font-size: 1.8em;
+}
+
+#homepage .jumbotron-static-image section .container-right p {
   width:90%;
+  height:80%;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  line-height: 45px;
+  font-size: 1.2em;
+}
+
+#homepage .jumbotron-static-image section .container-right .btn-container {
+  width:90%;
+  height:10%;
+  display: flex;
+  align-items: flex-end;
   margin:0 auto;
 }
 
-#homepage .under-grid .top div {
+
+#homepage .jumbotron-static-image section .container-right .btn-container a {
+  padding:1em 6em;
+  background-color: var(--pizza-yellow);
+  border-radius: 10px;
+  transition:0.5s;
+}
+
+#homepage .jumbotron-static-image section .container-right .btn-container a:hover {
   background-color: var(--pizza-green);
-  color: var(--pizza-beige);
-  width: calc(25% - 20px);
-  margin: 0px 10px 0px 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  box-shadow: 
-  0 -4px 6px -1px rgba(9, 23, 54, 0.15), 
-  0 4px 6px -1px rgba(9, 23, 54, 0.15), 
-  -4px 0 6px -1px rgba(9, 23, 54, 0.15), 
-  4px 0 6px -1px rgba(9, 23, 54, 0.15);
+  color: var(--pizza-yellow);
 }
 
-#homepage .under-grid .top div img {
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  margin-top:10px;
-}
-
-#homepage .under-grid .top div h3 {
-  margin: 1em 0em;
-  font-size: 3em;
-  color: var(--pizza-yellow)
-}
-
-#homepage .under-grid .top div p {
-  width: 90%;
-  margin:0 auto 1em auto;
-  font-size: 2em;
-  line-height: 40px;
-}
-
-/* BOTTOM */
-#homepage .under-grid .bottom {
-  margin: 8em 0em 0em 0em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#homepage .under-grid .bottom h2 {
-  font-size: 5em;
-}
-
-#homepage .under-grid .bottom p {
-  width:80%;
-  margin: 2em auto 0em auto;
-  font-size: 2em;
-  line-height: 60px;
-}
-
-#homepage .under-grid .bottom .circle {
-  position: relative;
-  overflow: visible;
-}
-
-#homepage .under-grid .bottom .circle img {
-  border-radius: 100%;
-  max-width: 100%;
-  display: block;
-  position: relative;
-  z-index: 2;
-}
-
-#homepage .under-grid .bottom .pizza__smoke {
-  position: absolute;
-  top: 0%;
-  left: 10%;
-  width: 80%;
-  height: 100%;
-  z-index: 10;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/386739/smoke.png);
-  background-size: 100% auto;
-  animation: smoke-animation 8s linear infinite;
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-@keyframes smoke-animation {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 340%; }
-}
+/* JUMBOTRON STATIC IMAGE - END*/
+/* JUMBOTRON STATIC IMAGE - END*/
+/* JUMBOTRON STATIC IMAGE - END*/
+/* JUMBOTRON STATIC IMAGE - END*/
+/* JUMBOTRON STATIC IMAGE - END*/
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -568,55 +567,6 @@ body::-webkit-scrollbar-thumb:hover {
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
-#homepage section.wrapped-text-section {
-  position: relative;
-  width: 90%;
-  margin: 0 auto;
-}
-
-#homepage section.wrapped-text-section .circle {
-  position: relative;
-  overflow: hidden;
-}
-
-/* 1 */
-#homepage section.wrapped-text-section .circle.circle1 {
-  height: 500px;
-  width: 500px;
-  float: left;
-  border-radius: 50%;
-  margin: 20px;
-  shape-outside: circle();
-}
-
-/* 2 */
-#homepage section.wrapped-text-section .circle.circle2 {
-  height: 300px;
-  width: 300px;
-  float: right;
-  border-radius: 50%;
-  margin: 20px;
-  shape-outside: circle();
-}
-
-#homepage section.wrapped-text-section .circle img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-}
-
-#homepage section.wrapped-text-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-#homepage section.wrapped-text-section p {
-  letter-spacing: 4px;
-  line-height: 40px;
-}
 
 
 /* ------------------------------------------- */
@@ -897,34 +847,34 @@ body::-webkit-scrollbar-thumb:hover {
   /* JUMBOTRON CONTAINER START */
   /* JUMBOTRON CONTAINER START */
   
-  #homepage .jumbotron-container section {
+  #homepage .jumbotron-scrolling-carousel section {
     flex-direction: column;
   }
   
-  #homepage .jumbotron-container section .container-left,
-  #homepage .jumbotron-container section .container-right {
+  #homepage .jumbotron-scrolling-carousel section .container-left,
+  #homepage .jumbotron-scrolling-carousel section .container-right {
     width: 100%;
   }
   
-  #homepage .jumbotron-container section .container-right .text h2 {
+  #homepage .jumbotron-scrolling-carousel section .container-right .text h2 {
     text-align: center;
     font-size: 3em;
     margin-bottom: 0;
     margin: 2em 0em 1em 0em;
   }
   
-  #homepage .jumbotron-container section .container-right .text h3 {
+  #homepage .jumbotron-scrolling-carousel section .container-right .text h3 {
     text-align: center;
     font-size: 2em;
     margin-bottom: 0;
     margin: 0em 0em 1em 0em;
   }
   
-  #homepage .jumbotron-container section .container-right .btn-container {
+  #homepage .jumbotron-scrolling-carousel section .container-right .btn-container {
     margin:1em 0em;
   }
   
-  #homepage .jumbotron-container section .container-right p {
+  #homepage .jumbotron-scrolling-carousel section .container-right p {
     width: 100%;
   }
   
@@ -939,69 +889,6 @@ body::-webkit-scrollbar-thumb:hover {
   /* ------------------------------------- */
   /* ------------------------------------- */
   /* ------------------------------------- */
-  
-  
-  /* ENDER GRID CONTAINER START */
-  /* ENDER GRID CONTAINER START */
-  /* ENDER GRID CONTAINER START */
-  /* ENDER GRID CONTAINER START */
-  /* ENDER GRID CONTAINER START */
-  
-  #homepage .under-grid {
-    margin: 5em 0em;
-  }
-  
-  #homepage .under-grid .bottom {
-    width: 90%;
-    margin: 5em auto 0em auto;
-  }
-  
-  #homepage .under-grid .bottom h2 {
-    font-size: 3em;
-  }
-  
-  #homepage .under-grid .bottom p {
-    width:100%;
-  }
-  
-  #homepage .under-grid h2#title {
-    margin-bottom: 1em;
-    font-size: 3em;
-  }
-  
-  #homepage .under-grid .top {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #homepage .under-grid .top div {
-    width: 100%;
-    margin-bottom:2em;
-  }
-  
-  #homepage section.wrapped-text-section {
-    width: 100%;
-    text-align: left;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #homepage section.wrapped-text-section .circle.circle1,
-  #homepage section.wrapped-text-section .circle.circle2 {
-    width: 250px;
-    height:250px;
-    float: initial;
-  }
-  
-  /* ENDER GRID CONTAINER END */
-  /* ENDER GRID CONTAINER END */
-  /* ENDER GRID CONTAINER END */
-  /* ENDER GRID CONTAINER END */
-  /* ENDER GRID CONTAINER END */
 }
 
 /* SMALL - MEDIA QUERY END */

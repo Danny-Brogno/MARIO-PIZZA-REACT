@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { UnderHeader } from "../../components/underHeader.js";
 import { Jumbotron } from "../../components/jumbotron.js";
 import { Banner } from "../../components/banner.js";
-import { JumbotronContainer } from "../../components/jumbotronContainer.js";
-import { UnderGridContainer } from "../../components/underGridContainer.js";
+import { JumbotronScrollingCarousel } from "../../components/jumbotronScrollingCarousel.js";
+import { JumbotronStaticImage } from "../../components/jumbotronStaticImage.js";
 // CSS
 import '../../style-global.css';
 import '../../style-homepage.css';
@@ -27,9 +27,9 @@ export const HomePage = () => {
     <div id="homepage">
       <UnderHeader />
       <Jumbotron />
+      <JumbotronScrollingCarousel />
       <Banner />
-      <JumbotronContainer />
-      <UnderGridContainer />
+      <JumbotronStaticImage />
     </div>
   )
 }

@@ -87,7 +87,13 @@ body::-webkit-scrollbar-thumb:hover {
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
-#about-us-page .about-us-container {
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - START*/
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - START*/
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - START*/
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - START*/
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - START*/
+
+#about-us-page .under-header-AboutUs {
   width: 100%;
   /* background: radial-gradient(#333, #000); */
   overflow: hidden;
@@ -99,36 +105,98 @@ body::-webkit-scrollbar-thumb:hover {
   position: relative;
 }
 
-#about-us-page .about-us-container .central-container {
-  height: calc(70vh - 100px);
-  margin-top: 100px;
+#about-us-page .under-header-AboutUs .central-container {
   width: 90%;
-  border-radius: 10%;
 }
 
-#about-us-page .about-us-container .central-container div.top {
+/* TOP */
+#about-us-page .under-header-AboutUs .central-container div.top {
   width: 100%;
-  height: 20%;
-  /* debug */
-  background-color: var(--pizza-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#about-us-page .about-us-container .central-container div.center {
+#about-us-page .under-header-AboutUs .central-container div.top h1 {
+  padding: 1em 0em;
+  font-size: 5em;
+}
+
+/* CENTER / MIDDLE */
+#about-us-page .under-header-AboutUs .central-container div.center {
   width: 100%;
   height: 60%;
-  /* debug */
-  background-color: var(--pizza-green);
+  display: flex;
 }
 
-#about-us-page .about-us-container .central-container div.bottom {
+#about-us-page .under-header-AboutUs .central-container div.center div:first-child,
+#about-us-page .under-header-AboutUs .central-container div.center div:nth-child(2),
+#about-us-page .under-header-AboutUs .central-container div.center div:last-child {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  height:100%;
+}
+
+#about-us-page .under-header-AboutUs .central-container div.center div:first-child,
+#about-us-page .under-header-AboutUs .central-container div.center div:last-child {
+  line-height: 45px;
+  letter-spacing: 2px;
+  font-size: 1.7em;
+}
+
+#about-us-page .under-header-AboutUs .central-container div.center div:first-child {
+  margin-right: 2em;
+}
+
+#about-us-page .under-header-AboutUs .central-container div.center div:last-child {
+  margin-left: 2em;
+}
+
+#about-us-page .under-header-AboutUs .central-container div.center div:first-child p .char,
+#about-us-page .under-header-AboutUs .central-container div.center div:last-child p .char {
+  visibility: hidden;
+  animation: animate 0s steps(2) forwards;
+  animation-delay: calc(0.01s * var(--char-index));
+}
+
+@keyframes animate {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+#about-us-page .under-header-AboutUs .central-container div.center div:nth-child(2) img {
+  height:40em;
+  border-radius: 10px;
+}
+
+/* BOTTOM */
+#about-us-page .under-header-AboutUs .central-container div.bottom {
   width: 100%;
   height: 20%;
-  /* debug */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+
+#about-us-page .under-header-AboutUs .central-container div.bottom button {
   background-color: var(--pizza-green);
+  color: var(--pizza-yellow);
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 2em;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 /* ANIMATION IN THE BACKGROUND */
-#about-us-page .about-us-container .set {
+#about-us-page .under-header-AboutUs .set {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -138,65 +206,65 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* ALL DIVS TOGETHER */
-#about-us-page .about-us-container .set div {
+#about-us-page .under-header-AboutUs .set div {
   position: absolute;
   display: block;
 }
 
-#about-us-page .about-us-container .set div img {
-  width: 150px;
-  height: 150px;
+#about-us-page .under-header-AboutUs .set div img {
+  width: 100px;
+  height: 100px;
 }
 
 /* (1) */
-#about-us-page .about-us-container .set div:nth-child(1) {
+#about-us-page .under-header-AboutUs .set div:nth-child(1) {
   left: 20%;
   animation: falling 15s linear infinite;
   animation-delay: -7s;
 }
 
 /* (2) */
-#about-us-page .about-us-container .set div:nth-child(2) {
+#about-us-page .under-header-AboutUs .set div:nth-child(2) {
   left: 50%;
   animation: falling 20s linear infinite;
   animation-delay: -5s;
 }
 
 /* (3) */
-#about-us-page .about-us-container .set div:nth-child(3) {
+#about-us-page .under-header-AboutUs .set div:nth-child(3) {
   left: 70%;
   animation: falling 20s linear infinite;
   animation-delay: 0s;
 }
 
 /* (4) */
-#about-us-page .about-us-container .set div:nth-child(4) {
+#about-us-page .under-header-AboutUs .set div:nth-child(4) {
   left: 0%;
   animation: falling 15s linear infinite;
   animation-delay: -5s;
 }
 
 /* (5) */
-#about-us-page .about-us-container .set div:nth-child(5) {
+#about-us-page .under-header-AboutUs .set div:nth-child(5) {
   left: 85%;
   animation: falling 18s linear infinite;
   animation-delay: -10s;
 }
 
 /* (6) */
-#about-us-page .about-us-container .set div:nth-child(6) {
+#about-us-page .under-header-AboutUs .set div:nth-child(6) {
   left: 0%;
   animation: falling 12s linear infinite;
 }
 
 /* (7) */
-#about-us-page .about-us-container .set div:nth-child(7) {
+#about-us-page .under-header-AboutUs .set div:nth-child(7) {
   left: 15%;
   animation: falling 14s linear infinite;
 }
 
 /* (8) */
-#about-us-page .about-us-container .set div:nth-child(8) {
+#about-us-page .under-header-AboutUs .set div:nth-child(8) {
   left: 60%;
   animation: falling 15s linear infinite;
 }
@@ -235,20 +303,40 @@ body::-webkit-scrollbar-thumb:hover {
   transform:scale(0.8) rotateY(180deg);
 }
 
-/* UNDER GRID SECTION START */
-/* UNDER GRID SECTION START */
-/* UNDER GRID SECTION START */
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - END*/
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - END*/
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - END*/
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - END*/
+/* JUMBOTRON-CONTAINER (RAINING PIZZA) - END*/
+
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* THREE BOX CONTAINER - START */
+/* THREE BOX CONTAINER - START */
+/* THREE BOX CONTAINER - START */
 
 /* INSIDE HERE THERE ARE 2 DIVS: TOP AND BOTTOM */
-#about-us-page .about-us-container .under-grid {
+#about-us-page .three-box-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 8em 0em;
+  margin: 5em 0em;
+}
+
+#about-us-page .three-box-container h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 4em;
+  margin-bottom: 1em;
 }
 
 /* TOP */
-#about-us-page .about-us-container .under-grid .top {
+#about-us-page .three-box-container .top {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -256,7 +344,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 0 auto;
 }
 
-#about-us-page .about-us-container .under-grid .top div {
+#about-us-page .three-box-container .top div {
   background-color: var(--pizza-green);
   color: var(--pizza-yellow);
   flex: 1 1 300px; 
@@ -274,7 +362,7 @@ body::-webkit-scrollbar-thumb:hover {
     4px 0 6px -1px rgba(9, 23, 54, 0.15);
 }
 
-#about-us-page .about-us-container .under-grid .top div i {
+/* #about-us-page .three-box-container .top div i {
   display: flex;
   justify-content: center;
   background-color: var(--color-sidebar-top-box);
@@ -283,14 +371,34 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 50%;
   padding: 1em;
   margin-top: 1em;
+} */
+
+#about-us-page .three-box-container .top div img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 1em;
+  animation: spinning 10s linear infinite;
 }
 
-#about-us-page .about-us-container .under-grid .top div h3 {
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}
+
+#about-us-page .three-box-container .top div h3 {
   margin: 2em 0em;
   font-size: 1.5em;
 }
 
-#about-us-page .about-us-container .under-grid .top div p {
+#about-us-page .three-box-container .top div p {
   width: 90%;
   margin:0 auto 1em auto;
   font-size: 1.2em;
@@ -298,7 +406,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* BOTTOM */
-#about-us-page .about-us-container .under-grid .bottom {
+#about-us-page .three-box-container .bottom {
   margin: 5em 0em 0em 0em;
   display: flex;
   flex-direction: column;
@@ -307,139 +415,223 @@ body::-webkit-scrollbar-thumb:hover {
   text-align: center;
 }
 
-#about-us-page .about-us-container .under-grid .bottom h2 {
-  font-size: 2em;
+#about-us-page .three-box-container .bottom h2 {
+  font-size: 4em;
 }
 
-#about-us-page .about-us-container .under-grid .bottom p {
+#about-us-page .three-box-container .bottom p {
   width:80%;
   margin: 2em auto 0em auto;
-  font-size: 1.5em;
+  font-size: 2em;
+  letter-spacing: 3px;
+  line-height: 50px;
 }
 
-/* UNDER GRID SECTION END */
-/* UNDER GRID SECTION END */
-/* UNDER GRID SECTION END */
+/* THREE BOX CONTAINER - END */
+/* THREE BOX CONTAINER - END */
+/* THREE BOX CONTAINER - END */
 
-/* JUMBOTRON-CONTAINER START*/
-/* JUMBOTRON-CONTAINER START*/
-/* JUMBOTRON-CONTAINER START*/
-/* JUMBOTRON-CONTAINER START*/
-/* JUMBOTRON-CONTAINER START*/
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
 
-#about-us-page .jumbotron-container-aboutUs {
-  width: 100%;
-  height: 600px;
-  min-height: 600px;
-  margin-top: 101px;
-}
+/* MEET OUR STAFF - START */
+/* MEET OUR STAFF - START */
+/* MEET OUR STAFF - START */
+/* MEET OUR STAFF - START */
+/* MEET OUR STAFF - START */
 
-#about-us-page .jumbotron-container-aboutUs section {
-  width:90%;
-  height:100%;
-  margin:0 auto;
-  display: flex;
-}
-
-#about-us-page .jumbotron-container-aboutUs section .container-left {
-  width:50%;
-  height: 100%;
-}
-
-/* just in one section */
-#about-us-page .jumbotron-container-aboutUs section .container-left img {
-  height:100%;
-  width: 100%;
-  border-radius: 10px;
-}
-
-#about-us-page .jumbotron-container-aboutUs section .container-left #slider {
-  width:100%;
-  height:100%;
-  padding:5px;
-  box-shadow: 0 0 20px rgba(0,0,0,1);
-  position:relative;
- }
- 
-#about-us-page .jumbotron-container-aboutUs section .container-left #slider .slide {
-  list-style:none;
-}
-
-#about-us-page .jumbotron-container-aboutUs section .container-left #slider > li {
-  position:absolute;
-  top:5px;
-  left:5px;
-  right:5px;
-  bottom:5px;
-}
-
-#about-us-page .jumbotron-container-aboutUs section .container-left #slider .slide img {
-  height: 100%;
-  width:100%;
-  border-radius: 10px;
-}
-
-#about-us-page .jumbotron-container-aboutUs section .container-right {
-  width:50%;
-  height: 100%;
+/* INSIDE HERE THERE ARE 2 DIVS: TOP AND BOTTOM */
+#about-us-page .meet-our-staff-container {
   display: flex;
   flex-direction: column;
+  margin: 8em 0em;
 }
 
-#about-us-page .jumbotron-container-aboutUs section .container-right .text {
-  width: 90%;
-  height: 10%;
-  margin: 0 auto;
+/* TOP */
+
+#about-us-page .meet-our-staff-container h2#title {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  font-size: 5em;
+  margin-bottom: 1em;
 }
 
-#about-us-page .jumbotron-container-aboutUs section .container-right .text h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-#about-us-page .jumbotron-container-aboutUs section .container-right .text h3 {
-  font-size: 1.8em;
-}
-
-#about-us-page .jumbotron-container-aboutUs section .container-right p {
+#about-us-page .meet-our-staff-container .top {
+  display: flex;
+  justify-content: space-evenly;
   width:90%;
-  height:80%;
-  margin:0 auto;
-  display: flex;
-  align-items: center;
-  line-height: 45px;
-  font-size: 1.2em;
-}
-
-#about-us-page .jumbotron-container-aboutUs section .container-right .btn-container {
-  width:90%;
-  height:10%;
-  display: flex;
-  align-items: flex-end;
   margin:0 auto;
 }
 
-
-#about-us-page .jumbotron-container-aboutUs section .container-right .btn-container a {
-  padding:1em 6em;
-  background-color: var(--pizza-yellow);
-  border-radius: 10px;
-  transition:0.5s;
-}
-
-#about-us-page .jumbotron-container-aboutUs section .container-right .btn-container a:hover {
+#about-us-page .meet-our-staff-container .top div {
   background-color: var(--pizza-green);
-  color: var(--pizza-yellow);
+  color: var(--pizza-beige);
+  width: calc(25% - 20px);
+  margin: 0px 10px 0px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 
+  0 -4px 6px -1px rgba(9, 23, 54, 0.15), 
+  0 4px 6px -1px rgba(9, 23, 54, 0.15), 
+  -4px 0 6px -1px rgba(9, 23, 54, 0.15), 
+  4px 0 6px -1px rgba(9, 23, 54, 0.15);
 }
 
-/* JUMBOTRON-CONTAINER END*/
-/* JUMBOTRON-CONTAINER END*/
-/* JUMBOTRON-CONTAINER END*/
-/* JUMBOTRON-CONTAINER END*/
-/* JUMBOTRON-CONTAINER END*/
+#about-us-page .meet-our-staff-container .top div img {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  margin-top:10px;
+}
+
+#about-us-page .meet-our-staff-container .top div h3 {
+  margin: 1em 0em;
+  font-size: 3em;
+  color: var(--pizza-yellow)
+}
+
+#about-us-page .meet-our-staff-container .top div p {
+  width: 90%;
+  margin:0 auto 1em auto;
+  font-size: 2em;
+  line-height: 40px;
+}
+
+/* BOTTOM */
+#about-us-page .meet-our-staff-container .bottom {
+  margin: 8em 0em 0em 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#about-us-page .meet-our-staff-container .bottom h2 {
+  font-size: 5em;
+}
+
+#about-us-page .meet-our-staff-container .bottom p {
+  width:80%;
+  margin: 2em auto 0em auto;
+  font-size: 2em;
+  line-height: 60px;
+}
+
+#about-us-page .meet-our-staff-container .bottom .circle {
+  position: relative;
+  overflow: visible;
+}
+
+#about-us-page .meet-our-staff-container .bottom .circle img {
+  border-radius: 100%;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+#about-us-page .meet-our-staff-container .bottom .pizza__smoke {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  z-index: 10;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/386739/smoke.png);
+  background-size: 100% auto;
+  animation: smoke-animation 8s linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes smoke-animation {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 340%; }
+}
+
+/* MEET OUR STAFF - END */
+/* MEET OUR STAFF - END */
+/* MEET OUR STAFF - END */
+/* MEET OUR STAFF - END */
+/* MEET OUR STAFF - END */
+/* (ALWAYS THE SAME SECTION) */
+/* (ALWAYS THE SAME SECTION) */
+/* (ALWAYS THE SAME SECTION) */
+/* (ALWAYS THE SAME SECTION) */
+/* (ALWAYS THE SAME SECTION) */
+/* WRAPPED TEXT SECTION - START */
+/* WRAPPED TEXT SECTION - START */
+/* WRAPPED TEXT SECTION - START */
+/* WRAPPED TEXT SECTION - START */
+/* WRAPPED TEXT SECTION - START */
+
+#about-us-page section.wrapped-text-section {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#about-us-page section.wrapped-text-section .circle {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 1 */
+#about-us-page section.wrapped-text-section .circle.circle1 {
+  height: 500px;
+  width: 500px;
+  float: left;
+  border-radius: 50%;
+  margin: 20px;
+  shape-outside: circle();
+}
+
+/* 2 */
+#about-us-page section.wrapped-text-section .circle.circle2 {
+  height: 300px;
+  width: 300px;
+  float: right;
+  border-radius: 50%;
+  margin: 20px;
+  shape-outside: circle();
+}
+
+#about-us-page section.wrapped-text-section .circle img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+#about-us-page section.wrapped-text-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#about-us-page section.wrapped-text-section p {
+  letter-spacing: 4px;
+  line-height: 40px;
+}
+
+/* WRAPPED TEXT SECTION - START */
+/* WRAPPED TEXT SECTION - START */
+/* WRAPPED TEXT SECTION - START */
+/* WRAPPED TEXT SECTION - START */
+/* WRAPPED TEXT SECTION - START */
+
+#about-us-page .banner {
+  margin-top: 0;
+}
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -498,7 +690,57 @@ body::-webkit-scrollbar-thumb:hover {
 /* SMALL - MEDIA QUERY START */
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
-
+  
+  #about-us-page .meet-our-staff-container {
+    margin: 5em 0em;
+  }
+  
+  #about-us-page .meet-our-staff-container .bottom {
+    width: 90%;
+    margin: 5em auto 0em auto;
+  }
+  
+  #about-us-page .meet-our-staff-container .bottom h2 {
+    font-size: 3em;
+  }
+  
+  #about-us-page .meet-our-staff-container .bottom p {
+    width:100%;
+  }
+  
+  #about-us-page .meet-our-staff-container h2#title {
+    margin-bottom: 1em;
+    font-size: 3em;
+  }
+  
+  #about-us-page .meet-our-staff-container .top {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #about-us-page .meet-our-staff-container .top div {
+    width: 100%;
+    margin-bottom:2em;
+  }
+  
+  #about-us-page section.wrapped-text-section {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #about-us-page section.wrapped-text-section .circle.circle1,
+  #about-us-page section.wrapped-text-section .circle.circle2 {
+    width: 250px;
+    height:250px;
+    float: initial;
+  }
+  
 }
 
 /* SMALL - MEDIA QUERY END */
