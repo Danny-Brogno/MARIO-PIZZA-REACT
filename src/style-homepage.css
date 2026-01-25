@@ -212,16 +212,16 @@ body::-webkit-scrollbar-thumb:hover {
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
-/* CONTAINER START*/
-/* CONTAINER START*/
-/* CONTAINER START*/
-/* CONTAINER START*/
-/* CONTAINER START*/
+/* JUMBOTRON START*/
+/* JUMBOTRON START*/
+/* JUMBOTRON START*/
+/* JUMBOTRON START*/
+/* JUMBOTRON START*/
 
 #homepage .jumbotron section.main-container {
-  width:100%;
-  height:100%;
-  margin: 100px 0px 100px 0px;
+  width: 100%;
+  height: 100%;
+  margin: 5em auto 5em auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,7 +234,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* BOX */
-#homepage .container {
+#homepage .jumbotron section.main-container .container {
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -244,9 +244,9 @@ body::-webkit-scrollbar-thumb:hover {
   min-height: 800px;
 }
 
-#homepage .container .firstLine,
-#homepage .container .secondLine,
-.container .thirdLine {
+#homepage .jumbotron section.main-container .container .firstLine,
+#homepage .jumbotron section.main-container .container .secondLine,
+#homepage .jumbotron section.main-container .container .thirdLine {
   width: 100%;
   height: 50%;
   display:flex;
@@ -254,7 +254,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-wrap: wrap;
 }
 
-#homepage .box {
+#homepage .jumbotron section.main-container .container .box {
   width: calc(100% / 3);
   height: 100%;
   border: 2px solid var(--pizza-beige);
@@ -268,7 +268,7 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 8px;
 }
 
-#homepage .box img {
+#homepage .jumbotron section.main-container .container .box img {
   width: 100%;
   height: 100%;
   display: flex;
@@ -277,7 +277,7 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 8px;
 }
 
-#homepage .dark {
+#homepage .jumbotron section.main-container .container .dark {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 0;
@@ -287,11 +287,11 @@ body::-webkit-scrollbar-thumb:hover {
   display: none;
 }
 
-#homepage .box:hover .dark {
+#homepage .jumbotron section.main-container .container .box:hover .dark {
   display: block;
 }
 
-#homepage .box h3 {
+#homepage .jumbotron section.main-container .container .box h3 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -302,11 +302,30 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 3;
 }
 
-/* CONTAINER END*/
-/* CONTAINER END*/
-/* CONTAINER END*/
-/* CONTAINER END*/
-/* CONTAINER END*/
+#homepage .jumbotron section.main-container .container .jumbotron-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5em 0em 0em 0em;
+}
+
+#homepage .jumbotron section.main-container .container .jumbotron-btn-container button {
+  background-color: var(--pizza-green);
+  color: var(--pizza-yellow);
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 2em;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+/* JUMBOTRON END*/
+/* JUMBOTRON END*/
+/* JUMBOTRON END*/
+/* JUMBOTRON END*/
+/* JUMBOTRON END*/
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -314,15 +333,15 @@ body::-webkit-scrollbar-thumb:hover {
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
-/* jumbotron-container START*/
-/* jumbotron-container START*/
-/* jumbotron-container START*/
-/* jumbotron-container START*/
-/* jumbotron-container START*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
 
 #homepage .jumbotron-scrolling-carousel {
   width: 100%;
-  margin: 8em 0em
+  margin: 5em 0em
 }
 
 #homepage .jumbotron-scrolling-carousel section {
@@ -429,11 +448,11 @@ body::-webkit-scrollbar-thumb:hover {
   color: var(--pizza-yellow);
 }
 
-/* jumbotron-container END*/
-/* jumbotron-container END*/
-/* jumbotron-container END*/
-/* jumbotron-container END*/
-/* jumbotron-container END*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
+/* JUMBOTRON-SCOLLING-CAROUSEL - START*/
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -567,7 +586,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
-
+/* MEDIA QUERIES */
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -683,20 +702,21 @@ body::-webkit-scrollbar-thumb:hover {
   /* ------------------------------------- */
   /* ------------------------------------- */
   
-  /* CONTAINER / MAIN START */
-  /* CONTAINER / MAIN START */
-  /* CONTAINER / MAIN START */
-  /* CONTAINER / MAIN START */
-  /* CONTAINER / MAIN START */
+  /* JUMBOTRON - START */
+  /* JUMBOTRON - START */
+  /* JUMBOTRON - START */
+  /* JUMBOTRON - START */
+  /* JUMBOTRON - START */
   
-  #homepage .container {
+  #homepage .jumbotron section.main-container .container {
     height:initial;
     width:90%;
     margin:0 auto;
   }
-  #homepage .container .firstLine,
-  #homepage .container .secondLine,
-  #homepage .container .thirdLine {
+  
+  #homepage .jumbotron section.main-container .container .firstLine,
+  #homepage .jumbotron section.main-container .container .secondLine,
+  #homepage .jumbotron section.main-container .container .thirdLine {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -704,7 +724,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
   }
   
-  #homepage .box {
+  #homepage .jumbotron section.main-container .container .box {
     height:100%;
     width:100%;
     padding:0;
@@ -715,126 +735,19 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 50px 0px 0px 0px;
   }
   
-  #homepage div section.main-container h1 {
-    font-size: 3em;
-    text-align: center;
-  }
-  
-  /* CONTAINER / MAIN END */
-  /* CONTAINER / MAIN END */
-  /* CONTAINER / MAIN END */
-  /* CONTAINER / MAIN END */
-  /* CONTAINER / MAIN END */
-  
-  /* ------------------------------------- */
-  /* ------------------------------------- */
-  /* ------------------------------------- */
-  /* ------------------------------------- */
-  /* ------------------------------------- */
-  
-  /* BANNER START */
-  /* BANNER START */
-  /* BANNER START */
-  /* BANNER START */
-  /* BANNER START */
-  
-  #homepage .banner {
-    height: initial;
-    margin: 50px 0px 0px 0px;
-  }
-  
-  #homepage .banner .top {
-    height: initial;
-    font-size: initial;
+  #homepage .jumbotron section.main-container h1 {
     width: 90%;
-    margin: 0 auto 3em auto;
-  }
-  
-  #homepage .banner .contact-now {
-    font-size: 1.3em;
-    padding: 0;
-  }
-  
-  #homepage .banner section.banner-section {
-    flex-direction: column;
-    height:initial;
-  }
-  
-  #homepage .banner section.banner-section div > img {
-    margin-bottom: 2em;
-  }
-  
-  #homepage .banner section.banner-section .one img, 
-  #homepage .banner section.banner-section .two img, 
-  #homepage .banner section.banner-section .three img, 
-  #homepage .banner section.banner-section .four img, 
-  #homepage .banner section.banner-section .five img {
-    width: 100%;
-  }
-  
-  /* OVERLAY POPUP START */
-  /* OVERLAY POPUP START */
-  /* OVERLAY POPUP START */
-  /* OVERLAY POPUP START */
-  /* OVERLAY POPUP START */
-  
-  #homepage .banner .overlay-content .inside {
-    width:90%;
-    margin:0 auto;
-    height:initial;
-  }
-  
-  #homepage .banner .overlay-content .inside .big {
-    font-size: 1.3em;
+    margin: 0em auto 1em auto;
+    font-size: 4em;
     text-align: center;
   }
   
-  #homepage .banner .overlay-content .inside section:first-of-type,
-  #homepage .banner .overlay-content .inside section:nth-child(2),
-  #homepage .banner .overlay-content .inside section:last-of-type {
-    height: initial;
-    flex-direction: column;
-  }
-  
-  #homepage .banner .overlay-content .inside section:nth-child(2) .left .upper {
-    height:initial;
-    width: 100%;
-  }
-  
-  #homepage .banner .overlay-content .inside section:nth-child(2) .left .upper label {
-    margin: 2em 0em;
-    text-align: center;
-  }
-  
-  #homepage .banner .overlay-content .inside section:nth-child(2) .left .upper #myDropdown,
-  #homepage .banner .overlay-content .inside textarea {
-    margin-bottom: 2em;
-  }
-  
-  #homepage .banner .overlay-content .inside section:nth-child(2) .left .lower {
-    width:100%;
-  }
-  
-  #homepage .banner .overlay-content .inside section:nth-child(2) .left,
-  #homepage .banner .overlay-content .inside section:nth-child(2) .right {
-    width: 100%;
-  }
-  
-  #homepage .banner .overlay-content .inside section:last-of-type button {
-    padding: 1em 3em;
-    margin: 2em 0em;
-  }
-  
-  #homepage .banner .overlay-content .inside section:nth-child(2) .right div {
-    margin-bottom: 2em;
-  }
-  
-  /* OVERLAY POPUP END */
-  /* OVERLAY POPUP END */
-  /* OVERLAY POPUP END */
-  /* OVERLAY POPUP END */
-  /* OVERLAY POPUP END */
-  
+  /* CONTAINER / MAIN END */
+  /* CONTAINER / MAIN END */
+  /* CONTAINER / MAIN END */
+  /* CONTAINER / MAIN END */
+  /* CONTAINER / MAIN END */
+
   /* ------------------------------------- */
   /* ------------------------------------- */
   /* ------------------------------------- */
@@ -856,11 +769,14 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
   }
   
+  #homepage .jumbotron-scrolling-carousel section .container-right .text {
+    margin: 0em auto 1em auto;
+  }
+  
   #homepage .jumbotron-scrolling-carousel section .container-right .text h2 {
     text-align: center;
     font-size: 3em;
-    margin-bottom: 0;
-    margin: 2em 0em 1em 0em;
+    margin: 1em 0em 1em 0em;
   }
   
   #homepage .jumbotron-scrolling-carousel section .container-right .text h3 {
@@ -872,7 +788,16 @@ body::-webkit-scrollbar-thumb:hover {
   
   #homepage .jumbotron-scrolling-carousel section .container-right .btn-container {
     margin:1em 0em;
+    width: 100%;
   }
+  
+  #homepage .jumbotron-scrolling-carousel section .container-right .btn-container button {
+    width: 100%;
+    padding: 1em 0em;
+    border: none;
+    margin-top: 1em;
+  }
+  
   
   #homepage .jumbotron-scrolling-carousel section .container-right p {
     width: 100%;
@@ -889,6 +814,39 @@ body::-webkit-scrollbar-thumb:hover {
   /* ------------------------------------- */
   /* ------------------------------------- */
   /* ------------------------------------- */
+  
+  #homepage .jumbotron-static-image {
+    height: initial;
+    min-height: initial;
+  }
+  
+  #homepage .jumbotron-static-image section {
+    flex-direction: column;
+  }
+  
+  #homepage .jumbotron-static-image section .container-left,
+  #homepage .jumbotron-static-image section .container-right,
+  #homepage .jumbotron-static-image section .container-right .text,
+  #homepage .jumbotron-static-image section .container-right p,
+  #homepage .jumbotron-static-image section .container-right .btn-container {
+    width: 100%;
+  }
+  
+  #homepage .jumbotron-static-image section .container-right {
+    margin-top: 3em;
+  }
+  
+  #homepage .jumbotron-static-image section .container-right p {
+    margin: 2em 0em 2em 0em;
+  }
+  
+  #homepage .jumbotron-static-image section .container-right .btn-container button {
+    width: 100%;
+    padding: 1em 0em;
+    border: none;
+  }
+  
+  
 }
 
 /* SMALL - MEDIA QUERY END */

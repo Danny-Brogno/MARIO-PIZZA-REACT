@@ -33,31 +33,42 @@ export const UnderHeaderAboutUs = () => {
         <div className="center">
         
           <div>
+          
             <p data-splitting>
               In 1925, Mario traded his plumbing wrench for a rolling pin, realizing that fixing leaky pipes was far less lucrative than feeding the masses. 
               Legend says he discovered the "Secret Sauce" after accidentally dropping a Fire Flower into a vat of San Marzano tomatoes giving the crust its signature kick. 
+            </p>
+            
+            <p data-splitting>
               Alongside Peach, who brought royal standards to the kitchen (and kept Mario from jumping on the customers), they built an empire. 
               One slice, and you’ll realize the princess isn't in another castle she’s here, eating pepperoni.
             </p>
+            
           </div>
+          
           
           <div>
             <img src={pizzaBackground} alt="image-here" />
           </div>
           
           <div>
+          
             <p data-splitting>
               In 1925, Mario left the comfort of the familiar to honor a heritage written in flour and sweat. 
               It wasn't about games; it was about the sacrifice of a man who worked until his hands were stained with the earth of Italy. 
+            </p>
+            
+            <p data-splitting>
               Every dough ball is aged for forty-eight hours, a testament to the patience that true craft demands. 
               We don't cut corners; we honor the legacy of hard-earned tradition, serving authentic, wood-fired history that tastes of home and heart.
             </p>
+            
           </div>
           
         </div>
         
         <div className="bottom">
-          <button type="button">CLICK HERE TO DOWNLOAD OUR MENU</button>
+          <h1>SOME TEXT HERE</h1>
         </div>
         
       </div>

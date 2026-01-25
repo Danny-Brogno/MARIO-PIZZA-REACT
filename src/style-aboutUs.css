@@ -107,6 +107,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 #about-us-page .under-header-AboutUs .central-container {
   width: 90%;
+  height: 1100px;
 }
 
 /* TOP */
@@ -147,10 +148,16 @@ body::-webkit-scrollbar-thumb:hover {
 
 #about-us-page .under-header-AboutUs .central-container div.center div:first-child {
   margin-right: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #about-us-page .under-header-AboutUs .central-container div.center div:last-child {
   margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #about-us-page .under-header-AboutUs .central-container div.center div:first-child p .char,
@@ -170,7 +177,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #about-us-page .under-header-AboutUs .central-container div.center div:nth-child(2) img {
-  height:40em;
+  height:100%;
   border-radius: 10px;
 }
 
@@ -181,18 +188,6 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: center;
   margin: 5em 0em;
-}
-
-#about-us-page .under-header-AboutUs .central-container div.bottom button {
-  background-color: var(--pizza-green);
-  color: var(--pizza-yellow);
-  font-weight: bold;
-  font-size: 1.1em;
-  padding: 2em;
-  border-radius: 10px;
-  cursor: pointer;
-  outline: none;
-  border: none;
 }
 
 /* ANIMATION IN THE BACKGROUND */
