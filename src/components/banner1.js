@@ -26,7 +26,7 @@ export const Banner1 = () => {
   const closeNav = () => setIsNavOpen(false);
 
   return (
-    <div className="banner">
+    <div className="banner one">
       <div className="top">
         <h2>
           ORDER ONLINE OR GET IN TOUCH BY CLICKING 

@@ -59,7 +59,7 @@ export const JumbotronScrollingCarousel = () => {
             Our secret isn't just the imported flour or the tomatoes that sat in the Italian sun a little longer than the rest; it’s the fact that we refuse to take ourselves too seriously, even if we take our toppings very, very seriously.
           </p>
           <div className="btn-container">
-            <button type="button">READ MORE</button>
+            <button type="button" className="my-button-first" style={{margin: "0"}}>READ MORE</button>
           </div>
         </div>
       </section>

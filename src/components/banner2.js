@@ -1,9 +1,4 @@
-import React, { useState, useEffect } from 'react'; // Import hooks
-import pizza10 from '../img/10.jpg';
-import pizza11 from '../img/11.jpg';
-import pizza12 from '../img/12.jpg';
-import pizza13 from '../img/13.jpg';
-import pizza14 from '../img/14.jpg';
+import React, { useState, useEffect } from 'react';
 
 export const Banner2 = () => {
   // Create state to track if the overlay is open
@@ -26,7 +21,7 @@ export const Banner2 = () => {
   const closeNav = () => setIsNavOpen(false);
 
   return (
-    <div className="banner">
+    <div className="banner two">
       <div className="top">
         <h2>
           ORDER ONLINE OR GET IN TOUCH BY CLICKING 
@@ -107,11 +102,7 @@ export const Banner2 = () => {
       </div>
 
       <section className="banner-section">
-        <div className="one"><img src={pizza14} alt="pizza10" /></div>
-        <div className="two"><img src={pizza13} alt="pizza11" /></div>
-        <div className="three"><img src={pizza12} alt="pizza12" /></div>
-        <div className="four"><img src={pizza11} alt="pizza13" /></div>
-        <div className="five"><img src={pizza10} alt="pizza14" /></div>
+        
       </section>
     </div>
   );

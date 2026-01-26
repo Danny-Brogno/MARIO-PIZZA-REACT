@@ -113,6 +113,49 @@ body {
   overflow: hidden;
 }
 
+.my-button-first {
+  border: none;
+  padding: 1em 6em;
+  background-color: var(--pizza-yellow);
+  color: var(--pizza-green);
+  transition: 0.4s;
+  border-radius: 10px;
+  margin: 3em 0em 2em 0em;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.my-button-first:hover {
+  background-color: var(--pizza-red);
+  color: var(--pizza-yellow);
+}
+
+.my-button-special {
+  background-color: var(--pizza-green);
+  color: var(--pizza-yellow);
+  border: none;
+  padding: 20px 100px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.my-button-special:hover {
+  background-color: var(--pizza-red);
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -228,6 +271,7 @@ header nav ul li span:last-of-type{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 header nav ul li span:last-of-type h2 {
@@ -933,12 +977,14 @@ footer#footer-global section .scroll-top-btn ul:hover {
   }
 
   #invisible-burger .dropdown li {
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
     font-size: 60%;
     color: var(--normal-black);
+    cursor: pointer;
   }
 
   #invisible-burger .dropdown li:hover {
@@ -958,37 +1004,38 @@ footer#footer-global section .scroll-top-btn ul:hover {
   /* BANNER START*/
   /* BANNER START*/
 
-  .banner {
+  .banner1 {
     height: initial;
     margin: 50px 0px 0px 0px;
   }
   
-  .banner .top {
+  .banner1 .top {
     height: initial;
     font-size: initial;
     width: 90%;
     margin: 0 auto 3em auto;
+    text-align: center;
   }
   
-  .banner .contact-now {
+  .banner1 .contact-now {
     font-size: 1.3em;
     padding: 0;
   }
   
-  .banner section.banner-section {
+  .banner1 section.banner-section {
     flex-direction: column;
     height:initial;
   }
   
-  .banner section.banner-section div > img {
+  .banner1 section.banner-section div > img {
     margin-bottom: 2em;
   }
   
-  .banner section.banner-section .one img, 
-  .banner section.banner-section .two img, 
-  .banner section.banner-section .three img, 
-  .banner section.banner-section .four img, 
-  .banner section.banner-section .five img {
+  .banner1 section.banner-section .one img, 
+  .banner1 section.banner-section .two img, 
+  .banner1 section.banner-section .three img, 
+  .banner1 section.banner-section .four img, 
+  .banner1 section.banner-section .five img {
     width: 100%;
   }
   
@@ -1074,7 +1121,7 @@ footer#footer-global section .scroll-top-btn ul:hover {
   
   footer#footer-global .top-footer,
   footer#footer-global .bottom-footer {
-    width: 95%;
+    width: 90%;
     flex-direction: column;
   }
   

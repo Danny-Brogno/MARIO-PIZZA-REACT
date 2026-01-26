@@ -33,11 +33,15 @@ export const Header = ({currentPage, setCurrentPage}) => {
     // Select all elements that need the blur effect
     const elementsToBlur = [
       ".under-header",
-      "main",
-      "footer",
+      ".jumbotron",
+      ".jumbotron-scrolling-carousel",
+      ".three-box-container-homepage",
+      ".three-box-container-aboutUs",
       ".logo-container",
-      ".banner",
-      ".jumbotron-container"
+      ".banner1",
+      ".banner2",
+      ".jumbotron-static-image",
+      "footer"
     ];
     
     elementsToBlur.forEach(selector => {

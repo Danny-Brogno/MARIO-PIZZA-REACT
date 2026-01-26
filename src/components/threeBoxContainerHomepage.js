@@ -15,6 +15,7 @@ export const ThreeBoxContainerHomepage = () => {
           <p>
             Mozzarella, fresh rocket, prosciutto crudo di Parma and olive oil.
           </p>
+          <button type="button" className="my-button-first" style={{margin: "3em 0em 2em 0em"}}>ORDER NOW</button>
         </div>
         
         <div>
@@ -23,6 +24,7 @@ export const ThreeBoxContainerHomepage = () => {
           <p>
             Grilled italian salsiccia, savory cime di rapa and olive oil.
           </p>
+          <button type="button" className="my-button-first" style={{margin: "3em 0em 2em 0em"}}>ORDER NOW</button>
         </div>
         
         <div>
@@ -31,16 +33,20 @@ export const ThreeBoxContainerHomepage = () => {
           <p>
             Mozzarella, buffalo mozzarella, cherry tomatoes, basil and olive oil.
           </p>
+          <button type="button" className="my-button-first" style={{margin: "3em 0em 2em 0em"}}>ORDER NOW</button>
         </div>
 
       </div>
       <div className="bottom">
+      
         <h2>
           Beyond the crust: slice your perfect day.
         </h2>
+        
         <p>
           Our doughy delights are just the start. If you need more than a quick bite, explore our savory services: custom topping building, exclusive cheesy deals not found elsewhere, or direct consultation with Mario to match your specific hunger needs with the perfect pizza property.
         </p>
+        
       </div>
     </div>
   )

@@ -37,7 +37,7 @@ export const JumbotronStaticImage = () => {
           </p>
           
           <div className="btn-container">
-            <button type="button">
+            <button type="button" className="my-button-first" style={{margin: "3em 0em 0em 0em"}}>
               READ MORE
             </button>
           </div>

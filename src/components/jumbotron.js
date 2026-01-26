@@ -10,15 +10,15 @@ import pizza8 from '../img/8.jpg';
 import pizza9 from '../img/9.jpg';
 
 export const Jumbotron = () => {
-  // 1. State to track which image is enlarged
+  // State to track which image is enlarged
   const [enlargedImg, setEnlargedImg] = useState(null);
 
-  // 2. Function to open the overlay
+  // Function to open the overlay
   const handleImageClick = (imgSrc) => {
     setEnlargedImg(imgSrc);
   };
 
-  // 3. Function to close the overlay
+  // Function to close the overlay
   const closeOverlay = () => {
     setEnlargedImg(null);
   };
@@ -96,7 +96,7 @@ export const Jumbotron = () => {
           </div>
           
           <div className="jumbotron-btn-container">
-            <button type="button">CLICK HERE TO DOWNLOAD OUR MENU</button>
+            <button type="button" className="my-button-first" style={{padding: "2em 8em", margin: "5em 0em 0em 0em"}}>CLICK HERE TO DOWNLOAD OUR MENU</button>
           </div>
           
         </div>

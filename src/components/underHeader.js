@@ -32,7 +32,7 @@ export const UnderHeader = () => {
             Follow our love for perfect crust and texture; make your next dinner a pizza one!
           </p>
           
-          <button className="order-now-btn">
+          <button className="my-button-special">
             Order now!
           </button>
         </div>
