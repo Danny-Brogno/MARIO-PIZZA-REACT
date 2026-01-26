@@ -3,9 +3,10 @@ import React, { useEffect } from 'react';
 // COMPONENTS
 import { UnderHeader } from "../../components/underHeader.js";
 import { Jumbotron } from "../../components/jumbotron.js";
-import { Banner } from "../../components/banner.js";
 import { JumbotronScrollingCarousel } from "../../components/jumbotronScrollingCarousel.js";
+import { Banner1 } from "../../components/banner1.js";
 import { ThreeBoxContainerHomepage } from "../../components/threeBoxContainerHomepage.js"
+import { Banner2 } from "../../components/banner2.js";
 import { JumbotronStaticImage } from "../../components/jumbotronStaticImage.js";
 
 // CSS
@@ -39,9 +40,9 @@ export const HomePage = () => {
       <UnderHeader />
       <Jumbotron />
       <JumbotronScrollingCarousel />
-      <Banner />
+      <Banner1 />
       <ThreeBoxContainerHomepage />
-      <Banner />
+      <Banner2 />
       <JumbotronStaticImage />
     </div>
   )

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 // COMPONENTS
 import { UnderHeaderAboutUs } from "../../components/underHeaderAboutUs.js";
 import { MeetOurStaffContainer } from "../../components/meetOurStaffContainer.js";
-import { Banner } from "../../components/banner.js";
+import { Banner1 } from "../../components/banner1.js";
 import { ThreeBoxContainerAboutUs } from "../../components/threeBoxContainerAboutUs.js";
 
 // CSS
@@ -33,7 +33,7 @@ export const AboutUs = () => {
   return (
     <div id="about-us-page">
       <UnderHeaderAboutUs />
-      <Banner />
+      <Banner1 />
       <MeetOurStaffContainer />
       <ThreeBoxContainerAboutUs />
     </div>

@@ -188,7 +188,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: 20%;
   display: flex;
   justify-content: center;
-  margin: 5em 0em;
+  align-items: center;
 }
 
 /* ANIMATION IN THE BACKGROUND */

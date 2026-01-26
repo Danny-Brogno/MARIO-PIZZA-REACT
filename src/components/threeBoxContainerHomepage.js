@@ -7,7 +7,7 @@ import pizza3 from '../img/32.jpg';
 export const ThreeBoxContainerHomepage = () => {
   return (
     <div className="three-box-container-homepage">
-    <h1>BEST SELLERS</h1>
+      <h1>BEST SELLERS</h1>
       <div className="top">
         <div>
           <img src={pizza1} alt="image-here" />

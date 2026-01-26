@@ -5,11 +5,11 @@ import pizza12 from '../img/12.jpg';
 import pizza13 from '../img/13.jpg';
 import pizza14 from '../img/14.jpg';
 
-export const Banner = () => {
-  // 1. Create state to track if the overlay is open
+export const Banner2 = () => {
+  // Create state to track if the overlay is open
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  // 2. Logic to handle the body overflow (prevents scrolling when overlay is open)
+  // Logic to handle the body overflow (prevents scrolling when overlay is open)
   useEffect(() => {
     if (isNavOpen) {
       document.body.classList.add("overflow-hidden");
@@ -21,7 +21,7 @@ export const Banner = () => {
     return () => document.body.classList.remove("overflow-hidden");
   }, [isNavOpen]);
 
-  // 3. Translated functions
+  // Translated functions
   const openNav = () => setIsNavOpen(true);
   const closeNav = () => setIsNavOpen(false);
 
@@ -33,7 +33,7 @@ export const Banner = () => {
           <b className="contact-now" onClick={openNav}> HERE</b>
         </h2>
 
-        {/* 4. The Overlay (controlled by isNavOpen state) */}
+        {/* The Overlay (controlled by isNavOpen state) */}
         <div 
           id="myNav" 
           className="overlay" 
@@ -107,11 +107,11 @@ export const Banner = () => {
       </div>
 
       <section className="banner-section">
-        <div className="one"><img src={pizza10} alt="pizza10" /></div>
-        <div className="two"><img src={pizza11} alt="pizza11" /></div>
+        <div className="one"><img src={pizza14} alt="pizza10" /></div>
+        <div className="two"><img src={pizza13} alt="pizza11" /></div>
         <div className="three"><img src={pizza12} alt="pizza12" /></div>
-        <div className="four"><img src={pizza13} alt="pizza13" /></div>
-        <div className="five"><img src={pizza14} alt="pizza14" /></div>
+        <div className="four"><img src={pizza11} alt="pizza13" /></div>
+        <div className="five"><img src={pizza10} alt="pizza14" /></div>
       </section>
     </div>
   );
