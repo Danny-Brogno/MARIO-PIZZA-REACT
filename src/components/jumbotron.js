@@ -96,7 +96,7 @@ export const Jumbotron = () => {
           </div>
           
           <div className="jumbotron-btn-container">
-            <button type="button" className="my-button-first" style={{padding: "2em 8em", margin: "5em 0em 0em 0em"}}>CLICK HERE TO DOWNLOAD OUR MENU</button>
+            <button type="button" className="my-button-first" style={{padding: "2em 8em", margin: "5em 0em 0em 0em", letterSpacing: "3px"}}>DOWNLOAD OUR MENU</button>
           </div>
           
         </div>
