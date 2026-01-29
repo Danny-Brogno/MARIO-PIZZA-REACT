@@ -24,4 +24,21 @@ for pizza in pizza_menu:
     for ingredient in pizza['ingredients']:
         print(f" - Ingredient {ingredient}: OK")
 
-print("\nSystem ready. Awaiting orders from React Frontend...")
+print(f"System ready. Awaiting orders from React Frontend...")
+
+
+x = 1
+y = 2
+sum = x + y
+subtraction = y - x
+multiplication = y * x 
+division = y / x 
+
+print(f"Sum -> 1+2={sum}   Subtraction -> 2-1={subtraction}   Multiplication -> 2x1={multiplication}   Division -> 2/1={division}")
+
+if x > y:
+    print(f"{x} is bigger than {y}")
+elif x == y:
+    print(f"{x} and {y} are the same")
+else:
+    print(f"{y} is bigger than {x}")
