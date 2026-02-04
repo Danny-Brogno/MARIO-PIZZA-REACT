@@ -1107,7 +1107,8 @@ footer#footer-global section .scroll-top-btn ul:hover {
   
   .banner section.banner-section {
     flex-direction: column;
-    height:initial;
+    height: initial;
+    width: 100%;
   }
   
   .banner section.banner-section div > img {
@@ -1120,6 +1121,11 @@ footer#footer-global section .scroll-top-btn ul:hover {
   .banner section.banner-section .four img, 
   .banner section.banner-section .five img {
     width: 100%;
+  }
+  
+  .banner section.banner-section div {
+    margin: 0;
+    width: 90%;
   }
   
   /* OVERLAY POPUP START */

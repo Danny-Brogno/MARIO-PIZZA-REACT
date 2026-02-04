@@ -96,20 +96,20 @@ export const Jumbotron = () => {
           </div>
           
           <div className="jumbotron-btn-container">
-  <a 
-    href="/Mario_Pizza_Menu.pdf" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    style={{ textDecoration: 'none' }} // Prevents link underlining
-  >
-    <button 
-      type="button" 
-      className="my-button-first" 
-    >
-      DOWNLOAD OUR MENU
-    </button>
-  </a>
-</div>
+            <a 
+              href="/Mario_Pizza_Menu.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none' }} // Prevents link underlining
+            >
+              <button 
+                type="button" 
+                className="my-button-first" 
+              >
+                DOWNLOAD OUR MENU
+              </button>
+            </a>
+          </div>
           
         </div>
       </section>

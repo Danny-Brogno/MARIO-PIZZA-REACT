@@ -858,6 +858,10 @@ body::-webkit-scrollbar-thumb:hover {
     height: 5em;
   }
   
+  #homepage .jumbotron .jumbotron-btn-container a {
+    width: 100%;
+  }
+  
   /* JUMBOTRON - END */
   /* JUMBOTRON - END */
   /* JUMBOTRON - END */

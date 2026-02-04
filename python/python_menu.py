@@ -2,14 +2,14 @@ from fpdf import FPDF
 
 class MarioMenu(FPDF):
     def header(self):
-        # 1. DRAW THE BACKGROUND FIRST (The Paper)
+        # DRAW THE BACKGROUND FIRST (The Paper)
         self.set_fill_color(247, 197, 49) # Pizza Yellow
         self.rect(0, 0, 210, 297, 'F') 
         
-        # 2. DRAW THE LOGO
+        # DRAW THE LOGO
         self.image('mario-pizza-logo.png', 10, 8, 30) 
         
-        # 3. DRAW THE TITLE (Red)
+        # DRAW THE TITLE (Red)
         self.set_font('Arial', 'B', 24)
         self.set_text_color(214, 40, 40) # Pizza Red
         self.cell(0, 20, 'MARIO PIZZA MENU', 0, 1, 'C')
@@ -34,10 +34,15 @@ pdf.add_page() # This automatically runs the header() above
 # Start writing the content
 pdf.section_title("PIZZAS")
 items = [
-    ("Margherita", "£5"), ("Pepperoni", "£7"), ("Sausage & turnip greens", "£8"),
-    ("Bufala mozzarella", "£9"), ("Prosciutto crudo & mozzarella", "£10"),
-    ("Primavera", "£10"), ("Yellow tomatoes & burrata", "£8"),
-    ("Sundried tomatoes & bresaola", "£9"), ("Four cheeses", "£8")
+    ("Margherita", "£5"),
+    ("Pepperoni", "£7"),
+    ("Sausage & turnip greens", "£8"),
+    ("Bufala mozzarella", "£9"),
+    ("Prosciutto crudo & mozzarella", "£10"),
+    ("Primavera", "£10"),
+    ("Yellow tomatoes & burrata", "£8"),
+    ("Sundried tomatoes & bresaola", "£9"),
+    ("Four cheeses", "£8")
 ]
 for name, price in items:
     pdf.menu_item(name, price)

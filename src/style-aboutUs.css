@@ -457,16 +457,16 @@ body::-webkit-scrollbar-thumb:hover {
 
 #about-us-page .meet-our-staff-container .top {
   display: flex;
-  justify-content: space-evenly;
-  width:90%;
-  margin:0 auto;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #about-us-page .meet-our-staff-container .top div {
   background-color: var(--pizza-green);
   color: var(--pizza-beige);
   width: calc(25% - 20px);
-  margin: 0px 10px 0px 10px;
+  margin: 0px 0px 0px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
