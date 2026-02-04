@@ -112,3 +112,15 @@ print("Data Type:", type(random_number))
 
 print("--------------------------------------------------------------------------------------------")
 
+
+fullName = "Danny Brogno"
+print(fullName[0:5])
+print(fullName[0], fullName[4])
+
+if "Danny" not in fullName:
+    print(f"There is no Danny")
+elif "Danny" in fullName:
+    print(f"There is Danny")
+    
+for fullName in fullName:
+    print(fullName)
