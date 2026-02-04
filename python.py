@@ -114,6 +114,7 @@ print("-------------------------------------------------------------------------
 
 
 fullName = "Danny Brogno"
+job = "web developer"
 print(fullName[0:5])
 print(fullName[0], fullName[4])
 
