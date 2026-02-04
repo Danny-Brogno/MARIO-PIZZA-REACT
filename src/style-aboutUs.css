@@ -413,10 +413,12 @@ body::-webkit-scrollbar-thumb:hover {
 
 #about-us-page .three-box-container-aboutUs .bottom h2 {
   font-size: 4em;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #about-us-page .three-box-container-aboutUs .bottom p {
-  width:80%;
+  width: 90%;
   margin: 2em auto 0em auto;
   font-size: 2em;
   letter-spacing: 3px;
