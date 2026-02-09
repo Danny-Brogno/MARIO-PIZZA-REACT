@@ -329,7 +329,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 #homepage .jumbotron-scrolling-carousel section .container-left #slider {
   width: 100%;
-  height: 100%;
+  /* EDITED */
+  /* height: 100%; */
   padding: 5px;
   position:relative;
  }
@@ -372,12 +373,12 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0em auto 3em auto;
+  margin: 0em auto 0em auto;
 }
 
 #homepage .jumbotron-scrolling-carousel section .container-right .text h2 {
   font-size: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0.2em;
 }
 
 #homepage .jumbotron-scrolling-carousel section .container-right .text h3 {
@@ -390,8 +391,8 @@ body::-webkit-scrollbar-thumb:hover {
   margin:0 auto;
   display: flex;
   align-items: center;
-  line-height: 50px;
-  font-size: 1.6em;
+  line-height: 30px;
+  font-size: 1.3em;
 }
 
 #homepage .jumbotron-scrolling-carousel section .container-right .btn-container {
@@ -399,7 +400,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: 10%;
   display: flex;
   align-items: flex-end;
-  margin: 2em auto 0em auto;
+  margin: 0em auto 0em auto;
 }
 
 #homepage .jumbotron-scrolling-carousel section .container-right .btn-container button {
@@ -459,8 +460,9 @@ body::-webkit-scrollbar-thumb:hover {
 #homepage .three-box-container-homepage .top div {
   background-color: var(--pizza-green);
   color: var(--pizza-yellow);
-  flex: 1 1 300px; 
-  padding: 1em;
+  flex: 1 1 300px;
+  /* EDITED */
+  /* padding: 1em; */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -506,14 +508,14 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #homepage .three-box-container-homepage .top div h3 {
-  margin: 2em 0em;
+  margin: 1em auto;
   font-size: 2.5em;
 }
 
 #homepage .three-box-container-homepage .top div p {
-  width: 70%;
-  font-size: 1.7em;
-  line-height: 40px;
+  width: 90%;
+  font-size: 1.5em;
+  line-height: 30px;
   letter-spacing: 1px;
 }
 
@@ -576,7 +578,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* just in one section */
 #homepage .jumbotron-static-image section .container-left img {
-  height:100%;
+  /* EDITED */
+  /* height:100%; */
   width: 100%;
   border-radius: 30px;
 }
@@ -626,12 +629,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #homepage .jumbotron-static-image section .container-right .text h2 {
-  font-size: 3em;
-  margin-bottom: 1.5em;
+  font-size: 2.3em;
+  margin-bottom: 0.5em;
 }
 
 #homepage .jumbotron-static-image section .container-right .text h3 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 #homepage .jumbotron-static-image section .container-right p {
@@ -640,8 +643,8 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 0em auto;
   display: flex;
   align-items: center;
-  line-height: 50px;
-  font-size: 1.6em;
+  line-height: 30px;
+  font-size: 1.3em;
 }
 
 #homepage .jumbotron-static-image section .container-right .btn-container {
