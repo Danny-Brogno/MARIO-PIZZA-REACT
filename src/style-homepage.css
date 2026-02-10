@@ -393,6 +393,7 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
   line-height: 2;
   font-size: 1.50rem;
+  box-sizing: border-box;
 }
 
 #homepage .jumbotron-scrolling-carousel section .container-right .btn-container {
@@ -646,6 +647,7 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
   line-height: 2;
   font-size: 1.50rem;
+  box-sizing: border-box;
 }
 
 #homepage .jumbotron-static-image section .container-right .btn-container {
