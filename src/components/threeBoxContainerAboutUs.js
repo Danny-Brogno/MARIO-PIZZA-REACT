@@ -1,7 +1,7 @@
 import React from 'react';
-import pizza1 from '../img/15.jpg';
-import pizza2 from '../img/16.jpg';
-import pizza3 from '../img/28.jpg';
+import pizza15 from '../img/15.jpg';
+import pizza16 from '../img/16.jpg';
+import pizza28 from '../img/28.jpg';
 
 // --------------------------
 export const ThreeBoxContainerAboutUs = () => {
@@ -10,7 +10,7 @@ export const ThreeBoxContainerAboutUs = () => {
     <h1>OUR VALUES</h1>
       <div className="top">
         <div>
-          <img src={pizza1} alt="image-here" />
+          <img src={pizza15} alt="pizza-here" />
           <h3>Uncompromising Quality</h3>
           <p>
             We believe that a great pizza starts with the integrity of its ingredients. 
@@ -19,7 +19,7 @@ export const ThreeBoxContainerAboutUs = () => {
         </div>
         
         <div>
-          <img src={pizza2} alt="image-here" />
+          <img src={pizza16} alt="pizza-here" />
           <h3>Mastered Consistency</h3>
           <p>
             A perfect pizza is not a lucky accident but a guarantee. 
@@ -28,7 +28,7 @@ export const ThreeBoxContainerAboutUs = () => {
         </div>
         
         <div>
-          <img src={pizza3} alt="image-here" />
+          <img src={pizza28} alt="pizza-here" />
           <h3>Community Connection</h3>
           <p>
             A pizzeria is more than just a place to eat. It's a gathering for friends and families. 

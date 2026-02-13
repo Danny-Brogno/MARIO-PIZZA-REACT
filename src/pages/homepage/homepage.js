@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 // COMPONENTS
 import { UnderHeader } from "../../components/underHeader.js";
 import { Jumbotron } from "../../components/jumbotron.js";
+import { MakeYourOwnPizza } from "../../components/makeYourOwnPizza.js";
 import { JumbotronScrollingCarousel } from "../../components/jumbotronScrollingCarousel.js";
 import { Banner1 } from "../../components/banner1.js";
 import { ThreeBoxContainerHomepage } from "../../components/threeBoxContainerHomepage.js"
@@ -39,6 +40,7 @@ export const HomePage = () => {
     <div id="homepage">
       <UnderHeader />
       <Jumbotron />
+      <MakeYourOwnPizza />
       <JumbotronScrollingCarousel />
       <Banner1 />
       <ThreeBoxContainerHomepage />

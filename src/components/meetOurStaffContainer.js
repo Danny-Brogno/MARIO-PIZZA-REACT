@@ -1,10 +1,10 @@
 import React from 'react';
-import pizza15 from '../img/29.jpg';
-import pizza16 from '../img/30.jpg';
-import pizza17 from '../img/17.jpg';
-import pizza18 from '../img/18.jpg';
-import pizza19 from '../img/19.jpg';
-import pizza26 from '../img/26.jpg';
+import mario from '../img/10.jpg';
+import luigi from '../img/11.jpg';
+import peach from '../img/12.jpg';
+import daisy from '../img/13.jpg';
+import pizza29 from '../img/29.jpg';
+import pizza30 from '../img/30.jpg';
 
 export const MeetOurStaffContainer = () => {
   return (
@@ -13,7 +13,7 @@ export const MeetOurStaffContainer = () => {
           <div className="top">
           
             <div>
-              <img src={pizza17} alt="pizza17" />
+              <img src={mario} alt="mario" />
               <h3>Mario</h3>
               <p>
                 He goes beyond toppings. With years at roaring ovens, Mario masters dough hydration, woodfire temperatures, and authentic crust flavor the details most diners miss.
@@ -21,7 +21,7 @@ export const MeetOurStaffContainer = () => {
             </div>
             
             <div>
-              <img src={pizza18} alt="pizza18" />
+              <img src={luigi} alt="luigi" />
               <h3>Luigi</h3>
               <p>
                 Precision meets pure speed. Luigi handles dough, firing artisan pies quickly before racing through traffic so every delivery arrives as fast as the wind.
@@ -29,14 +29,14 @@ export const MeetOurStaffContainer = () => {
             </div>
             
             <div>
-              <img src={pizza19} alt="pizza19" />
+              <img src={peach} alt="peach" />
               <h3>Peach</h3>
               <p>
                 Affection fuels her recipes. Peach infuses heartfelt devotion into every meal, ensuring lucky guests fall deeply in love with those wonderful flavors shared together.
               </p>
             </div>
             <div>
-              <img src={pizza26} alt="pizza26" />
+              <img src={daisy} alt="daisy" />
               <h3>Daisy</h3>
               <p>
                 Stunning beauty defines every creation. Daisy crafts visually perfect pizzas while her enchanting voice captivates guests, making everyone fall completely in love.
@@ -66,13 +66,13 @@ export const MeetOurStaffContainer = () => {
               {/* Pizza 1 */}
               <div className="circle circle1">
                 <div className="pizza__smoke"></div>
-                <img src={pizza15} alt="pizza15" />
+                <img src={pizza29} alt="pizza29" />
               </div>
 
               {/* Pizza 2 */}
               <div className="circle circle2">
                 <div className="pizza__smoke"></div>
-                <img src={pizza16} alt="pizza16" />
+                <img src={pizza30} alt="pizza30" />
               </div>
 
               <div className="">

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'; // Import hooks
-import pizza10 from '../img/10.jpg';
-import pizza11 from '../img/11.jpg';
-import pizza12 from '../img/12.jpg';
-import pizza13 from '../img/13.jpg';
-import pizza14 from '../img/14.jpg';
+import pizza10 from '../img/1.jpg';
+import pizza11 from '../img/2.jpg';
+import pizza12 from '../img/3.jpg';
+import pizza13 from '../img/4.jpg';
+import pizza14 from '../img/5.jpg';
 
 export const Banner1 = () => {
   // Create state to track if the overlay is open

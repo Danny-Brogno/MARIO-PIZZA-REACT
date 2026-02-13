@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import pizza20 from '../img/20.jpg';
-import pizza21 from '../img/21.jpg';
-import pizza22 from '../img/22.jpg';
-import pizza23 from '../img/23.jpg';
-import pizza24 from '../img/24.jpg';
-import pizza25 from '../img/25.jpg';
+import pizza1 from '../img/1.jpg';
+import pizza2 from '../img/2.jpg';
+import pizza3 from '../img/3.jpg';
+import pizza4 from '../img/4.jpg';
+import pizza5 from '../img/5.jpg';
+import pizza6 from '../img/6.jpg';
+import pizza7 from '../img/7.jpg';
+import pizza8 from '../img/8.jpg';
+import pizza9 from '../img/9.jpg';
 
 export const JumbotronScrollingCarousel = () => {
   // Store the images in an array for easy mapping
-  const images = [pizza20, pizza21, pizza22, pizza23, pizza24, pizza25];
+  const images = [pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9];
   
   // Track which image is currently visible
   const [currentIndex, setCurrentIndex] = useState(0);

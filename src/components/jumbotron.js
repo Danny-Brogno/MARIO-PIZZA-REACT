@@ -91,7 +91,7 @@ export const Jumbotron = () => {
             </div>
             <div className="box" onClick={() => handleImageClick(pizza9)}>
               <img src={pizza9} alt="pizza9" style={{ cursor: 'pointer' }} />
-              <div className="dark"><h3>4 cheeses</h3></div>
+              <div className="dark"><h3>5 cheeses</h3></div>
             </div>
           </div>
           
