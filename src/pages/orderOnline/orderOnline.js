@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
-import { RelationshipComponent } from '../../app-test1';
+import { Jumbotron } from "../../components/jumbotron.js";
+import { MakeYourOwnPizza } from "../../components/makeYourOwnPizza.js";
+import { RelationshipComponent } from '../../app-test1.js';
 
 // CSS
 import '../../style-homepage.css';
+import '../../style-global.css';
 
 // FAVICON
 import favicon from '../../img/favicon-homepage.png';
@@ -27,16 +30,8 @@ export const OrderOnline = () => {
   
   return (
     <div>
-      <h1>ORDER ONLINE</h1>
-      <h1>ORDER ONLINE</h1>
-      <h1>ORDER ONLINE</h1>
-      <h1>ORDER ONLINE</h1>
-      <h1>ORDER ONLINE</h1>
-      <h1>ORDER ONLINE</h1>
-      <h1>ORDER ONLINE</h1>
-      <h1>ORDER ONLINE</h1>
-      <h1>ORDER ONLINE</h1>
-      <h1>ORDER ONLINE</h1>
+      <Jumbotron />
+      <MakeYourOwnPizza />
       <RelationshipComponent />
     </div>
   )
