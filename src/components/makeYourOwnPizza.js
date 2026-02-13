@@ -1,43 +1,120 @@
-import React from 'react';
+import React, { useState } from 'react';
 import makeYourOwnPizza from '../img/14.jpg';
 
 export const MakeYourOwnPizza = () => {
   
   const ingredients = [
-    "Italian sausages",
-    "Turnip greens",
-    "Mozzarella di bufala",
-    "Burrata cheese",
-    "Blue cheese",
-    "Emmental",
-    "Sundried tomatoes",
-    "Bresaola in slices",
-    "Prosciutto Crudo di Parma in slices",
-    "Fresh rocket",
-    "Pepperoni",
-    "Yellow cherry tomatoes",
-    "Porcini mushrooms",
-    "Champignon mushrooms",
-    "Black olives",
-    "Green olives",
-    "Cooked ham in slices",
-    "Artichokes"
+    { name: "Italian sausages", price: 2 },
+    { name: "Turnip greens", price: 2 },
+    { name: "Extra mozzarella", price: 3 },
+    { name: "No tomato sauce", price: 0 },
+    { name: "Mozzarella di bufala", price: 4 },
+    { name: "Burrata cheese", price: 4 },
+    { name: "Blue cheese", price: 4 },
+    { name: "Emmental cheese", price: 4 },
+    { name: "Sundried tomatoes", price: 2 },
+    { name: "Bresaola", price: 4 },
+    { name: "Prosciutto Crudo di Parma", price: 5 },
+    { name: "Fresh rocket", price: 2 },
+    { name: "Pepperoni", price: 3 },
+    { name: "Yellow cherry tomatoes", price: 2 },
+    { name: "Porcini mushrooms", price: 4 },
+    { name: "Champignon mushrooms", price: 2 },
+    { name: "Black olives", price: 2 },
+    { name: "Green olives", price: 2 },
+    { name: "Cooked ham", price: 3 },
+    { name: "Artichokes", price: 3 }
   ];
+  
+  // USESTATE HOOK
+  const [selected, setSelected] = useState([]);
+  const [showSummary, setShowSummary] = useState(false);
+  
+  const toggleIngredient = (item) => {
+    if (selected.some(i => i.name === item.name)) {
+      setSelected(selected.filter(i => i.name !== item.name));
+    } else {
+      if (selected.length < 5) {
+        setSelected([...selected, item]);
+      } else {
+        alert("Maximum 5 ingredients allowed!");
+      }
+    }
+  };
+  
+  // Calculate Total
+  const total = selected.reduce((acc, curr) => acc + curr.price, 0);
   
   return (
     <section className="make-your-own-pizza">
       <div className="outer-container">
         <h3> MAKE YOUR OWN PIZZA!</h3>
-        <h5>Choose up to 5 from this list of ingredients:</h5>
+        <h5>Selected: {selected.length} / 5</h5>
+        
         <div className="inside-container">
-          <ul>
-          {ingredients.map((ingredient, index) => (
-            <li key={index}>{ingredient}</li>
-          ))}
-          </ul> 
-          <img src={makeYourOwnPizza} alt="image-here"/>
+          <ul style={{ listStyle: 'none', cursor: 'pointer' }}>
+            {ingredients.map((ing, index) => (
+              <li 
+                key={index} 
+                onClick={() => toggleIngredient(ing)}
+                style={{
+                  display: 'flex',
+                  color: selected.some(s => s.name === ing.name) ? 'var(--pizza-green)' : 'var(--pizza-dark)',
+                  fontWeight: selected.some(s => s.name === ing.name) ? 'bold' : 'normal',
+                  margin: '5px 0'
+                }}
+              >
+                <span>
+                  {selected.some(s => s.name === ing.name) ? '✅ ' : '⬜ '}
+                  {ing.name}
+                </span>
+                
+                <span>
+                  £
+                  {ing.price}
+                </span>
+                
+              </li>
+            ))}
+          </ul>
+
+          <div className="image-wrapper" style={{ width: '70%', position: 'relative' }}>
+            <img src={makeYourOwnPizza} alt="pizza" style={{ width: '100%', height: '100%' }} />
+            
+            {/* THE OVERLAY LAYER */}
+            {showSummary && (
+              <div className="summary-overlay">
+                <div className="summary-content">
+                  <h4>YOUR SELECTION</h4>
+                  <hr />
+                  {selected.map((s, i) => (
+                    <div key={i} className="summary-line">
+                      <span>{s.name}</span>
+                      <span>£{s.price}</span>
+                    </div>
+                  ))}
+                  <hr />
+                  <div className="summary-total">
+                    <strong>TOTAL</strong>
+                    <strong>£{total}</strong>
+                  </div>
+                  <button className="checkout-btn">GO TO CART</button>
+                  <button onClick={() => setShowSummary(false)} className="close-btn">EDIT</button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
+
+        <button 
+          type="button" 
+          className="my-button-first"
+          onClick={() => setShowSummary(true)}
+          disabled={selected.length === 0}
+        >
+          Select ingredients
+        </button>
       </div>
     </section>
-  )
+  );
 }

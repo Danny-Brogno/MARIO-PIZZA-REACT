@@ -272,7 +272,7 @@ body::-webkit-scrollbar-thumb:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
+  font-size: 1.7rem;
   white-space: nowrap;
   color: white;
   z-index: 3;
@@ -304,7 +304,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 #homepage section.make-your-own-pizza {
   width: 90%;
-  margin:0 auto;
+  margin: 0 auto;  
+  height: auto; 
 }
 
 #homepage section.make-your-own-pizza h3 {
@@ -319,6 +320,10 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
 }
 
+#homepage section.make-your-own-pizza div.outer-container {
+
+}
+
 /* OUTER CONTAINER */
 #homepage section.make-your-own-pizza div.outer-container h5 {
   margin: 2rem 0rem;
@@ -329,23 +334,144 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: stretch; /* Ensures both sides are the same height */
+  height: 35rem; /* Define the height here instead of the section */
+  gap: 20px;
 }
-
 
 #homepage section.make-your-own-pizza div.inside-container img {
   width: 70%;
+  height: 100%; 
+  object-fit: cover; /* Keeps image proportions correct */
   border-radius: 10px;
+  /* Fix for Firefox clipped corners */
+  display: block;
 }
 
 #homepage section.make-your-own-pizza div.inside-container ul {
   width: 30%;
+  height: 100%; /* Changed from 42rem to 100% of parent (35rem) */
+  overflow-y: auto; /* Scroll only if needed */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  border: 2px solid var(--pizza-green);
+  border-right: none;
+  /* Added padding so the last item doesn't touch the border */
+  padding: 10px; 
+  box-sizing: border-box; /* Crucial so border doesn't add to height */
+}
+
+#homepage section.make-your-own-pizza div.inside-container ul::-webkit-scrollbar {
+  width: 15px;
+}
+
+#homepage section.make-your-own-pizza div.inside-container ul::-webkit-scrollbar-track {
+  background: var(--pizza-yellow);
+}
+
+#homepage section.make-your-own-pizza div.inside-container ul::-webkit-scrollbar-thumb {
+  background-color: var(--pizza-dark);
+  border-radius: 2px;
+  border: 2px solid var(--pizza-green);
+  transition:0.5s;
+}
+
+#homepage section.make-your-own-pizza div.inside-container ul::-webkit-scrollbar-thumb:hover {
+  background: var(--pizza-dark);
 }
 
 #homepage section.make-your-own-pizza div.inside-container ul li {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+/* NEW CLASSES FOR THE OVERLAY AND LIST */
+
+/* Overlay Container */
+#homepage section.make-your-own-pizza .image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#homepage section.make-your-own-pizza .summary-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Dark transparent cover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 10;
+  animation: fadeIn 0.3s ease;
+}
+
+#homepage section.make-your-own-pizza .summary-content {
+  width: 60%;
+  text-align: center;
+}
+
+#homepage section.make-your-own-pizza .summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+#homepage section.make-your-own-pizza .summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  margin-top: 15px;
+  color: var(--pizza-yellow);
+}
+
+#homepage section.make-your-own-pizza .checkout-btn {
+  background: var(--pizza-green);
+  color: var(--pizza-yellow);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#homepage section.make-your-own-pizza .close-btn {
+  background: var(--pizza-red);
+  color: var(--pizza-yellow);
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#homepage section.make-your-own-pizza .checkout-btn:hover,
+#homepage section.make-your-own-pizza .close-btn:hover {
+  background-color: var(--pizza-yellow);
+  color: var(--pizza-green);
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* MAKE YOUR OWN PIZZA - END */
@@ -377,8 +503,10 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
 }
 
+/* CONTAINER LEFT */
 #homepage .jumbotron-scrolling-carousel section .container-left {
-  width:50%;
+  width: 50%;
+  min-height: 25rem;
 }
 
 /* just in one section */
@@ -388,8 +516,9 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 10px;
 }
 
-#homepage .jumbotron-scrolling-carousel section .container-left #slider {
+#homepage .jumbotron-scrolling-carousel section .container-left ul#slider {
   width: 100%;
+  height:100%;
   padding: 5px;
   position:relative;
  }
@@ -416,8 +545,10 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 10px;
 }
 
+/* CONTAINER RIGHT */
 #homepage .jumbotron-scrolling-carousel section .container-right {
   width: 50%;
+  min-height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -450,6 +581,8 @@ body::-webkit-scrollbar-thumb:hover {
   line-height: 1.4;
   font-size: 1.35rem;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased !important; /* For Chrome/Safari */
+  -moz-osx-font-smoothing: grayscale !important; /* For Firefox */
 }
 
 #homepage .jumbotron-scrolling-carousel section .container-right .btn-container {
@@ -625,13 +758,16 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
 }
 
+/* CONTAINER LEFT */
 #homepage .jumbotron-static-image section .container-left {
   width:50%;
+  height:25rem;
 }
 
 /* just in one section */
 #homepage .jumbotron-static-image section .container-left img {
   width: 100%;
+  height:100%;
   border-radius: 30px;
 }
 
@@ -661,10 +797,13 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 10px;
 }
 
+/* CONTAINER RIGHT */
 #homepage .jumbotron-static-image section .container-right {
-  width:50%;
+  width: 50%;
+  height: 25rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 #homepage .jumbotron-static-image section .container-right .text {
@@ -677,7 +816,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 #homepage .jumbotron-static-image section .container-right .text h2 {
   font-size: 2.3rem;
-  margin-bottom: 1rem;
 }
 
 #homepage .jumbotron-static-image section .container-right .text h3 {
@@ -686,7 +824,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 #homepage .jumbotron-static-image section .container-right p {
   width: 90%;
-  margin: 2rem auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   line-height: 1.4;
@@ -699,7 +837,7 @@ body::-webkit-scrollbar-thumb:hover {
   height:10%;
   display: flex;
   align-items: flex-end;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 
