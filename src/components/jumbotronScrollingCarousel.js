@@ -59,7 +59,6 @@ export const JumbotronScrollingCarousel = () => {
           <p>
             Let’s be honest: nobody ever craved a salad at 9:00 PM on a Tuesday. At Mario Pizza, we believe that life is too short for mediocre crusts and "functional" fuel. 
             We treat every dough ball like a high-stakes science experiment, where the only acceptable outcome is a perfect, leopard-spotted char and a cheese pull that defies the laws of physics. 
-            Our secret isn't just the imported flour or the tomatoes that sat in the Italian sun a little longer than the rest; it’s the fact that we refuse to take ourselves too seriously, even if we take our toppings very, very seriously.
           </p>
           <div className="btn-container">
             <button type="button" className="my-button-first" style={{margin: "0"}}>READ MORE</button>

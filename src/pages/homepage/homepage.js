@@ -40,8 +40,8 @@ export const HomePage = () => {
     <div id="homepage">
       <UnderHeader />
       <Jumbotron />
-      <MakeYourOwnPizza />
       <JumbotronScrollingCarousel />
+      <MakeYourOwnPizza />
       <Banner1 />
       <ThreeBoxContainerHomepage />
       <Banner2 />
