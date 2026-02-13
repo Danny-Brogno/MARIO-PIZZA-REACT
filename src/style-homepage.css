@@ -302,6 +302,11 @@ body::-webkit-scrollbar-thumb:hover {
 /* MAKE YOUR OWN PIZZA - START */
 /* MAKE YOUR OWN PIZZA - START */
 
+#homepage section.make-your-own-pizza {
+  width: 90%;
+  margin:0 auto;
+}
+
 #homepage section.make-your-own-pizza h3 {
   font-size: 3rem;
   display: flex;
@@ -314,20 +319,26 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
 }
 
-#homepage section.make-your-own-pizza div {
+/* OUTER CONTAINER */
+#homepage section.make-your-own-pizza div.outer-container {
+
+}
+
+/* INSIDE CONTAINER */
+#homepage section.make-your-own-pizza div.inside-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#homepage section.make-your-own-pizza div.inside-container img {
+
+}
+
+#homepage section.make-your-own-pizza div.inside-container ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 90%;
-  margin:0 auto;
-}
-
-#homepage section.make-your-own-pizza div img {
-
-}
-
-#homepage section.make-your-own-pizza div ul {
-  display: flex;
   justify-content: space-between;
 }
 
