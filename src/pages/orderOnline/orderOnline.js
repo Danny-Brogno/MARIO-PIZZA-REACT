@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-import { Jumbotron } from "../../components/jumbotron.js";
 import { MakeYourOwnPizza } from "../../components/makeYourOwnPizza.js";
-import { RelationshipComponent } from '../../app-test1.js';
-
 // CSS
-import '../../style-homepage.css';
 import '../../style-global.css';
+import '../../style-orderOnline.css';
 
 // FAVICON
 import favicon from '../../img/favicon-homepage.png';
@@ -29,10 +26,8 @@ export const OrderOnline = () => {
   }, []);
   
   return (
-    <div>
-      <Jumbotron />
+    <div id="order-online">
       <MakeYourOwnPizza />
-      <RelationshipComponent />
     </div>
   )
 }
