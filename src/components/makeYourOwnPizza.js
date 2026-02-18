@@ -59,6 +59,7 @@ export const MakeYourOwnPizza = () => {
                 onClick={() => toggleIngredient(ing)}
                 style={{
                   display: 'flex',
+                  justifyContent: 'space-between',
                   color: selected.some(s => s.name === ing.name) ? 'var(--pizza-green)' : 'var(--pizza-dark)',
                   fontWeight: selected.some(s => s.name === ing.name) ? 'bold' : 'normal',
                   margin: '5px 0'

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { MakeYourOwnPizza } from "../../components/makeYourOwnPizza.js";
+import { RelationshipComponent } from "../../app-test1.js";
 // CSS
 import '../../style-global.css';
 import '../../style-orderOnline.css';
@@ -28,6 +29,7 @@ export const OrderOnline = () => {
   return (
     <div id="order-online">
       <MakeYourOwnPizza />
+      <RelationshipComponent />
     </div>
   )
 }
