@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../img/mario-pizza-logo.png';
 
 const scrollToTheTop = () => {
   window.scrollTo({
@@ -9,74 +10,77 @@ const scrollToTheTop = () => {
 
 export const Footer = ({currentPage, setCurrentPage}) => {
   return (
+    
     <footer id="footer-global">
-      <section className="top-footer">
-        <div className="left">
-          <div className="titles left">
-            <h2>CONTACT US</h2>
-            <h3>SEND US A MESSAGE</h3>
-          </div>
-          <form className="form" action="/submit-form" method="post">
-            <input type="text" id="fullname-form" name="firstName" placeholder="Princess Toadstool" required />
-            <input type="email" id="email-form" name="email" placeholder="pizza@gmail.com" required />
-            <textarea name="Text1" cols="40" rows="7" placeholder="How can I order more pizza?"></textarea>
-            <div className="form-submit-container">
-              <input type="submit" value="Submit" id="submit-form" />
-            </div>
-          </form>
-        </div>
-
-        <div className="middle">
+      <section>
         
-          <div className="titles right">
-            <div className="under-titles">
-              <h2>SITEMAP</h2>
-              <h2>SOCIALS</h2>
-            </div>
-          </div>
-          
-          <div className="unordered-lists-footer">
-            <ul>
-              <li><button type="button" onClick={()=>setCurrentPage("homepage")}>HOME</button></li>
-              <li><button type="button" onClick={()=>setCurrentPage("aboutUs")}>ABOUT US</button></li>
-              <li><button type="button" onClick={()=>setCurrentPage("orderOnline")}>ORDER ONLINE</button></li>
-              <li><button type="button" onClick={()=>setCurrentPage("contact")}>CONTACT US</button></li>
-            </ul>
-            <ul>
-              <li><button type="button"><i className="fa-brands fa-square-facebook"></i>Facebook</button></li>
-              <li><button type="button"><i className="fa-brands fa-instagram"></i>Instagram</button></li>
-              <li><button type="button"><i className="fa-brands fa-linkedin"></i>Linkedin</button></li>
-              <li><button type="button"><i className="fa-brands fa-x-twitter"></i>Twitter</button></li>
-              <li><button type="button"><i className="fa-brands fa-tiktok"></i>Tik Tok</button></li>
-            </ul>
-          </div>
+        <div className="top-footer">
+          <h3>
+            &copy;Mario Pizza. All rights reserved.
+          </h3>
         </div>
-
-        <div className="right">
-          <div className="top">
-            <section></section>
+        
+        <div className="middle-footer">
+          {/* LEFT COLUMN */}
+          <ul className="footer-links-left">
+            <li className="gone"><button type="button" onClick={()=>setCurrentPage("homepage")}>HOME</button></li>
+            <li className="gone"><button type="button" onClick={()=>setCurrentPage("aboutUs")}>ABOUT US</button></li>
+            <li className="gone"><button type="button" onClick={()=>setCurrentPage("orderOnline")}>ORDER ONLINE</button></li>
+            <li className="gone"><button type="button" onClick={()=>setCurrentPage("contact")}>CONTACT US</button></li>
+          </ul>
+        
+          {/* CENTER COLUMN: THE IMAGE */}
+          <div className="footer-logo-center">
+            <img src={logo} alt="Mario Pizza Logo" />
           </div>
-          <div className="bottom">
-            <div className="phone">
-              <span><i className="fa-solid fa-phone"></i></span>
-              <span><a href="tel:+390212345678">+39 02 12345678</a></span>
-            </div>
-            <div className="email">
-              <span><i className="fa-solid fa-envelope"></i></span>
-              <span><a href="mailto:fake.email@fakeemail.com">fake.email@fakeemail.com</a></span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="under-footer">
-        <p>COPYRIGHT 2001. ALL RIGHTS RESERVED "MARIO PIZZA"</p>
-        <div className="scroll-top-btn" onClick={scrollToTheTop}>
-          <ul>
-            <li><i className="fas fa-chevron-up"></i></li>
+        
+          {/* RIGHT COLUMN */}
+          <ul className="footer-links-right">
+            <li className="gone"><button type="button">DOWNLOAD MENU</button></li>
+            <li className="gone"><button type="button">PROMOS</button></li>
+            <li className="gone"><button type="button">MEET OUR STAFF</button></li>
+            <li className="gone"><button type="button">SUPER STAR PIZZA PASS</button></li>
           </ul>
         </div>
+        
+        <div className="bottom-footer">
+          
+          <span>
+            <i className="fa-brands fa-square-facebook"></i>
+          </span>
+          
+          <span>
+            <i className="fa-brands fa-instagram"></i>
+          </span>
+          
+          <span>
+            <i className="fa-brands fa-linkedin"></i>
+          </span>
+          
+          <span>
+            <i className="fa-brands fa-x-twitter"></i>
+          </span>
+          
+          <span>
+            <i className="fa-brands fa-tiktok"></i>
+          </span>
+        </div>
+        
+        <div className="copy-right">
+          <p>COPYRIGHT 2001. ALL RIGHTS RESERVED "MARIO PIZZA"</p>
+        </div>
+
+        
+        <div className="scroll-top-btn" onClick={scrollToTheTop}>
+          <ul>
+            <li>
+              <i className="fas fa-chevron-up"></i>
+            </li>
+          </ul>
+        </div>
+        
       </section>
+      
     </footer>
   );
 };

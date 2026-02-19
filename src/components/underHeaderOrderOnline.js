@@ -43,7 +43,7 @@ export const UnderHeaderOrderOnline = () => {
   };
   
   return (
-    <div id="under-header-orderOnline">
+    <div className="under-header-orderOnline">
       <h1>ORDER ONLINE</h1>
       <div className="order-pizza-container">
         

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import {UnderHeaderOrderOnline} from "../../components/underHeaderOrderOnline.js";
+import { UnderHeaderOrderOnline } from "../../components/underHeaderOrderOnline.js";
+import { Banner1 } from "../../components/banner1.js";
 import { MakeYourOwnPizza } from "../../components/makeYourOwnPizza.js";
 import { Banner2 } from "../../components/banner2.js";
 
@@ -29,8 +30,9 @@ export const OrderOnline = () => {
   }, []);
   
   return (
-    <div id="order-online">
+    <div id="order-online-page">
       <UnderHeaderOrderOnline />
+      <Banner1 />
       <MakeYourOwnPizza />
       <Banner2 />
     </div>
