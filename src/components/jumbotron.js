@@ -10,6 +10,7 @@ import pizza8 from '../img/8.jpg';
 import pizza9 from '../img/9.jpg';
 
 export const Jumbotron = () => {
+  
   // State to track which image is enlarged
   const [enlargedImg, setEnlargedImg] = useState(null);
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 // COMPONENTS
-import { UnderHeader } from "../../components/underHeader.js";
+import { UnderHeaderHomepage } from "../../components/underHeaderHomepage.js";
 import { Jumbotron } from "../../components/jumbotron.js";
 import { MakeYourOwnPizza } from "../../components/makeYourOwnPizza.js";
 import { JumbotronScrollingCarousel } from "../../components/jumbotronScrollingCarousel.js";
@@ -38,7 +38,7 @@ export const HomePage = () => {
   return (
     
     <div id="homepage">
-      <UnderHeader />
+      <UnderHeaderHomepage />
       <Jumbotron />
       <JumbotronScrollingCarousel />
       <MakeYourOwnPizza />

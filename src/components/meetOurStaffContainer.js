@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import mario from '../img/10.jpg';
 import luigi from '../img/11.jpg';
 import peach from '../img/12.jpg';
@@ -7,13 +7,45 @@ import pizza29 from '../img/29.jpg';
 import pizza30 from '../img/30.jpg';
 
 export const MeetOurStaffContainer = () => {
+  
+  // State to track which image is enlarged
+  const [enlargedImg, setEnlargedImg] = useState(null);
+
+  // Function to open the overlay
+  const handleImageClick = (imgSrc) => {
+    setEnlargedImg(imgSrc);
+  };
+
+  // Function to close the overlay
+  const closeOverlay = () => {
+    setEnlargedImg(null);
+  };
+  
   return (
     <div className="meet-our-staff-container">
       <h2 id="title">MEET OUR STAFF</h2>
           <div className="top">
-          
+
+            {/* THE OVERLAY (Only shows when an image is clicked) */}
+            {enlargedImg && (
+              <div 
+                onClick={closeOverlay}
+                style={{
+                  background: `RGBA(0,0,0,.9) url(${enlargedImg}) no-repeat center`,
+                  backgroundSize: 'contain',
+                  width: '100%',
+                  height: '100%',
+                  position: 'fixed',
+                  zIndex: '10000',
+                  top: '0',
+                  left: '0',
+                  cursor: 'pointer'
+                }}
+              />
+            )}
+
             <div>
-              <img src={mario} alt="mario" />
+              <img src={mario} alt="mario" onClick={() => handleImageClick(mario)} />
               <h3>Mario</h3>
               <p>
                 He goes beyond toppings. With years at roaring ovens, Mario masters dough hydration, woodfire temperatures, and authentic crust flavor the details most diners miss.
@@ -21,7 +53,7 @@ export const MeetOurStaffContainer = () => {
             </div>
             
             <div>
-              <img src={luigi} alt="luigi" />
+              <img src={luigi} alt="luigi" onClick={() => handleImageClick(luigi)} />
               <h3>Luigi</h3>
               <p>
                 Precision meets pure speed. Luigi handles dough, firing artisan pies quickly before racing through traffic so every delivery arrives as fast as the wind.
@@ -29,14 +61,14 @@ export const MeetOurStaffContainer = () => {
             </div>
             
             <div>
-              <img src={peach} alt="peach" />
+              <img src={peach} alt="peach" onClick={() => handleImageClick(peach)} />
               <h3>Peach</h3>
               <p>
                 Affection fuels her recipes. Peach infuses heartfelt devotion into every meal, ensuring lucky guests fall deeply in love with those wonderful flavors shared together.
               </p>
             </div>
             <div>
-              <img src={daisy} alt="daisy" />
+              <img src={daisy} alt="daisy" onClick={() => handleImageClick(daisy)} />
               <h3>Daisy</h3>
               <p>
                 Stunning beauty defines every creation. Daisy crafts visually perfect pizzas while her enchanting voice captivates guests, making everyone fall completely in love.

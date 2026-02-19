@@ -1,5 +1,207 @@
-#order-online section.make-your-own-pizza {
-  
+/* 1 - under header ORDER ONLINE - START */
+/* 1 - under header ORDER ONLINE - START */
+/* 1 - under header ORDER ONLINE - START */
+/* 1 - under header ORDER ONLINE - START */
+/* 1 - under header ORDER ONLINE - START */
+
+#under-header-orderOnline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+#under-header-orderOnline h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 2rem 0rem;
+}
 
+#under-header-orderOnline .order-pizza-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#under-header-orderOnline .order-pizza-container .card {
+  position: relative;
+  width: 375px;
+  height: 425px;
+  background-color: var(--pizza-yellow);
+  color: black;
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid var(--pizza-red);
+}
+
+/* Hover effect for the whole container */
+#under-header-orderOnline .order-pizza-container:hover .card {
+  filter: blur(2px);
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+#under-header-orderOnline .order-pizza-container .card:hover {
+  filter: blur(0px);
+  transform: scale(1.1);
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* THE CIRCLE CONTAINER */
+#under-header-orderOnline .order-pizza-container .card .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--normal-black);
+  clip-path: circle(210px at center 0px);
+  text-align: center;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+/* THE PIZZA OVERLAY (This fixes the gap) */
+#under-header-orderOnline .order-pizza-container .card .circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Replace with your pizza image path */
+  background-image: var(--pizza-img);
+  background-size: 380px; /* Double the radius (180x2) for perfect fit */
+  background-position: center top; 
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* THE TEXT CONTENT */
+#under-header-orderOnline .order-pizza-container .card .content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#under-header-orderOnline .order-pizza-container .card .content h2 {
+  color: var(--pizza-green);
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  white-space: nowrap;      /* Forces text onto a single line */
+  overflow: hidden;         /* Hides the text that spills out */
+  text-overflow: ellipsis;  /* Adds the "..." at the end */
+}
+
+#under-header-orderOnline .order-pizza-container .card .content p {
+  color: var(--pizza-green);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+#under-header-orderOnline .order-pizza-container .card .content a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--pizza-green);
+  color: var(--normal-white);
+  border-radius: 40px;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#under-header-orderOnline .order-pizza-container .card .content a:hover {
+  letter-spacing: 1px;
+  background-color: #333;
+}
+
+#under-header-orderOnline .my-button-special {
+  padding: 0.5rem 0rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  background-color: var(--pizza-red);
+}
+
+/* INDIVIDUAL CARD THEME COLORS */
+
+/* 1 - under header ORDER ONLINE - END */
+/* 1 - under header ORDER ONLINE - END */
+/* 1 - under header ORDER ONLINE - END */
+/* 1 - under header ORDER ONLINE - END */
+/* 1 - under header ORDER ONLINE - END */
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* 2 - MAKE YOUR OWN PIZZA - START */
+/* 2 - MAKE YOUR OWN PIZZA - START */
+/* 2 - MAKE YOUR OWN PIZZA - START */
+/* 2 - MAKE YOUR OWN PIZZA - START */
+/* 2 - MAKE YOUR OWN PIZZA - START */
+
+#under-header-orderOnline section.make-your-own-pizza .outer-container h3 {
+  font-size: 2.5rem;
+}
+
+/* 2 - MAKE YOUR OWN PIZZA - END */
+/* 2 - MAKE YOUR OWN PIZZA - END */
+/* 2 - MAKE YOUR OWN PIZZA - END */
+/* 2 - MAKE YOUR OWN PIZZA - END */
+/* 2 - MAKE YOUR OWN PIZZA - END */
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  
+  #under-header-orderOnline .order-pizza-container {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  #under-header-orderOnline .order-pizza-container .card {
+    width: 90% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  #under-header-orderOnline h1 {
+    text-align: center;
+  }
+}
+
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */

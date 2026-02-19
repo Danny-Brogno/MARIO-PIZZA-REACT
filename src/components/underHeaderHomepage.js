@@ -6,7 +6,7 @@ import 'splitting/dist/splitting.js';
 import Splitting from 'splitting';
 
 // --------------------------
-export const UnderHeader = () => {
+export const UnderHeaderHomepage = () => {
   
   useEffect(() => {
     // We call the function inside useEffect so React ensures 

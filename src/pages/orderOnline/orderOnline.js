@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import {UnderHeaderOrderOnline} from "../../components/underHeaderOrderOnline.js";
 import { MakeYourOwnPizza } from "../../components/makeYourOwnPizza.js";
-import { RelationshipComponent } from "../../app-test1.js";
+import { Banner2 } from "../../components/banner2.js";
+
 // CSS
 import '../../style-global.css';
 import '../../style-orderOnline.css';
@@ -28,8 +30,9 @@ export const OrderOnline = () => {
   
   return (
     <div id="order-online">
+      <UnderHeaderOrderOnline />
       <MakeYourOwnPizza />
-      <RelationshipComponent />
+      <Banner2 />
     </div>
   )
 }

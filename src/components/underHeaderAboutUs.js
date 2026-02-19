@@ -21,9 +21,6 @@ export const UnderHeaderAboutUs = () => {
     Splitting();
   }, []);
   
-  // THIS IS FOR THE SPACING UNDER THE SECOND <p>
-  let spacing3 = 3;
-  
   return (
     <div className="under-header-AboutUs">
       
@@ -42,11 +39,6 @@ export const UnderHeaderAboutUs = () => {
               Legend says he discovered the "Secret Sauce" after accidentally dropping a Fire Flower into a vat of San Marzano tomatoes. 
             </p>
             
-            <p data-splitting style={{marginBottom: spacing3 + 'rem'}}>
-              Alongside Peach, who brought royal standards to the kitchen, they built an empire. 
-              One slice, and you’ll realize the princess isn't in another castle she’s here, eating pepperoni.
-            </p>
-            
           </div>
           
           
@@ -59,11 +51,6 @@ export const UnderHeaderAboutUs = () => {
             <p data-splitting>
               In 1925, Mario left the comfort of the familiar to honor a heritage written in flour and sweat. 
               It wasn't about games; it was about the sacrifice of a man who worked until his hands were stained with the earth of Italy. 
-            </p>
-            
-            <p data-splitting style={{marginBottom: spacing3 + 'rem'}}>
-              Every dough ball is aged for forty-eight hours, a testament to the patience that true craft demands. 
-              We don't cut corners; we honor the legacy of hard-earned tradition, serving authentic, wood-fired history that tastes of home and heart.
             </p>
             
           </div>
