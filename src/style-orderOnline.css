@@ -21,9 +21,8 @@
   position: relative;
   width: 90%;
   margin: 0 auto;
-  padding: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -34,7 +33,7 @@
   height: 425px;
   background-color: var(--pizza-yellow);
   color: black;
-  margin: 20px;
+  margin: 10px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
@@ -159,7 +158,7 @@
 /* 2 - MAKE YOUR OWN PIZZA - START */
 /* 2 - MAKE YOUR OWN PIZZA - START */
 
-#order-online section.make-your-own-pizza .outer-container h3 {
+#order-online-page section.make-your-own-pizza .outer-container h3 {
   font-size: 2.5rem;
   margin-top: 3rem;
 }
@@ -169,6 +168,10 @@
 /* 2 - MAKE YOUR OWN PIZZA - END */
 /* 2 - MAKE YOUR OWN PIZZA - END */
 /* 2 - MAKE YOUR OWN PIZZA - END */
+
+#order-online-page .banner.two {
+  margin-bottom: 3rem;
+}
 
 /* ------------------------------- */
 /* ------------------------------- */
