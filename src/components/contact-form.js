@@ -11,12 +11,13 @@ export const ContactForm = () => {
       <div className="flex justify-space-between">
         
         <div className="left-content">
-          Place your Clickable Phone and Email here. This is crucial for mobile users who want to order now.
+          <p>
+            Place your Clickable Phone and Email here. This is crucial for mobile users who want to order now.
+          </p>
         </div>
         
         <div className="middle-content">
           <div className="screen">
-          
           <div className="screen-header">
             <div className="screen-header-left">
             <div className="screen-header-button close"></div>
@@ -56,7 +57,9 @@ export const ContactForm = () => {
         </div>
         
         <div className="right-content">
-          Operating Hours (Right): A simple, clean list. Consistency is key for hungry customers.
+          <p>
+            Operating Hours (Right): A simple, clean list. Consistency is key for hungry customers.
+          </p>
         </div>
         
       </div>

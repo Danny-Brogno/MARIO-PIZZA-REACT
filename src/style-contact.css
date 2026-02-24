@@ -25,16 +25,25 @@
 
 /* CONTACT FORM - LEFT SECTION */
 #contact-page .container-form .left-content {
+  width: 25%;
   display: flex;
   align-items: center;
-  width: 25%;
-  padding-right: 1rem;
+  justify-content: flex-start; /* Keep it to the left */
+  padding-right: 5%; /* This creates the gap so it doesn't touch the form */
+  box-sizing: border-box;
+}
+
+#contact-page .container-form .left-content p {
+  width: 100%; /* Let the text fill the 25% area (minus padding) */
+  display: flex;
+  align-items: center;
+  line-height: 2;
 }
 
 /* CONTACT FORM - MIDDLE SECTION  */
 #contact-page .container-form .middle-content {
   display: flex;
-  flex: 2; /* This makes the center twice as big as the sides */
+  width: 50%;
   justify-content: center;
 }
 
@@ -190,10 +199,19 @@
 
 /* CONTACT FORM - RIGHT SECTION */
 #contact-page .container-form .right-content {
-  display: flex;
   width: 25%;
+  display: flex;
+  justify-content: flex-end; /* Pushes content to the far right */
+  padding-left: 5%; /* Safety gap between form and text */
+  box-sizing: border-box;
+}
+
+#contact-page .container-form .right-content p {
+  width: 100%;
+  display: flex;
   align-items: center;
-  padding-left: 1rem;
+  justify-content: flex-end; /* Ensures text stays right-aligned */
+  line-height: 2;
   text-align: right;
 }
 
