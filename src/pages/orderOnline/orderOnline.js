@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+
+// COMPONENTS
 import { UnderHeaderOrderOnline } from "../../components/underHeaderOrderOnline.js";
 import { Banner1 } from "../../components/banner1.js";
 import { MakeYourOwnPizza } from "../../components/makeYourOwnPizza.js";

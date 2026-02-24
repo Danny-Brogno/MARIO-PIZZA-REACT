@@ -1,3 +1,207 @@
-#contact-page {
-  
+#contact-page .background-container-form {
+  display: flex;
+  flex-direction: column;
 }
+
+#contact-page .background-container-form h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin: 3rem 0rem;
+}
+
+#contact-page .background-container-form .content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#contact-page .background-container-form .content .screen {
+  position: relative;
+  background: var(--pizza-green);
+  border-radius: 15px;
+}
+
+#contact-page .background-container-form .content .screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+#contact-page .background-container-form .content .screen .screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--pizza-dark);;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#contact-page .background-container-form .content .screen .screen-header .screen-header-left {
+  margin-right: auto;
+}
+
+#contact-page .background-container-form .content .screen .screen-header .screen-header-left .screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+#contact-page .background-container-form .content .screen .screen-header .screen-header-left .screen-header-button.close {
+  background: var(--pizza-yellow);
+}
+
+#contact-page .background-container-form .content .screen .screen-header .screen-header-left .screen-header-button.maximize {
+  background: var(--pizza-red);
+}
+
+#contact-page .background-container-form .content .screen .screen-header .screen-header-left .screen-header-button.minimize {
+  background: var(--pizza-green);
+}
+
+
+#contact-page .background-container-form .content .screen .screen-body {
+  display: flex;
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item.left .app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: var(--pizza-yellow);
+  font-size: 26px;
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item.left .app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 70%;
+  height: 4px;
+  background: var(--pizza-red);
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-group {
+  margin-bottom: 15px;
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-group.message {
+  margin-top: 40px;
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-control::placeholder {
+  color: var(--pizza-yellow);
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-control:focus {
+  border-bottom-color: var(--pizza-beige);
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-button {
+  padding: 1em 1.5em 1em 1.5em;
+  background-color: var(--pizza-yellow);
+  border: none;
+  color: var(--pizza-red);
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 1em;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-button:hover {
+  color: var(--pizza-beige);
+  background-color: var(--pizza-red);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contact-page .banner {
+  margin-bottom: 5rem;
+}
+
