@@ -1,28 +1,51 @@
-#contact-page .background-container-form {
+/* 1 - ContactForm - START */
+/* 1 - ContactForm - START */
+/* 1 - ContactForm - START */
+/* 1 - ContactForm - START */
+/* 1 - ContactForm - START */
+
+#contact-page .container-form {
   display: flex;
   flex-direction: column;
-}
-
-#contact-page .background-container-form h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  margin: 3rem 0rem;
-}
-
-#contact-page .background-container-form .content {
   width: 90%;
   margin: 0 auto;
 }
 
-#contact-page .background-container-form .content .screen {
+/* TITLE */
+#contact-page .container-form .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0rem;
+}
+
+#contact-page .container-form .title h1 {
+  font-size: 3rem;
+}
+
+/* CONTACT FORM - LEFT SECTION */
+#contact-page .container-form .left-content {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  padding-right: 1rem;
+}
+
+/* CONTACT FORM - MIDDLE SECTION  */
+#contact-page .container-form .middle-content {
+  display: flex;
+  flex: 2; /* This makes the center twice as big as the sides */
+  justify-content: center;
+}
+
+#contact-page .container-form .middle-content .screen {
+  width: 100%;
   position: relative;
   background: var(--pizza-green);
   border-radius: 15px;
 }
 
-#contact-page .background-container-form .content .screen:after {
+#contact-page .container-form .middle-content .screen:after {
   content: '';
   display: block;
   position: absolute;
@@ -35,7 +58,7 @@
   z-index: -1;
 }
 
-#contact-page .background-container-form .content .screen .screen-header {
+#contact-page .container-form .middle-content .screen .screen-header {
   display: flex;
   align-items: center;
   padding: 10px 20px;
@@ -44,11 +67,11 @@
   border-top-right-radius: 15px;
 }
 
-#contact-page .background-container-form .content .screen .screen-header .screen-header-left {
+#contact-page .container-form .middle-content .screen .screen-header .screen-header-left {
   margin-right: auto;
 }
 
-#contact-page .background-container-form .content .screen .screen-header .screen-header-left .screen-header-button {
+#contact-page .container-form .middle-content .screen .screen-header .screen-header-left .screen-header-button {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -57,34 +80,41 @@
   background: white;
 }
 
-#contact-page .background-container-form .content .screen .screen-header .screen-header-left .screen-header-button.close {
+#contact-page .container-form .middle-content .screen .screen-header .screen-header-left .screen-header-button.close {
   background: var(--pizza-yellow);
 }
 
-#contact-page .background-container-form .content .screen .screen-header .screen-header-left .screen-header-button.maximize {
+#contact-page .container-form .middle-content .screen .screen-header .screen-header-left .screen-header-button.maximize {
   background: var(--pizza-red);
 }
 
-#contact-page .background-container-form .content .screen .screen-header .screen-header-left .screen-header-button.minimize {
+#contact-page .container-form .middle-content .screen .screen-header .screen-header-left .screen-header-button.minimize {
   background: var(--pizza-green);
 }
 
-
-#contact-page .background-container-form .content .screen .screen-body {
-  display: flex;
-}
-
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item {
-  flex: 1;
-  padding: 50px;
-}
-
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item.left {
+#contact-page .container-form .middle-content .screen .screen-body {
   display: flex;
   flex-direction: column;
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item.left .app-title {
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item {
+  width: 100%;
+}
+
+/* #contact-page .container-form .middle-content .screen .screen-body .screen-body-item .app-form {
+  width: 100%;
+} */
+
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item.left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item.left .app-title {
+  width: 90%;
+  margin: 2rem auto 2rem auto; /* Centers the input within the form group */
+  display: block;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -92,32 +122,34 @@
   font-size: 26px;
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item.left .app-title:after {
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item.left .app-title:after {
   content: '';
   display: block;
   position: absolute;
   left: 0;
   bottom: -10px;
-  width: 70%;
+  width: 100%;
   height: 4px;
   background: var(--pizza-red);
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-group {
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item .app-form-group {
   margin-bottom: 15px;
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-group.message {
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item .app-form-group.message {
   margin-top: 40px;
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-group.buttons {
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item .app-form-group.buttons {
   margin-bottom: 0;
   text-align: right;
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-control {
-  width: 100%;
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item .app-form-control {
+  width: 90%;
+  margin: 0 auto; /* Centers the input within the form group */
+  display: block;
   padding: 10px 0;
   background: none;
   border: none;
@@ -129,15 +161,15 @@
   transition: border-color .2s;
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-control::placeholder {
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item .app-form-control::placeholder {
   color: var(--pizza-yellow);
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-control:focus {
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item .app-form-control:focus {
   border-bottom-color: var(--pizza-beige);
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-button {
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item .app-form-button {
   padding: 1em 1.5em 1em 1.5em;
   background-color: var(--pizza-yellow);
   border: none;
@@ -148,60 +180,137 @@
   border-radius: 1em;
   transition: 0.5s;
   font-weight: bold;
+  margin: 2rem 2rem 2rem 0rem;
 }
 
-#contact-page .background-container-form .content .screen .screen-body .screen-body-item .app-form-button:hover {
+#contact-page .container-form .middle-content .screen .screen-body .screen-body-item .app-form-button:hover {
   color: var(--pizza-beige);
   background-color: var(--pizza-red);
 }
 
+/* CONTACT FORM - RIGHT SECTION */
+#contact-page .container-form .right-content {
+  display: flex;
+  width: 25%;
+  align-items: center;
+  padding-left: 1rem;
+  text-align: right;
+}
 
+/* 1 - ContactForm - END */
+/* 1 - ContactForm - END */
+/* 1 - ContactForm - END */
+/* 1 - ContactForm - END */
+/* 1 - ContactForm - END */
 
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
 
+/* 2 - COMTACT MAP - START */
+/* 2 - COMTACT MAP - START */
+/* 2 - COMTACT MAP - START */
+/* 2 - COMTACT MAP - START */
+/* 2 - COMTACT MAP - START */
 
+#contact-page .contact-map {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
 
+/* 2 - COMTACT MAP - END */
+/* 2 - COMTACT MAP - END */
+/* 2 - COMTACT MAP - END */
+/* 2 - COMTACT MAP - END */
+/* 2 - COMTACT MAP - END */
 
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
 
+/* BANNER IN CONTACT PAGE - START */
+/* BANNER IN CONTACT PAGE - START */
+/* BANNER IN CONTACT PAGE - START */
+/* BANNER IN CONTACT PAGE - START */
+/* BANNER IN CONTACT PAGE - START */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#contact-page .banner {
+#contact-page .banner.one {
   margin-bottom: 5rem;
 }
 
+/* BANNER IN CONTACT PAGE - END */
+/* BANNER IN CONTACT PAGE - END */
+/* BANNER IN CONTACT PAGE - END */
+/* BANNER IN CONTACT PAGE - END */
+/* BANNER IN CONTACT PAGE - END */
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+
+@media screen and (max-width: 1616px) {
+  
+}
+
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+
+@media screen and (max-width: 1316px) and (max-width: 1023px) {
+  
+}
+
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+/* SMALL - MEDIA QUERY START */
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  
+}
+
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */
+/* SMALL - MEDIA QUERY END */

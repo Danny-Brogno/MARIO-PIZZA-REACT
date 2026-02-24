@@ -169,9 +169,71 @@
 /* 2 - MAKE YOUR OWN PIZZA - END */
 /* 2 - MAKE YOUR OWN PIZZA - END */
 
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* BANNER IN ORDER ONLINE PAGE - START */
+/* BANNER IN ORDER ONLINE PAGE - START */
+/* BANNER IN ORDER ONLINE PAGE - START */
+/* BANNER IN ORDER ONLINE PAGE - START */
+/* BANNER IN ORDER ONLINE PAGE - START */
+
 #order-online-page .banner.two {
   margin-bottom: 3rem;
 }
+
+/* BANNER IN ORDER ONLINE PAGE - END */
+/* BANNER IN ORDER ONLINE PAGE - END */
+/* BANNER IN ORDER ONLINE PAGE - END */
+/* BANNER IN ORDER ONLINE PAGE - END */
+/* BANNER IN ORDER ONLINE PAGE - END */
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+/* LARGE - MEDIA QUERY START */
+
+@media screen and (max-width: 1616px) {
+  
+}
+
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+/* LARGE - MEDIA QUERY END */
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+/* MEDIUM - MEDIA QUERY START */
+
+@media screen and (max-width: 1316px) and (max-width: 1023px) {
+  
+}
+
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
+/* MEDIUM - MEDIA QUERY END */
 
 /* ------------------------------- */
 /* ------------------------------- */

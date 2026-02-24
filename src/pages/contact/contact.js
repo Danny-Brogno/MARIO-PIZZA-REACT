@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 // COMPONENTS 
 import { Banner1 } from "../../components/banner1.js";
 import { ContactForm } from "../../components/contact-form.js";
+import { ContactMap } from "../../components/contact-map.js";
 // CSS
 import '../../style-global.css';
 import '../../style-contact.css';
@@ -31,6 +32,7 @@ export const ContactPage = () => {
   return (
     <div id="contact-page">
       <ContactForm />
+      <ContactMap />
       <Banner1 />
     </div>
   )
