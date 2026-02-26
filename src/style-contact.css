@@ -28,13 +28,13 @@
   width: 25%;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Keep it to the left */
-  padding-right: 5%; /* This creates the gap so it doesn't touch the form */
+  justify-content: flex-start;
+  padding-right: 5%; 
   box-sizing: border-box;
 }
 
 #contact-page .container-form .left-content p {
-  width: 100%; /* Let the text fill the 25% area (minus padding) */
+  width: 100%;
   display: flex;
   align-items: center;
   line-height: 2;
@@ -227,11 +227,11 @@
 /* ------------------------------- */
 /* ------------------------------- */
 
-/* 2 - COMTACT MAP - START */
-/* 2 - COMTACT MAP - START */
-/* 2 - COMTACT MAP - START */
-/* 2 - COMTACT MAP - START */
-/* 2 - COMTACT MAP - START */
+/* 2 - CONTACTS-> MAP - START */
+/* 2 - CONTACTS-> MAP - START */
+/* 2 - CONTACTS-> MAP - START */
+/* 2 - CONTACTS-> MAP - START */
+/* 2 - CONTACTS-> MAP - START */
 
 #contact-page .contact-map {
   margin-top: 3rem;
@@ -239,11 +239,11 @@
   justify-content: center;
 }
 
-/* 2 - COMTACT MAP - END */
-/* 2 - COMTACT MAP - END */
-/* 2 - COMTACT MAP - END */
-/* 2 - COMTACT MAP - END */
-/* 2 - COMTACT MAP - END */
+/* 2 - CONTACTS-> MAP - END */
+/* 2 - CONTACTS-> MAP - END */
+/* 2 - CONTACTS-> MAP - END */
+/* 2 - CONTACTS-> MAP - END */
+/* 2 - CONTACTS-> MAP - END */
 
 /* ------------------------------- */
 /* ------------------------------- */
