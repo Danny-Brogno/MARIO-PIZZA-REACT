@@ -9,9 +9,9 @@ export const Testing = () => {
     setIsClicked(true);
   }
   
-  return (
+  return(
     <button onClick={toggleClick}>
-      {isClicked ? "I have been clicked!" : "Click me!"}
+      {isClicked ? "THANKS FOR CLIKING!!!" : "CLICK HERE!"}
     </button>
   )
 }
