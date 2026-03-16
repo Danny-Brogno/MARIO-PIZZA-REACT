@@ -10,8 +10,12 @@ export const Testing = () => {
   }
   
   return(
-    <button onClick={toggleClick}>
-      {isClicked ? "THANKS FOR CLIKING!!!" : "CLICK HERE!"}
-    </button>
+    <>
+      <div>
+        <button onClick={toggleClick}>
+          {isClicked ? "THANKS FOR CLIKING!!!" : "CLICK HERE!"}
+        </button>
+      </div>
+    </>
   )
 }
