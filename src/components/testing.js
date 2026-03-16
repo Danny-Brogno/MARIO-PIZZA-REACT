@@ -10,7 +10,7 @@ export const Testing = () => {
   }
   
   return(
-    <>
+    <>{/* FRAGMENT  */}
       <div>
         <button onClick={toggleClick}>
           {isClicked ? "THANKS FOR CLIKING!!!" : "CLICK HERE!"}
