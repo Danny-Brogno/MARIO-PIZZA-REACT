@@ -10,7 +10,7 @@ import { ThreeBoxContainerAboutUs } from "../../components/threeBoxContainerAbou
 import '../../style-global.css';
 import '../../style-aboutUs.css';
 // FAVICON
-import favicon1 from '../../img/favicon-aboutUs.png';
+import faviconAboutUsPage from '../../img/favicon-aboutUs.png';
 
 // --------------------------
 export const AboutUs = () => {
@@ -26,7 +26,7 @@ export const AboutUs = () => {
     // Set Favicon
     const link = document.querySelector("link[rel~='icon']");
     if (link) {
-      link.href = favicon1;
+      link.href = faviconAboutUsPage;
     }
   }, []);
   

@@ -10,7 +10,7 @@ import '../../style-global.css';
 import '../../style-contact.css';
 
 // FAVICON
-import favicon from '../../img/favicon-aboutUs.png';
+import faviconContactPage from '../../img/favicon-aboutUs.png';
 
 
 export const ContactPage = () => {
@@ -26,7 +26,7 @@ export const ContactPage = () => {
     // Set Favicon
     const link = document.querySelector("link[rel~='icon']");
     if (link) {
-      link.href = favicon;
+      link.href = faviconContactPage;
     }
   }, []);
   

@@ -42,6 +42,7 @@ export const Header = ({currentPage, setCurrentPage}) => {
       ".logo-container",
       ".banner",
       ".banner.two",
+      ".make-your-own-pizza",
       ".jumbotron-static-image",
       "footer"
     ];

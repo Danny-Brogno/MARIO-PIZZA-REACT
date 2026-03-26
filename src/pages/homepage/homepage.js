@@ -15,7 +15,7 @@ import '../../style-global.css';
 import '../../style-homepage.css';
 
 // FAVICON
-import favicon from '../../img/favicon-homepage.png';
+import faviconHomepage from '../../img/favicon-homepage.png';
 
 // --------------------------
 export const HomePage = () => {
@@ -31,7 +31,7 @@ export const HomePage = () => {
     // Set Favicon
     const link = document.querySelector("link[rel~='icon']");
     if (link) {
-      link.href = favicon;
+      link.href = faviconHomepage;
     }
   }, []);
   

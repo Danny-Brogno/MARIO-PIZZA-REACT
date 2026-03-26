@@ -11,7 +11,7 @@ import '../../style-global.css';
 import '../../style-orderOnline.css';
 
 // FAVICON
-import favicon from '../../img/favicon-homepage.png';
+import faviconOrderOnlinePage from '../../img/favicon-homepage.png';
 
 
 export const OrderOnline = () => {
@@ -27,7 +27,7 @@ export const OrderOnline = () => {
     // Set Favicon
     const link = document.querySelector("link[rel~='icon']");
     if (link) {
-      link.href = favicon;
+      link.href = faviconOrderOnlinePage;
     }
   }, []);
   
