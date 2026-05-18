@@ -264,6 +264,22 @@
   #order-online-page .under-header-orderOnline h1 {
     text-align: center;
   }
+  
+  #order-online-page .under-header-orderOnline .order-pizza-container {
+    justify-content: center;
+  }
+  
+  #order-online-page .under-header-orderOnline .order-pizza-container .card .circle {
+    clip-path: circle(190px at center 20px);
+  }
+  
+  #order-online-page .under-header-orderOnline .order-pizza-container:hover .card,
+  #order-online-page .under-header-orderOnline .order-pizza-container .card:hover {
+    filter: none;
+    transform: none;
+    opacity: initial;
+  }
+  
 }
 
 /* SMALL - MEDIA QUERY END */
