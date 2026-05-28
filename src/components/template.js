@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const EachBot = () => {
+export const ChangeThisNameHere = () => {
   return (
     
   )
