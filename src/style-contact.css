@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 0 auto;
+  margin: 0rem auto 5rem auto;
 }
 
 /* TITLE */
@@ -234,9 +234,68 @@
 /* 2 - CONTACT PAGE -> MAP - START */
 
 #contact-page .contact-map {
+  width: 100%;
+  height: 100%;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+}
+
+#contact-page .contact-map div.contacts-sub-container {
+  width: 90%;
+  margin:0 auto;
+  display: flex;
+}
+
+/* Inside contacts-sub-container there are 2 divs that take 50% of the width */
+/* 1 */
+#contact-page .contact-map div.contacts-sub-container span.directions,
+/* 2 */
+#contact-page .contact-map div.contacts-sub-container .contact-map-image-container  {
+  width: 50%;
+  height:100%;
+  position: relative;
+}
+
+#contact-page .contact-map div.contacts-sub-container .contact-map-image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+#contact-page .contact-map-image-container .dark {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 2;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* Make the DARK reappear on hover alongside the h3 */
+#contact-page .contact-map-image-container:hover .dark {
+  display: block;
+}
+
+#contact-page .contact-map-image-container h3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+  white-space: nowrap;
+  color: white;
+  z-index: 3;
+  display: none;
+}
+
+/* Make the h3 reappear on hover alongside the dark layer */
+#contact-page .contact-map-image-container:hover h3 {
+  display: block;
 }
 
 /* 2 - CONTACT PAGE -> MAP - END */

@@ -1,9 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+// image (to remove once we have google maps API)
+import mapImage from '../img/maps-image.png';
+
 
 export const ContactMap = () => {
+  
+  // State to track which image is enlarged
+  const [enlargedImg, setEnlargedImg] = useState(null);
+
+  // Function to open the overlay
+  const handleImageClick = (imgSrc) => {
+    setEnlargedImg(imgSrc);
+  };
+
+  // Function to close the overlay
+  const closeOverlay = () => {
+    setEnlargedImg(null);
+  };
+  
   return (
     <div className="contact-map">
-      MAP HERE
+      <div className="contacts-sub-container">
+      
+        <div className="directions">
+          <span>
+            Direzioni per arrivare alla pizzeria qui.
+            Questo è solo del testo riempitivo che non serve a niente.
+            Da cancellare ed aggiungere qualcosa di serio.
+          </span>
+        </div>
+        
+        {/* THE OVERLAY (Only shows when an image is clicked) */}
+        {enlargedImg && (
+          <div 
+            onClick={closeOverlay}
+            style={{
+              background: `RGBA(0,0,0,.9) url(${enlargedImg}) no-repeat center`,
+              backgroundSize: 'contain',
+              width: '100%',
+              height: '100%',
+              position: 'fixed',
+              zIndex: '10000',
+              top: '0',
+              left: '0',
+              cursor: 'pointer'
+            }}
+          />
+        )}
+        
+        <div className="contact-map-image-container" onClick={() => handleImageClick(mapImage)}>
+          <img src={mapImage} alt="map-here" />
+          <div className="dark"><h3>Click here to enlarge</h3></div>
+        </div>
+        
+      </div>
     </div>
   )
 }
