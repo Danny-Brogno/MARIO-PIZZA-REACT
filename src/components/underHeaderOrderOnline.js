@@ -41,7 +41,6 @@ export const UnderHeaderOrderOnline = () => {
   // Placeholder function for your toggle
   const togglePizzas = (pizza) => {
     console.log("Selected Pizza:", pizza.name);
-    // Add your logic here (e.g., opening a modal or selecting an item)
   };
   
   return (
@@ -87,7 +86,16 @@ export const UnderHeaderOrderOnline = () => {
           <div className="content">
             <h2>{pizza.name}</h2>
             <p>Price: £{pizza.price}</p>
-            <button tyle="button" className="my-button-special" onClick={(e) => e.stopPropagation()} onClick={() => setCurrentPage("cart")}>Add to cart</button>
+            <button 
+              type="button" 
+              className="my-button-special" 
+              onClick={(e) => {
+                e.stopPropagation(); 
+                setCurrentPage("cart");
+              }}
+              >
+                Add to cart
+              </button>
             </div>
           </div>
         ))}
