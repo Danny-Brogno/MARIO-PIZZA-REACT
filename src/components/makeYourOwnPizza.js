@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useNav } from '../context/NavContext.js';
+
 import makeYourOwnPizza from '../img/14.jpg';
 
 export const MakeYourOwnPizza = () => {
+  const { setCurrentPage } = useNav();
   
   const ingredients = [
     { name: "Italian sausages", price: 2 },
@@ -99,7 +102,7 @@ export const MakeYourOwnPizza = () => {
                     <strong>TOTAL</strong>
                     <strong>£{total}</strong>
                   </div>
-                  <button className="checkout-btn">GO TO CART</button>
+                  <button className="checkout-btn" onClick={() => setCurrentPage("cart")}>GO TO CART</button>
                   <button onClick={() => setShowSummary(false)} className="close-btn">EDIT</button>
                 </div>
               </div>

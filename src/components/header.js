@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNav } from '../context/NavContext.js';
+
 import logo from '../img/mario-pizza-logo.png';
 
-export const Header = ({currentPage, setCurrentPage}) => {
+export const Header = () => {
+  const { setCurrentPage } = useNav();
   
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   // the header's top position (hidden at -150px by default)

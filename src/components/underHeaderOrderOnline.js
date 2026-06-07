@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNav } from '../context/NavContext.js';
+
 import pizza1 from '../img/1.jpg';
 import pizza2 from '../img/2.jpg';
 import pizza3 from '../img/3.jpg';
@@ -10,7 +12,7 @@ import pizza8 from '../img/8.jpg';
 import pizza9 from '../img/9.jpg';
 
 export const UnderHeaderOrderOnline = () => {
-  
+  const { setCurrentPage } = useNav();
   // State to track which image is enlarged
   const [enlargedImg, setEnlargedImg] = useState(null);
 
@@ -85,7 +87,7 @@ export const UnderHeaderOrderOnline = () => {
           <div className="content">
             <h2>{pizza.name}</h2>
             <p>Price: £{pizza.price}</p>
-            <button tyle="button" className="my-button-special" onClick={(e) => e.stopPropagation()}>Add to chart</button>
+            <button tyle="button" className="my-button-special" onClick={(e) => e.stopPropagation()} onClick={() => setCurrentPage("cart")}>Add to cart</button>
             </div>
           </div>
         ))}

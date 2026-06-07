@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNav } from '../context/NavContext.js';
+
 import logo from '../img/mario-pizza-logo.png';
 
 const scrollToTheTop = () => {
@@ -8,7 +10,8 @@ const scrollToTheTop = () => {
   });
 };
 
-export const Footer = ({currentPage, setCurrentPage}) => {
+export const Footer = () => {
+  const { setCurrentPage } = useNav();
   return (
     
     <footer id="footer-global">
