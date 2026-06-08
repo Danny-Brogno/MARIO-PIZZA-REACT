@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNav } from '../context/NavContext.js';
 
 // SPLITTING is the text scrolling effect
 import 'splitting/dist/splitting.css';
@@ -7,6 +8,7 @@ import Splitting from 'splitting';
 
 // --------------------------
 export const UnderHeaderHomepage = () => {
+  const { setCurrentPage } = useNav();
   
   useEffect(() => {
     // We call the function inside useEffect so React ensures 
@@ -30,7 +32,7 @@ export const UnderHeaderHomepage = () => {
             Follow our love for perfect crust and texture; make your next dinner a pizza one!
           </p>
           
-          <button className="my-button-special">
+          <button className="my-button-special" onClick={()=>setCurrentPage("orderOnline")}>
             Order now!
           </button>
         </div>

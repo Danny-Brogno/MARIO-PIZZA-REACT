@@ -11,9 +11,26 @@ export const ContactForm = () => {
       <div className="flex justify-space-between">
         
         <div className="left-content">
-          <p>
-            Place your Clickable Phone and Email here. This is crucial for mobile users who want to order now.
-          </p>
+          <div>
+            <p>
+              Call us not at the following number:
+            </p>
+          
+            <p>
+              +39 0984 439052
+            </p>
+            
+          </div>
+          <div>
+            <p>
+              Email us not at the following email address:
+            </p>
+
+            <p>
+              mariopizza@gmail.com
+            </p>
+          
+          </div>
         </div>
         
         <div className="middle-content">
@@ -57,9 +74,34 @@ export const ContactForm = () => {
         </div>
         
         <div className="right-content">
-          <p>
-            Operating Hours (Right): A simple, clean list. Consistency is key for hungry customers.
-          </p>
+          <div>
+            <p>
+              Store opening hours:
+            </p>
+            <ul>
+              <li>
+                Monday: 11:00 to 23:00
+              </li>
+              <li>
+                Tuesday: 11:00 to 23:00
+              </li>
+              <li>
+                Wednesday: Closed
+              </li>
+              <li>
+                Thursday: 11:00 to 23:00
+              </li>
+              <li>
+                Friday: 11:00 to 23:00
+              </li>
+              <li>
+                Saturday: 11:00 to 23:00
+              </li>
+              <li>
+                Sunday: 11:00 to 23:00
+              </li>
+            </ul>
+          </div>
         </div>
         
       </div>

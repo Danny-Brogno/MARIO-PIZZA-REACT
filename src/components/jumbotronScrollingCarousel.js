@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useNav } from '../context/NavContext.js';
+
 import pizza1 from '../img/1.jpg';
 import pizza2 from '../img/2.jpg';
 import pizza3 from '../img/3.jpg';
@@ -10,6 +12,10 @@ import pizza8 from '../img/8.jpg';
 import pizza9 from '../img/9.jpg';
 
 export const JumbotronScrollingCarousel = () => {
+  
+  // CONTEXT -> makes us switch pages
+  const { setCurrentPage } = useNav();
+  
   // Store the images in an array for easy mapping
   const images = [pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9];
   
@@ -61,7 +67,9 @@ export const JumbotronScrollingCarousel = () => {
             We treat every dough ball like a high-stakes science experiment, where the only acceptable outcome is a perfect, leopard-spotted char and a cheese pull that defies the laws of physics. 
           </p>
           <div className="btn-container">
-            <button type="button" className="my-button-first" style={{margin: "0"}}>READ MORE</button>
+            <button type="button" className="my-button-first" style={{margin: "0"}} onClick={()=>setCurrentPage("aboutUs")}>
+              READ MORE
+            </button>
           </div>
         </div>
       </section>

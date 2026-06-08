@@ -33,6 +33,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
 }
 
 #homepage .under-header .under-header-content #pizza-logo {
@@ -632,6 +634,7 @@
   #homepage .under-header .under-header-content h2 {
     font-size: 3.5em;
   }
+  
 }
 
 /* MEDIUM - MEDIA QUERY END */
@@ -950,11 +953,11 @@
     border: none;
   }
   
-  /* JUMBOTRON STATIC IMAGE - START */
-  /* JUMBOTRON STATIC IMAGE - START */
-  /* JUMBOTRON STATIC IMAGE - START */
-  /* JUMBOTRON STATIC IMAGE - START */
-  /* JUMBOTRON STATIC IMAGE - START */
+  /* JUMBOTRON STATIC IMAGE - END */
+  /* JUMBOTRON STATIC IMAGE - END */
+  /* JUMBOTRON STATIC IMAGE - END */
+  /* JUMBOTRON STATIC IMAGE - END */
+  /* JUMBOTRON STATIC IMAGE - END */
   
 }
 

@@ -24,11 +24,36 @@ export const ContactMap = () => {
       <div className="contacts-sub-container">
       
         <div className="directions">
-          <span>
-            Direzioni per arrivare alla pizzeria qui.
-            Questo è solo del testo riempitivo che non serve a niente.
-            Da cancellare ed aggiungere qualcosa di serio.
-          </span>
+          <ul>
+            <li>
+              MARIO PIZZA RESTAURANT
+            </li>
+            
+            <li>
+              Via della Chiesa 8
+            </li>
+            
+            <li>
+              87100
+            </li>
+            
+            <li>
+              Cosenza
+            </li>
+          </ul>
+          
+          <ul>
+
+            <li>
+              Directions from Highway A2: take the Cosenza sud exit and go towards the "sopra elevata". Then take Viale Giacomo Mancini, going southbound. The fifth block on the left is Via della Chiesa.
+            </li>
+            
+            <li>
+              Directions with the bus: if you come from downtown Cosenza, take the 69 bus going towards Piazza dei Bruzi and get off at the "Chiesa" stop (9 stops). If you come from Rende, take the 68 bus going towards Arcavacata and get off at the "Chiesa" stop (12 stops).
+            </li>
+
+          </ul>
+          
         </div>
         
         {/* THE OVERLAY (Only shows when an image is clicked) */}

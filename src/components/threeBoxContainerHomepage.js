@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import { useNav } from '../context/NavContext.js';
+
 import pizza1 from '../img/27.jpg';
 import pizza2 from '../img/31.jpg';
 import pizza3 from '../img/32.jpg';
 
 // --------------------------
 export const ThreeBoxContainerHomepage = () => {
+  
+  // CONTEXT -> makes us switch pages
+  const { setCurrentPage } = useNav();
   
   // State to track which image is enlarged
   const [enlargedImg, setEnlargedImg] = useState(null);
@@ -47,7 +52,9 @@ export const ThreeBoxContainerHomepage = () => {
           <p>
             Mozzarella, fresh rocket, prosciutto crudo di Parma and olive oil.
           </p>
-          <button type="button" className="my-button-first" style={{margin: "3em 0em 2em 0em"}}>ORDER NOW</button>
+          <button type="button" className="my-button-first" style={{margin: "3em 0em 2em 0em"}} onClick={()=>setCurrentPage("orderOnline")}>
+            ORDER NOW
+          </button>
         </div>
         
         <div>
@@ -56,7 +63,9 @@ export const ThreeBoxContainerHomepage = () => {
           <p>
             Grilled italian salsiccia, savory cime di rapa and olive oil.
           </p>
-          <button type="button" className="my-button-first" style={{margin: "3em 0em 2em 0em"}}>ORDER NOW</button>
+          <button type="button" className="my-button-first" style={{margin: "3em 0em 2em 0em"}} onClick={()=>setCurrentPage("orderOnline")}>
+            ORDER NOW
+          </button>
         </div>
         
         <div>
@@ -65,7 +74,9 @@ export const ThreeBoxContainerHomepage = () => {
           <p>
             Mozzarella, buffalo mozzarella, cherry tomatoes, basil and olive oil.
           </p>
-          <button type="button" className="my-button-first" style={{margin: "3em 0em 2em 0em"}}>ORDER NOW</button>
+          <button type="button" className="my-button-first" style={{margin: "3em 0em 2em 0em"}} onClick={()=>setCurrentPage("orderOnline")}>
+            ORDER NOW
+          </button>
         </div>
 
       </div>
