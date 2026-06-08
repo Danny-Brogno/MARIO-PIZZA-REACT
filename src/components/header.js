@@ -4,8 +4,10 @@ import { useNav } from '../context/NavContext.js';
 import logo from '../img/mario-pizza-logo.png';
 
 export const Header = () => {
+  // THIS IS FOR THE CONTEXT
   const { setCurrentPage } = useNav();
   
+  // HEADER APPEARING ON SCROLL - START
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   // the header's top position (hidden at -150px by default)
@@ -26,46 +28,61 @@ export const Header = () => {
     // Cleanup the event listener when the component is removed
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  // HEADER APPEARING ON SCROLL - END
 
-  // Toggles the burger menu and the blur effect on background elements
+  // BLUR EFFECT - START
+  const handlePageChange = (pageName) => {
+    setCurrentPage(pageName);
+    setIsMenuOpen(false); // Closes the mobile menu state
+    
+    // Explicitly wipes out all blurs upon changing the page
+    const blurredElements = document.querySelectorAll(".blur");
+    blurredElements.forEach(el => el.classList.remove("blur"));
+  };
+
+  // 2. The explicit toggle menu logic (Without logo-container, using explicit .add / .remove)
   const toggleMenu = () => {
     const newState = !isMenuOpen;
     setIsMenuOpen(newState);
     
-    // Select all elements that need the blur effect
     const elementsToBlur = [
       ".under-header",
       ".under-header-AboutUs",
+      ".under-header-orderOnline",
       ".jumbotron",
       ".jumbotron-scrolling-carousel",
       ".meet-our-staff-container",
       ".three-box-container-homepage",
       ".three-box-container-aboutUs",
-      ".logo-container",
       ".banner",
       ".banner.two",
       ".make-your-own-pizza",
       ".jumbotron-static-image",
+      ".container-form",
+      ".contact-map",
       "footer"
     ];
     
     elementsToBlur.forEach(selector => {
       const el = document.querySelector(selector);
       if (el) {
-        el.classList.toggle("blur");
+        if (newState) {
+          el.classList.add("blur");
+        } else {
+          el.classList.remove("blur");
+        }
       }
     });
   };
 
-  // Closes the menu and explicitly removes the blur from the main content
+  // 3. Simple safety backup menu close handler for mouse leave event
   const closeMenu = () => {
     setIsMenuOpen(false);
-    document.querySelector("main")?.classList.remove("blur");
-    
-    // Also remove blur from other elements to be safe
     const elements = document.querySelectorAll(".blur");
     elements.forEach(el => el.classList.remove("blur"));
   };
+
+  // BLUR EFFECT - END
 
   return (
     <header id="header-global" style={{ top: headerTop }}>
@@ -118,12 +135,28 @@ export const Header = () => {
               >
                 <i className="fas fa-bars"></i>
               </button>
-
+              
               <ul className={`dropdown ${isMenuOpen ? 'menu-on' : 'hide'}`} onMouseLeave={closeMenu}>
-                <li><span onClick={()=>setCurrentPage("homepage")}>Home</span></li>
-                <li><span onClick={()=>setCurrentPage("aboutUs")}>About</span></li>
-                <li><span onClick={()=>setCurrentPage("orderOnline")}>Order online</span></li>
-                <li><span onClick={()=>setCurrentPage("contact")}>Contact</span></li>
+                <li>
+                  <span onClick={() => handlePageChange("homepage")}>
+                    Home
+                  </span>
+                </li>
+                <li>
+                  <span onClick={() => handlePageChange("aboutUs")}>
+                    About
+                  </span>
+                </li>
+                <li>
+                  <span onClick={() => handlePageChange("orderOnline")}>
+                    Order online
+                  </span>
+                </li>
+                <li>
+                  <span onClick={() => handlePageChange("contact")}>
+                    Contact
+                  </span>
+                </li>
               </ul>
             </section>
           </li>

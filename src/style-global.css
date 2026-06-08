@@ -127,6 +127,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .blur {
   filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
 }
 
 .margin-top-5-em {
@@ -1126,6 +1128,7 @@ footer#footer-global .copy-right {
   }
   
   header nav ul li {
+    width: 100%;
     border:none;
     padding:0;
     background-color: initial;
@@ -1146,12 +1149,15 @@ footer#footer-global .copy-right {
     position: absolute;
     top:0;
     right:0;
+    z-index: 9999;
   }
 
   #invisible-burger .dropdown {
     position:relative;
     padding: 10px;
     border: 2px solid var(--pizza-green);
+    background-color: var(--normal-white);
+    z-index: 10000; 
   }
   
   #invisible-burger .drop-links {
@@ -1166,7 +1172,7 @@ footer#footer-global .copy-right {
     font-size: 1em;
   }
 
-  #invisible-burger .dropdown li {
+  #invisible-burger ul.dropdown li span {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1177,7 +1183,7 @@ footer#footer-global .copy-right {
     cursor: pointer;
   }
 
-  #invisible-burger .dropdown li:hover {
+  #invisible-burger ul.dropdown li span:hover {
     background-color: lime;
     border-radius: 5px;
   }
