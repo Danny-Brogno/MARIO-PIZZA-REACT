@@ -40,7 +40,7 @@ export const Header = () => {
     blurredElements.forEach(el => el.classList.remove("blur"));
   };
 
-  // 2. The explicit toggle menu logic (Without logo-container, using explicit .add / .remove)
+  // The explicit toggle menu logic (Without logo-container, using explicit .add / .remove)
   const toggleMenu = () => {
     const newState = !isMenuOpen;
     setIsMenuOpen(newState);
@@ -75,7 +75,7 @@ export const Header = () => {
     });
   };
 
-  // 3. Simple safety backup menu close handler for mouse leave event
+  // Simple safety backup menu close handler for mouse leave event
   const closeMenu = () => {
     setIsMenuOpen(false);
     const elements = document.querySelectorAll(".blur");
