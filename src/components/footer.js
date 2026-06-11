@@ -49,7 +49,9 @@ export const Footer = () => {
         <div className="bottom-footer">
           
           <span>
-            <i className="fa-brands fa-square-facebook"></i>
+            <a href="http://facebook.com/danny.brogno" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-square-facebook"></i>
+            </a>
           </span>
           
           <span>
@@ -70,7 +72,7 @@ export const Footer = () => {
         </div>
         
         <div className="copy-right">
-          <p>COPYRIGHT 2001. ALL RIGHTS RESERVED "MARIO PIZZA"</p>
+          <p>&copy; 2026 Danny Brogno. All Rights Reserved.</p>
         </div>
 
         

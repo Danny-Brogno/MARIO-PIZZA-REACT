@@ -19,7 +19,7 @@ export const ContactForm = () => {
             <p>
               <a href="tel:+390984439052">
                 <span>
-                  <i class="fa-solid fa-phone trin-trin"></i>
+                  <i className="fa-solid fa-phone trin-trin"></i>
                   </span>
                 <span>
                   +39 0984 439052
@@ -34,12 +34,12 @@ export const ContactForm = () => {
             </p>
 
             <p>
-              <a href="mailto:mariopizza@gmail.com">
+              <a href="mailto:danny.brogno@gmail.com" className="scrolling-text">
                 <span>
-                  <i class="fa-solid fa-at"></i>
+                  <i className="fa-solid fa-at"></i>
                   </span>
                 <span>
-                  mariopizza@gmail.com
+                  danny.brogno@gmail.com
                 </span>
               </a>
             </p>

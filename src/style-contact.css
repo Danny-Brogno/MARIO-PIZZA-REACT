@@ -54,6 +54,28 @@
   font-size: 2rem;
 }
 
+#contact-page .container-form .left-content p a i.fa-at {
+  color: var(--pizza-red);
+}
+
+#contact-page .container-form .left-content p a.scrolling-text {
+  border-right: 3px solid var(--pizza-dark);
+  letter-spacing: 2px;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(20), cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {border-color: transparent}
+}
+
+@keyframes typing {
+  from {width: 0}
+}
+
 #contact-page .container-form .left-content p a span i.trin-trin {
   animation-name: trin;
   animation-duration: 1.5s;
@@ -82,7 +104,6 @@
     transform:rotate3d(0, 0, 1, 0deg);
   }
 }
-
 
 /* CONTACT FORM - MIDDLE SECTION  */
 #contact-page .container-form .middle-content {
