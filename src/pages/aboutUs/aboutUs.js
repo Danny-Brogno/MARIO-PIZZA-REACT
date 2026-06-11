@@ -9,6 +9,7 @@ import { ThreeBoxContainerAboutUs } from "../../components/threeBoxContainerAbou
 // CSS
 import '../../style-global.css';
 import '../../style-aboutUs.css';
+
 // FAVICON
 import faviconAboutUsPage from '../../img/favicon-aboutUs.png';
 

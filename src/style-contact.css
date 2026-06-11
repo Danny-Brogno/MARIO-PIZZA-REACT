@@ -47,10 +47,40 @@
 
 #contact-page .container-form .left-content div p:first-of-type {
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 #contact-page .container-form .left-content div p:last-of-type {
   font-size: 2rem;
+}
+
+#contact-page .container-form .left-content p a span i.trin-trin {
+  animation-name: trin;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  color: var(--pizza-red);
+}
+
+@keyframes trin {
+  from {
+    transform:rotate3d(0, 0, 1, 0deg);
+  }
+  20%, 32%, 44%, 56%, 68% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  23%, 35%, 47%, 59%, 71% {
+    transform: rotate3d(0,0,1,15deg);
+  }
+  26%, 38%, 50%, 62%, 74% {
+    transform: rotate3d(0,0,1,0deg);
+  }
+  29%, 41%, 53%, 65%, 77% {
+    transform: rotate3d(0,0,1,-15deg);
+  }
+  80% {
+    transform:rotate3d(0, 0, 1, 0deg);
+  }
 }
 
 
@@ -240,6 +270,7 @@
   justify-content: space-between;
   align-items: flex-end;
   height: 85%;
+  font-size: 1.5rem;
 }
 
 /* 1 - ContactForm - END */
@@ -301,14 +332,15 @@
 }
 
 #contact-page .contact-map div.contacts-sub-container .directions ul:last-of-type li {
-  line-height: 2rem;
-  font-size: 1.3rem;
+  font-size: 1.9rem;
+  line-height: 36px;
 }
 
 /* RIGHT - IMAGE */
 #contact-page .contact-map div.contacts-sub-container .contact-map-image-container  {
   width: 50%;
   height: 100%;
+  position:relative;
 }
 
 #contact-page .contact-map div.contacts-sub-container .contact-map-image-container img {

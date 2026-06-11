@@ -15,9 +15,16 @@ export const ContactForm = () => {
             <p>
               Call us not at the following number:
             </p>
-          
+
             <p>
-              +39 0984 439052
+              <a href="tel:+390984439052">
+                <span>
+                  <i class="fa-solid fa-phone trin-trin"></i>
+                  </span>
+                <span>
+                  +39 0984 439052
+                </span>
+              </a>
             </p>
             
           </div>
@@ -27,7 +34,14 @@ export const ContactForm = () => {
             </p>
 
             <p>
-              mariopizza@gmail.com
+              <a href="mailto:mariopizza@gmail.com">
+                <span>
+                  <i class="fa-solid fa-at"></i>
+                  </span>
+                <span>
+                  mariopizza@gmail.com
+                </span>
+              </a>
             </p>
           
           </div>
