@@ -46,30 +46,30 @@ export const Footer = () => {
           </ul>
         </div>
         
-        <div className="bottom-footer">
+        <ul className="bottom-footer">
           
-          <span>
+          <li>
             <a href="http://facebook.com/danny.brogno" target="_blank" rel="noreferrer">
               <i className="fa-brands fa-square-facebook"></i>
             </a>
-          </span>
+          </li>
           
-          <span>
+          <li>
             <i className="fa-brands fa-instagram"></i>
-          </span>
+          </li>
           
-          <span>
+          <li>
             <i className="fa-brands fa-linkedin"></i>
-          </span>
+          </li>
           
-          <span>
+          <li>
             <i className="fa-brands fa-x-twitter"></i>
-          </span>
+          </li>
           
-          <span>
+          <li>
             <i className="fa-brands fa-tiktok"></i>
-          </span>
-        </div>
+          </li>
+        </ul>
         
         <div className="copy-right">
           <p>&copy; 2026 Danny Brogno. All Rights Reserved.</p>

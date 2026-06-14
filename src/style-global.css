@@ -960,7 +960,7 @@ footer#footer-global section .middle-footer ul li button:hover {
 }
 
 /* BOTTOM FOOTER */
-footer#footer-global section .bottom-footer span i {
+footer#footer-global section ul.bottom-footer li i {
   font-size: 1.3em;
 }
 
