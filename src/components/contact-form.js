@@ -11,39 +11,54 @@ export const ContactForm = () => {
       <div className="flex justify-space-between">
         
         <div className="left-content">
-          <div>
+          
+          <div className="phone">
             <p>
-              Call us not at the following number:
+              Call us on our landline:
             </p>
 
-            <p>
-              <a href="tel:+390984439052">
-                <span>
-                  <i className="fa-solid fa-phone trin-trin"></i>
-                  </span>
-                <span>
-                  +39 0984 439052
-                </span>
-              </a>
-            </p>
+            <a href="tel:+390984439052">
+              <span>
+                <i className="fa-solid fa-phone trin-trin"></i>
+              </span>
+                
+              <span>
+                +39 0984 439052
+              </span>
+            </a>
             
           </div>
-          <div>
+          
+          <div className="whatsapp">
             <p>
-              Email us not at the following email address:
+              Text us on WhatsApp:
+            </p>
+            
+            <a href="https://wa.me/4407849619289" target="_blank" rel="noreferrer">
+              <span>
+                <i className="fa-brands fa-whatsapp"></i>
+              </span>
+
+              <span>
+                +44 784 9619 283
+              </span>
+            </a>
+          </div>
+          
+          <div className="email">
+            <p>
+              Email us at the following email address:
             </p>
 
-            <p>
-              <a href="mailto:danny.brogno@gmail.com" className="scrolling-text">
-                <span>
-                  <i className="fa-solid fa-at"></i>
-                  </span>
-                <span>
-                  danny.brogno@gmail.com
-                </span>
-              </a>
-            </p>
-          
+            <a href="mailto:danny.brogno@gmail.com" className="scrolling-text">
+              <span>
+                <i className="fa-solid fa-at"></i>
+              </span>
+              
+              <span>
+                danny.brogno@gmail.com
+              </span>
+            </a>
           </div>
         </div>
         

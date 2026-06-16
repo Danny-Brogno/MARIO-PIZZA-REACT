@@ -19,7 +19,7 @@ export const Footer = () => {
         
         <div className="top-footer">
           <h3>
-            &copy;Mario Pizza. All rights reserved.
+            &copy; 2026 Danny Brogno. All Rights Reserved.
           </h3>
         </div>
         
@@ -72,7 +72,9 @@ export const Footer = () => {
         </ul>
         
         <div className="copy-right">
-          <p>&copy; 2026 Danny Brogno. All Rights Reserved.</p>
+          <p>
+            &copy; 2026 Danny Brogno. All Rights Reserved.
+          </p>
         </div>
 
         

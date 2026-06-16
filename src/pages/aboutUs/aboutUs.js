@@ -22,7 +22,7 @@ export const AboutUs = () => {
     window.scrollTo(0, 0);
 
     // Set Title
-    document.title = "Mario Pizza | ABout us";
+    document.title = "Mario Pizza | About us";
 
     // Set Favicon
     const link = document.querySelector("link[rel~='icon']");
