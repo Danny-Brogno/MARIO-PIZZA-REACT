@@ -39,7 +39,18 @@ export const Footer = () => {
         
           {/* RIGHT COLUMN */}
           <ul className="footer-links-right">
-            <li className="gone"><button type="button">DOWNLOAD MENU</button></li>
+            <li className="gone">
+              <a 
+                href="/Mario_Pizza_Menu.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }} // Prevents link underlining
+              >
+                <button type="button">
+                  DOWNLOAD MENU
+                </button>
+              </a>
+            </li>
             <li className="gone"><button type="button">PROMOS</button></li>
             <li className="gone"><button type="button">MEET OUR STAFF</button></li>
             <li className="gone"><button type="button">SUPER STAR PIZZA PASS</button></li>
@@ -73,7 +84,7 @@ export const Footer = () => {
         
         <div className="copy-right">
           <p>
-            &copy; 2026 Danny Brogno. All Rights Reserved.
+          
           </p>
         </div>
 
