@@ -191,11 +191,19 @@
 /* BANNER IN ORDER ONLINE PAGE - END */
 /* BANNER IN ORDER ONLINE PAGE - END */
 
-/* ------------------------------- */
-/* ------------------------------- */
-/* ------------------------------- */
-/* ------------------------------- */
-/* ------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* MEDIA QUERIES */
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
 
 /* LARGE - MEDIA QUERY START */
 /* LARGE - MEDIA QUERY START */
@@ -225,7 +233,7 @@
 /* MEDIUM - MEDIA QUERY START */
 /* MEDIUM - MEDIA QUERY START */
 
-@media screen and (max-width: 1316px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   
 }
 
@@ -247,7 +255,7 @@
 /* SMALL - MEDIA QUERY START */
 /* SMALL - MEDIA QUERY START */
 
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   
   #order-online-page .under-header-orderOnline .order-pizza-container {
     padding: 0;

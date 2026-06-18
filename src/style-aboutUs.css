@@ -537,16 +537,28 @@
   letter-spacing: 4px;
   line-height: 40px;
 }
-
-/* WRAPPED TEXT SECTION - START */
-/* WRAPPED TEXT SECTION - START */
-/* WRAPPED TEXT SECTION - START */
-/* WRAPPED TEXT SECTION - START */
-/* WRAPPED TEXT SECTION - START */
+/* (ALWAYS THE SAME SECTION - SEE ABOVE) */
+/* (ALWAYS THE SAME SECTION - SEE ABOVE) */
+/* (ALWAYS THE SAME SECTION - SEE ABOVE) */
+/* (ALWAYS THE SAME SECTION - SEE ABOVE) */
+/* (ALWAYS THE SAME SECTION - SEE ABOVE) */
+/* WRAPPED TEXT SECTION - END */
+/* WRAPPED TEXT SECTION - END */
+/* WRAPPED TEXT SECTION - END */
+/* WRAPPED TEXT SECTION - END */
+/* WRAPPED TEXT SECTION - END */
 
 #about-us-page .banner {
   margin-top: 0;
 }
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* MEDIA QUERIES */
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -582,7 +594,7 @@
 /* MEDIUM - MEDIA QUERY START */
 /* MEDIUM - MEDIA QUERY START */
 
-@media screen and (max-width: 1316px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   
 }
 
@@ -604,7 +616,7 @@
 /* SMALL - MEDIA QUERY START */
 /* SMALL - MEDIA QUERY START */
 
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   
   /* UNDER HEADER (raining pizzas) - START */
   /* UNDER HEADER (raining pizzas) - START */

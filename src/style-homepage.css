@@ -604,9 +604,21 @@
 
 @media screen and (max-width: 1616px) {
   
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  
   #homepage .under-header .under-header-content h2 {
     font-size: 4.5em;
   }
+  
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
   
 }
 
@@ -628,12 +640,144 @@
 /* MEDIUM - MEDIA QUERY START */
 /* MEDIUM - MEDIA QUERY START */
 
-@media screen and (max-width: 1316px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
+  
+  /* JUMBOTRON START */
+  /* JUMBOTRON START */
+  /* JUMBOTRON START */
+  /* JUMBOTRON START */
+  /* JUMBOTRON START */
+  
+  #homepage .jumbotron section.main-container .container {
+    min-height: initial;
+  }
+  
+  /* JUMBOTRON END */
+  /* JUMBOTRON END */
+  /* JUMBOTRON END */
+  /* JUMBOTRON END */
+  /* JUMBOTRON END */
+  
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
+  /* UNDER HEADER START*/
   
   #homepage .under-header .under-header-content h2 {
     font-size: 3.5em;
   }
   
+  /* UNDER HEADER END*/
+  /* UNDER HEADER END*/
+  /* UNDER HEADER END*/
+  /* UNDER HEADER END*/
+  /* UNDER HEADER END*/
+  
+  /* JUMBOTRON SCROLLING CAROUSEL - START */
+  /* JUMBOTRON SCROLLING CAROUSEL - START */
+  /* JUMBOTRON SCROLLING CAROUSEL - START */
+  /* JUMBOTRON SCROLLING CAROUSEL - START */
+  /* JUMBOTRON SCROLLING CAROUSEL - START */
+
+  #homepage .jumbotron-scrolling-carousel section {
+    flex-direction: column;
+  }
+  
+  #homepage .jumbotron-scrolling-carousel section .container-left,
+  #homepage .jumbotron-scrolling-carousel section .container-right {
+    width: 100%;
+    min-height: initial;
+    height:initial;
+  }
+  
+  #homepage .jumbotron-scrolling-carousel section .container-right .text {
+    margin: 0em auto 1em auto;
+  }
+  
+  #homepage .jumbotron-scrolling-carousel section .container-right .text h2 {
+    text-align: center;
+    font-size: 3em;
+    margin: 1em 0em 1em 0em;
+  }
+  
+  #homepage .jumbotron-scrolling-carousel section .container-right .text h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0;
+    margin: 0em 0em 1em 0em;
+  }
+  
+  #homepage .jumbotron-scrolling-carousel section .container-right .btn-container {
+    margin:1em 0em;
+    width: 100%;
+  }
+  
+  #homepage .jumbotron-scrolling-carousel section .container-right .btn-container button {
+    width: 100%;
+    padding: 1em 0em;
+    border: none;
+    margin-top: 1em;
+  }
+  
+  #homepage .jumbotron-scrolling-carousel section .container-right p {
+    width: 100%;
+  }
+  
+  /* JUMBOTRON SCROLLING CAROUSEL - END */
+  /* JUMBOTRON SCROLLING CAROUSEL - END */
+  /* JUMBOTRON SCROLLING CAROUSEL - END */
+  /* JUMBOTRON SCROLLING CAROUSEL - END */
+  /* JUMBOTRON SCROLLING CAROUSEL - END */
+  
+  /* JUMBOTRON STATIC IMAGE - START */
+  /* JUMBOTRON STATIC IMAGE - START */
+  /* JUMBOTRON STATIC IMAGE - START */
+  /* JUMBOTRON STATIC IMAGE - START */
+  /* JUMBOTRON STATIC IMAGE - START */
+  
+  #homepage .jumbotron-static-image {
+    height: initial;
+    min-height: initial;
+    margin: 5em 0em;
+  }
+  
+  #homepage .jumbotron-static-image section {
+    flex-direction: column;
+  }
+  
+  #homepage .jumbotron-static-image section .container-left,
+  #homepage .jumbotron-static-image section .container-right,
+  #homepage .jumbotron-static-image section .container-right .text,
+  #homepage .jumbotron-static-image section .container-right p,
+  #homepage .jumbotron-static-image section .container-right .btn-container {
+    width: 100%;
+    min-height: initial;
+    height:initial;
+  }
+  
+  #homepage .jumbotron-static-image section .container-right {
+    margin-top: 3em;
+  }
+  
+  #homepage .jumbotron-static-image section .container-right p {
+    margin: 2em 0em 0em 0em;
+  }
+  
+  #homepage .jumbotron-static-image section .container-right .btn-container button {
+    width: 100%;
+    padding: 1em 0em;
+    border: none;
+  }
+  
+  /* JUMBOTRON STATIC IMAGE - END */
+  /* JUMBOTRON STATIC IMAGE - END */
+  /* JUMBOTRON STATIC IMAGE - END */
+  /* JUMBOTRON STATIC IMAGE - END */
+  /* JUMBOTRON STATIC IMAGE - END */
+  
+  
+  
 }
 
 /* MEDIUM - MEDIA QUERY END */
@@ -654,7 +798,7 @@
 /* SMALL - MEDIA QUERY START */
 /* SMALL - MEDIA QUERY START */
 
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   
   /* UNDER HEADER - START */
   /* UNDER HEADER - START */
