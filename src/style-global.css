@@ -1168,7 +1168,7 @@ footer#footer-global .copy-right {
 @media screen and (max-width: 767px) {
   
   header {
-    height:150px;
+    height:100px;
     position:initial;
   }
   

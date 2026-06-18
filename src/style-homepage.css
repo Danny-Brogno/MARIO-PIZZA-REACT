@@ -610,15 +610,23 @@
   /* UNDER HEADER START*/
   /* UNDER HEADER START*/
   
-  #homepage .under-header .under-header-content h2 {
-    font-size: 4.5em;
+  #homepage .under-header {
+    height: 70vh;
   }
   
-  /* UNDER HEADER START*/
-  /* UNDER HEADER START*/
-  /* UNDER HEADER START*/
-  /* UNDER HEADER START*/
-  /* UNDER HEADER START*/
+  #homepage .under-header .under-header-content h2 {
+    font-size: 3rem;
+  }
+  
+  #homepage .under-header .under-header-content p.under-header-text {
+    font-size: 2rem;
+  }
+  
+  /* UNDER HEADER END*/
+  /* UNDER HEADER END*/
+  /* UNDER HEADER END*/
+  /* UNDER HEADER END*/
+  /* UNDER HEADER END*/
   
 }
 
@@ -664,8 +672,16 @@
   /* UNDER HEADER START*/
   /* UNDER HEADER START*/
   
+  #homepage .under-header {
+    height: 60vh;
+  }
+  
   #homepage .under-header .under-header-content h2 {
-    font-size: 3.5em;
+    font-size: 3rem;
+  }
+  
+  #homepage .under-header .under-header-content p.under-header-text {
+    font-size: 2rem;
   }
   
   /* UNDER HEADER END*/
@@ -827,6 +843,7 @@
   #homepage .under-header .under-header-content h2 {
     font-size: 4em;
     text-align: center;
+    margin-top: 2rem;
   }
   
   #homepage .under-header .under-header-content p.under-header-text {
