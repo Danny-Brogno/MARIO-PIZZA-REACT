@@ -46,8 +46,8 @@ export const MakeYourOwnPizza = () => {
     }
   };
   
-  // Calculate Total
-  const total = selected.reduce((acc, curr) => acc + curr.price, 0);
+  // Calculate Total starting from a baseline price of £5
+  const total = selected.reduce((acc, curr) => acc + curr.price, 5);
 
   // LOGIC TO SAVE THE SELECTION TO GLOBAL STATE
   const handleGoToCart = () => {
@@ -89,8 +89,7 @@ export const MakeYourOwnPizza = () => {
                 </span>
                 
                 <span>
-                  £
-                  {ing.price}
+                  £{ing.price}
                 </span>
                 
               </li>
@@ -106,12 +105,21 @@ export const MakeYourOwnPizza = () => {
                 <div className="summary-content">
                   <h4>YOUR SELECTION</h4>
                   <hr />
+                  
+                  {/* STATIC BASE PRICE ROW */}
+                  <div className="summary-line">
+                    <span>Pizza base</span>
+                    <span>£5</span>
+                  </div>
+                  
+                  {/* DYNAMIC INGREDIENT ROWS */}
                   {selected.map((s, i) => (
                     <div key={i} className="summary-line">
                       <span>{s.name}</span>
                       <span>£{s.price}</span>
                     </div>
                   ))}
+                  
                   <hr />
                   <div className="summary-total">
                     <strong>TOTAL</strong>

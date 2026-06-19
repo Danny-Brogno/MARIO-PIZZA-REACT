@@ -15,26 +15,37 @@ export const CartItemsList = ({ items }) => {
 
   return (
     <div className="cart-populated row py-4">
-      <div className="col-lg-8">
-        <h2 className="mb-4 fw-bold">Your Selection</h2>
+      <h2 className="mb-4 fw-bold">Your cart</h2>
+      <div className="col-lg-8 sub-container">
         
         {items.map((item) => (
           <div key={item.id} className="cart-item-card d-flex align-items-center justify-content-between p-3 mb-3 bg-light rounded-4 border">
-            <div className="d-flex align-items-center gap-3">
-              <img src={item.image} alt={item.name} className="rounded-3" style={{ width: '90px', height: '90px', objectFit: 'cover' }} />
+            <div className="element-ordered d-flex align-items-center gap-3">
+              <img src={item.image} alt={item.name} className="rounded-3" />
+              
               <div>
-                <h4 className="m-0 fw-bold">{item.name}</h4>
-                <p className="text-muted m-0">${item.price} each</p>
+                {/* The title attribute displays the native full text tooltip on mouse hover */}
+                <h4 className="m-0 fw-bold name-of-pizza" title={item.name}>
+                  {item.name}
+                </h4>
+                <p className="text-muted m-0">£{item.price} each</p>
               </div>
-            </div>
-            
-            <div className="d-flex align-items-center gap-4">
-              <span className="fw-bold">Qty: {item.quantity}</span>
-              <span className="fw-bold text-success">${item.price * item.quantity}</span>
-              <button className="btn btn-sm btn-outline-danger" onClick={() => removeItem(item.id)}>
-                <i className="bi bi-trash"></i> Remove
+              
+              <div className="d-flex align-items-center gap-4 quantity-container">
+                <span className="fw-bold">
+                  Qty: {item.quantity} &rarr;
+                </span>
+                <span className="fw-bold text-success">
+                  &nbsp;£{item.price * item.quantity}
+                </span>
+              </div>
+              <button className="btn btn-sm btn-outline-danger my-button-cart" onClick={() => removeItem(item.id)}>
+                <i className="bi bi-trash">
+                  Remove
+                </i>
               </button>
             </div>
+            
           </div>
         ))}
       </div>
@@ -53,7 +64,7 @@ export const CartItemsList = ({ items }) => {
           </div>
           <div className="d-flex justify-content-between fw-bold fs-4 border-top pt-2 mb-4">
             <span>Total:</span>
-            <span className="text-warning">${subtotal.toFixed(2)}</span>
+            <span className="text-warning">£{subtotal.toFixed(2)}</span>
           </div>
           
           <button className="btn btn-warning w-100 py-3 mb-3 fw-bold tracking-wide text-uppercase">
