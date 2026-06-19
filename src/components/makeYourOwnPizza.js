@@ -4,7 +4,8 @@ import { useNav } from '../context/NavContext.js';
 import makeYourOwnPizza from '../img/14.jpg';
 
 export const MakeYourOwnPizza = () => {
-  const { setCurrentPage } = useNav();
+  // Pulling logic handlers from global context
+  const { setCurrentPage, setCartItems } = useNav();
   
   const ingredients = [
     { name: "Italian sausages", price: 2 },
@@ -47,6 +48,20 @@ export const MakeYourOwnPizza = () => {
   
   // Calculate Total
   const total = selected.reduce((acc, curr) => acc + curr.price, 0);
+
+  // LOGIC TO SAVE THE SELECTION TO GLOBAL STATE
+  const handleGoToCart = () => {
+    const customPizzaItem = {
+      id: `custom-${Date.now()}`,
+      name: "Personalised pizza",
+      price: total,
+      image: makeYourOwnPizza,
+      quantity: 1
+    };
+
+    setCartItems(prev => [...prev, customPizzaItem]);
+    setCurrentPage("cart");
+  };
   
   return (
     <section className="make-your-own-pizza">
@@ -102,7 +117,8 @@ export const MakeYourOwnPizza = () => {
                     <strong>TOTAL</strong>
                     <strong>£{total}</strong>
                   </div>
-                  <button className="checkout-btn" onClick={() => setCurrentPage("cart")}>GO TO CART</button>
+                  {/* Applied global state logic handler here */}
+                  <button className="checkout-btn" onClick={handleGoToCart}>GO TO CART</button>
                   <button onClick={() => setShowSummary(false)} className="close-btn">EDIT</button>
                 </div>
               </div>
@@ -121,4 +137,4 @@ export const MakeYourOwnPizza = () => {
       </div>
     </section>
   );
-}
+};

@@ -13,8 +13,8 @@ import pizza9 from '../img/9.jpg';
 
 export const UnderHeaderOrderOnline = () => {
   
-  // CONTEXT -> this makes us switch between pages
-  const { setCurrentPage } = useNav();
+  // CONTEXT -> Pulled navigation handlers and list properties
+  const { setCurrentPage, cartItems, setCartItems } = useNav();
   
   // State to track which image is enlarged
   const [enlargedImg, setEnlargedImg] = useState(null);
@@ -41,16 +41,50 @@ export const UnderHeaderOrderOnline = () => {
     { name: "Four cheeses", price: 8, image: pizza9 }
   ];
   
-  // Placeholder function for your toggle
   const togglePizzas = (pizza) => {
     console.log("Selected Pizza:", pizza.name);
   };
+
+  // ADD TO CART WITHOUT REDIRECT LOGIC
+  const handleAddToCart = (pizza) => {
+    setCartItems(prevItems => {
+      const existingItem = prevItems.find(item => item.name === pizza.name);
+      if (existingItem) {
+        return prevItems.map(item => 
+          item.name === pizza.name ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      } else {
+        return [...prevItems, { id: `pizza-${Date.now()}-${pizza.name}`, ...pizza, quantity: 1 }];
+      }
+    });
+  };
+
+  // Calculate accumulated items count for our small link badge display
+  const totalCartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   
   return (
-    <div className="under-header-orderOnline">
+    <div className="under-header-orderOnline" style={{ position: 'relative' }}>
       <h1>ORDER ONLINE</h1>
+
+      {/* SIMPLE CART ICON LINK (TOP RIGHT INLINE NAVIGATION) */}
+      <div 
+        onClick={() => setCurrentPage("cart")}
+        style={{
+          position: 'absolute',
+          top: '20px',
+          right: '25px',
+          cursor: 'pointer',
+          fontSize: '18px',
+          fontWeight: 'bold',
+          background: 'rgba(0,0,0,0.05)',
+          padding: '5px 12px',
+          borderRadius: '20px'
+        }}
+      >
+        🛒 Cart ({totalCartCount})
+      </div>
+
       <div className="order-pizza-container">
-        
         
         {/* THE OVERLAY (Only shows when an image is clicked) */}
         {enlargedImg && (
@@ -94,7 +128,7 @@ export const UnderHeaderOrderOnline = () => {
               className="my-button-special" 
               onClick={(e) => {
                 e.stopPropagation(); 
-                setCurrentPage("cart");
+                handleAddToCart(pizza); // Modified execution block: remains on page
               }}
               >
                 Add to cart
@@ -105,5 +139,4 @@ export const UnderHeaderOrderOnline = () => {
       </div>
     </div>
   );
-
-}
+};
