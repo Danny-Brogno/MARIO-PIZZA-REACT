@@ -21,9 +21,12 @@ export const CartItemsList = ({ items }) => {
         {items.map((item) => (
           <div key={item.id} className="cart-item-card d-flex align-items-center justify-content-between p-3 mb-3 bg-light rounded-4 border">
             <div className="element-ordered d-flex align-items-center gap-3">
-              <img src={item.image} alt={item.name} className="rounded-3" />
               
-              <div>
+              <div className="image-container">
+                <img src={item.image} alt={item.name} className="rounded-3" />
+              </div>
+              
+              <div className="name-and-price">
                 {/* The title attribute displays the native full text tooltip on mouse hover */}
                 <h4 className="m-0 fw-bold name-of-pizza" title={item.name}>
                   {item.name}
@@ -39,11 +42,15 @@ export const CartItemsList = ({ items }) => {
                   &nbsp;£{item.price * item.quantity}
                 </span>
               </div>
-              <button className="btn btn-sm btn-outline-danger my-button-cart" onClick={() => removeItem(item.id)}>
-                <i className="bi bi-trash">
-                  Remove
-                </i>
-              </button>
+              
+              <div className="button-container">
+                <button className="btn btn-sm btn-outline-danger my-button-cart" onClick={() => removeItem(item.id)}>
+                  <i className="bi bi-trash">
+                    Remove
+                  </i>
+                </button>
+              </div>
+              
             </div>
             
           </div>
