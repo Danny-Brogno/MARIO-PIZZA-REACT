@@ -34,7 +34,7 @@ function AppContent() {
 // So because of prop drilling
 // If I wanted to use the setCurrentPage function, that was in App, I needed to drill through the first child of App, which is homepage
 // THEN drill again to its componet: makeYourOwnPizza
-// So instead of repeating the code twice, you made a "twin" app element that manages only that transition from page to page, giving the function setCurrentPage to whomever requests it, no matter how down inside a sub-componet it it.
+// So instead of repeating the code twice, I made a "twin" app element that manages only that transition from page to page, giving the function setCurrentPage to whomever requests it, no matter how down inside a sub-componet it it.
 // And all the component needs to perform this page switch (no matter where he is) it's these 2 lines:
 // import { useNav } from '../context/NavContext.js';
 // const { currentPage, setCurrentPage } = useNav(); 
