@@ -15,8 +15,8 @@ export const CartItemsList = ({ items }) => {
 
   return (
     <div className="cart-populated row py-4">
-      <h2 className="mb-4 fw-bold">Your cart</h2>
       <div className="col-lg-8 sub-container">
+      <h2 className="mb-4 fw-bold">Your cart</h2>
         
         {items.map((item) => (
           <div key={item.id} className="cart-item-card d-flex align-items-center justify-content-between p-3 mb-3 bg-light rounded-4 border">

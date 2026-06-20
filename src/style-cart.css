@@ -3,12 +3,14 @@
 }
 
 #cart-page .cart-populated {
-  
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #cart-page .cart-populated .sub-container {
-  width:90%;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -22,7 +24,6 @@
 }
 
 #cart-page .cart-populated .cart-item-card {
-  min-width: 14rem !important;
   margin-bottom: 1rem;
 }
 
