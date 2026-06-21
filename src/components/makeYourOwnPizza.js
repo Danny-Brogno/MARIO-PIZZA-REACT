@@ -18,15 +18,17 @@ export const MakeYourOwnPizza = () => {
     { name: "Sundried tomatoes", price: 2 },
     { name: "Bresaola", price: 4 },
     { name: "Prosciutto Crudo di Parma", price: 5 },
+    { name: "Prosciutto Cotto", price: 4 },
     { name: "Fresh rocket", price: 2 },
     { name: "Pepperoni", price: 3 },
     { name: "Yellow cherry tomatoes", price: 2 },
-    { name: "Porcini mushrooms", price: 4 },
-    { name: "Champignon mushrooms", price: 2 },
+    { name: "Porcini mushrooms", price: 5 },
+    { name: "Button mushrooms", price: 3 },
     { name: "Black olives", price: 2 },
     { name: "Green olives", price: 2 },
-    { name: "Cooked ham", price: 3 },
-    { name: "Artichokes", price: 3 }
+    { name: "French fries", price: 2 },
+    { name: "Artichokes", price: 3 },
+    { name: "Frankfurter", price: 3 }
   ];
   
   const [selected, setSelected] = useState([]);
@@ -47,7 +49,7 @@ export const MakeYourOwnPizza = () => {
   // 1. Calculate the cost of the ingredients alone
   const toppingsTotal = selected.reduce((acc, curr) => acc + curr.price, 0);
 
-  // 2. NEW: Determine if the £5 base price applies (Free if toppings are £10 or more)
+  // 2. Determine if the £5 base price applies (Free if toppings are £10 or more)
   const basePrice = toppingsTotal >= 10 ? 0 : 5;
 
   // 3. Final Pizza Price calculation
@@ -62,6 +64,12 @@ export const MakeYourOwnPizza = () => {
   const overlayGrandTotal = pizzaPrice + overlayDeliveryFee;
 
   const handleGoToCart = () => {
+    // BUG FIX: Prevent adding to cart if no ingredients are chosen
+    if (selected.length === 0) {
+      alert("Please select at least 1 ingredient to customise your pizza!");
+      return;
+    }
+
     const customPizzaItem = {
       id: `custom-${Date.now()}`,
       name: "Personalised pizza",
@@ -78,12 +86,11 @@ export const MakeYourOwnPizza = () => {
   return (
     <section className="make-your-own-pizza">
       <div className="outer-container">
-        <h3> MAKE YOUR OWN PIZZA!</h3>
+        <h3 className="make-your-own-pizza-title"> MAKE YOUR OWN PIZZA!</h3>
         <h5>Selected: {selected.length} / 5</h5>
 
-        {/* Updated notice banner to include the cool pizza base deal */}
         <h3 className="promos-and-infos-1">
-          🚚 Spend £10 or more total for FREE delivery!
+          <i>🚚</i> &nbsp; Spend £10 or more total for FREE delivery! &nbsp; <i>🚚</i>
         </h3>
         
         <h3 className="promos-and-infos-2">
@@ -91,7 +98,7 @@ export const MakeYourOwnPizza = () => {
         </h3>
         
         <div className="inside-container">
-          <ul style={{ listStyle: 'none', cursor: 'pointer' }}>
+          <ul>
             {ingredients.map((ing, index) => (
               <li 
                 key={index} 
@@ -101,7 +108,8 @@ export const MakeYourOwnPizza = () => {
                   justifyContent: 'space-between',
                   color: selected.some(s => s.name === ing.name) ? 'var(--pizza-green)' : 'var(--pizza-dark)',
                   fontWeight: selected.some(s => s.name === ing.name) ? 'bold' : 'normal',
-                  margin: '5px 0'
+                  margin: '5px 0',
+                  cursor: 'pointer'
                 }}
               >
                 <span>
@@ -113,8 +121,8 @@ export const MakeYourOwnPizza = () => {
             ))}
           </ul>
 
-          <div className="image-wrapper" style={{ width: '70%', position: 'relative' }}>
-            <img src={makeYourOwnPizza} alt="pizza" style={{ width: '100%', height: '100%' }} />
+          <div className="image-wrapper">
+            <img src={makeYourOwnPizza} alt="pizza"/>
             
             {showSummary && (
               <div className="summary-overlay">
@@ -126,7 +134,7 @@ export const MakeYourOwnPizza = () => {
                   <div className="summary-line">
                     <span>Pizza base</span>
                     {basePrice === 0 ? (
-                      <span style={{ color: 'green', fontWeight: 'bold' }}>FREE Reward!</span>
+                      <span className="free-message">FREE</span>
                     ) : (
                       <span>£5</span>
                     )}
@@ -139,12 +147,12 @@ export const MakeYourOwnPizza = () => {
                     </div>
                   ))}
                   
-                  <div className="summary-line" style={{ fontStyle: 'italic' }}>
+                  <div className="summary-line">
                     <span>Delivery Fee</span>
                     {overlayDeliveryFee === 0 ? (
-                      <span style={{ color: 'green', fontWeight: 'bold' }}>FREE</span>
+                      <span className="free-message">FREE</span>
                     ) : (
-                      <span style={{ color: '#d62828' }}>+£5</span>
+                      <span className="charge-message">+£5</span>
                     )}
                   </div>
                   
@@ -154,7 +162,14 @@ export const MakeYourOwnPizza = () => {
                     <strong>£{overlayGrandTotal}</strong>
                   </div>
                   
-                  <button className="checkout-btn" onClick={handleGoToCart}>GO TO CART</button>
+                  {/* The checkout button will also inherit the disabled rule just in case */}
+                  <button 
+                    className="checkout-btn" 
+                    onClick={handleGoToCart}
+                    disabled={selected.length === 0}
+                  >
+                    GO TO CART
+                  </button>
                   <button onClick={() => setShowSummary(false)} className="close-btn">EDIT</button>
                 </div>
               </div>
@@ -167,6 +182,10 @@ export const MakeYourOwnPizza = () => {
           className="my-button-first"
           onClick={() => setShowSummary(true)}
           disabled={selected.length === 0}
+          style={{
+            opacity: selected.length === 0 ? 0.5 : 1,
+            cursor: selected.length === 0 ? 'not-allowed' : 'pointer'
+          }}
         >
           Select ingredients
         </button>

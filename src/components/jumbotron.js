@@ -8,6 +8,9 @@ import pizza6 from '../img/6.jpg';
 import pizza7 from '../img/7.jpg';
 import pizza8 from '../img/8.jpg';
 import pizza9 from '../img/9.jpg';
+import pizza10 from '../img/10.jpg';
+import pizza11 from '../img/11.jpg';
+import pizza12 from '../img/12.jpg';
 
 export const Jumbotron = () => {
   
@@ -93,6 +96,22 @@ export const Jumbotron = () => {
             <div className="box" onClick={() => handleImageClick(pizza9)}>
               <img src={pizza9} alt="pizza9" style={{ cursor: 'pointer' }} />
               <div className="dark"><h3>5 cheeses</h3></div>
+            </div>
+          </div>
+          
+          {/* FOURTH LINE */}
+          <div className="fourthLine">
+            <div className="box" onClick={() => handleImageClick(pizza10)}>
+              <img src={pizza10} alt="pizza10" style={{ cursor: 'pointer' }} />
+              <div className="dark"><h3>Capricciosa</h3></div>
+            </div>
+            <div className="box" onClick={() => handleImageClick(pizza11)}>
+              <img src={pizza11} alt="pizza11" style={{ cursor: 'pointer' }} />
+              <div className="dark"><h3>Cardinale</h3></div>
+            </div>
+            <div className="box" onClick={() => handleImageClick(pizza12)}>
+              <img src={pizza12} alt="pizza12" style={{ cursor: 'pointer' }} />
+              <div className="dark"><h3>Frankfurter and french fries</h3></div>
             </div>
           </div>
           

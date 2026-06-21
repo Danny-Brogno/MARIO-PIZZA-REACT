@@ -774,17 +774,25 @@ section.make-your-own-pizza div.inside-container ul::-webkit-scrollbar-thumb:hov
 
 section.make-your-own-pizza div.inside-container ul li {
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
 /* NEW CLASSES FOR THE OVERLAY AND LIST */
 
-/* Overlay Container */
 section.make-your-own-pizza .image-wrapper {
+  width: 70%;
+  position: relative;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
 
+section.make-your-own-pizza .image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Overlay Container */
 section.make-your-own-pizza .summary-overlay {
   position: absolute;
   top: 0;
@@ -881,6 +889,14 @@ section.make-your-own-pizza .outer-container h3.promos-and-infos-2 {
   color: var(--pizza-green);
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+
+section.make-your-own-pizza .summary-line span:nth-child(2).free-message {
+  color: forestgreen;
+}
+
+section.make-your-own-pizza .summary-line span:nth-child(2).charge-message {
+  color: var(--pizza-red);
 }
 
 /* MAKE YOUR OWN PIZZA - END */
@@ -1133,6 +1149,8 @@ footer#footer-global .copy-right {
   section.make-your-own-pizza div.inside-container {
     height: initial;
     flex-direction: column;
+    list-style: none;
+    cursor: pointer;
   }
 
   section.make-your-own-pizza div.inside-container ul {
@@ -1140,10 +1158,6 @@ footer#footer-global .copy-right {
     overflow-y: initial;
     border: none;
     padding: 0;
-  }
-
-  section.make-your-own-pizza div.inside-container ul li {
-    justify-content: space-between;
   }
 
   section.make-your-own-pizza .image-wrapper {

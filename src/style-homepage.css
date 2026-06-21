@@ -134,7 +134,8 @@
 
 #homepage .jumbotron section.main-container .container .firstLine,
 #homepage .jumbotron section.main-container .container .secondLine,
-#homepage .jumbotron section.main-container .container .thirdLine {
+#homepage .jumbotron section.main-container .container .thirdLine,
+#homepage .jumbotron section.main-container .container .fourthLine {
   width: 100%;
   height: 50%;
   display:flex;
@@ -897,7 +898,8 @@
   
   #homepage .jumbotron section.main-container .container .firstLine,
   #homepage .jumbotron section.main-container .container .secondLine,
-  #homepage .jumbotron section.main-container .container .thirdLine {
+  #homepage .jumbotron section.main-container .container .thirdLine,
+  #homepage .jumbotron section.main-container .container .fourthLine {
     display: flex;
     flex-direction: column;
     align-items: center;

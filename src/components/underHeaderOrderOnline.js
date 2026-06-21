@@ -10,6 +10,9 @@ import pizza6 from '../img/6.jpg';
 import pizza7 from '../img/7.jpg';
 import pizza8 from '../img/8.jpg';
 import pizza9 from '../img/9.jpg';
+import pizza10 from '../img/10.jpg';
+import pizza11 from '../img/11.jpg';
+import pizza12 from '../img/12.jpg';
 
 export const UnderHeaderOrderOnline = () => {
   
@@ -38,7 +41,10 @@ export const UnderHeaderOrderOnline = () => {
     { name: "Primavera", price: 10, image: pizza6 },
     { name: "Yellow tomatoes & burrata", price: 8, image: pizza7 },
     { name: "Sundried tomatoes & bresaola", price: 9, image: pizza8 },
-    { name: "Four cheeses", price: 8, image: pizza9 }
+    { name: "Four cheeses", price: 8, image: pizza9 },
+    { name: "Capricciosa", price: 9, image: pizza10 },
+    { name: "Cardinale", price: 9, image: pizza11 },
+    { name: "Frankfurter and french fries", price: 7, image: pizza12 }
   ];
   
   const togglePizzas = (pizza) => {
@@ -67,19 +73,8 @@ export const UnderHeaderOrderOnline = () => {
       <h1>ORDER ONLINE</h1>
 
       {/* SIMPLE CART ICON LINK (TOP RIGHT INLINE NAVIGATION) */}
-      <div 
+      <div className="cart-icon"
         onClick={() => setCurrentPage("cart")}
-        style={{
-          position: 'absolute',
-          top: '20px',
-          right: '25px',
-          cursor: 'pointer',
-          fontSize: '18px',
-          fontWeight: 'bold',
-          background: 'rgba(0,0,0,0.05)',
-          padding: '5px 12px',
-          borderRadius: '20px'
-        }}
       >
         🛒 Cart ({totalCartCount})
       </div>

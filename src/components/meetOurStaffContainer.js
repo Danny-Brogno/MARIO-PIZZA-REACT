@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import mario from '../img/10.jpg';
-import luigi from '../img/11.jpg';
-import peach from '../img/12.jpg';
-import daisy from '../img/13.jpg';
+import mario from '../img/staff-mario.jpg';
+import luigi from '../img/staff-luigi.jpg';
+import peach from '../img/staff-peach.jpg';
+import daisy from '../img/staff-daisy.jpg';
 import pizza29 from '../img/29.jpg';
 import pizza30 from '../img/30.jpg';
 

@@ -27,7 +27,7 @@ export const CartItemsList = ({ items }) => {
       </div>
       
       <div className="parent-container">
-        <div className="col-lg-8 left-container">
+        <div className="col-lg-7 left-container">
           {items.map((item) => (
             <div key={item.id} className="cart-item-card d-flex align-items-center justify-content-between p-3 mb-3 bg-light rounded-4 border">
               <div className="element-ordered d-flex align-items-center gap-3">
@@ -45,7 +45,7 @@ export const CartItemsList = ({ items }) => {
                   {/* Explicitly render selected ingredients if it's a unique custom build */}
                   {item.ingredientsList && item.ingredientsList.length > 0 && (
                     <p className="m-0 text-success">
-                      Extras: {item.ingredientsList.join(', ')}
+                      {item.ingredientsList.join(', ')}
                     </p>
                   )}
                   
@@ -76,7 +76,7 @@ export const CartItemsList = ({ items }) => {
         </div>
 
         {/* Side Summary Block matching your UI boxes */}
-        <div className="col-lg-4 right-container">
+        <div className="col-lg-5 right-container">
         <div className="order-summary-box p-4 bg-dark text-white rounded-4 shadow">
           <h3 className="fw-bold mb-3 border-bottom pb-2 text-warning">Order Summary</h3>
           <div className="subtotal d-flex justify-content-between mb-2">
@@ -109,7 +109,7 @@ export const CartItemsList = ({ items }) => {
             className="my-button-cart btn btn-outline-light w-100 py-2 fw-bold text-uppercase width100 height3rem"
             onClick={() => setCurrentPage("orderOnline")}
           >
-            ← Continue Ordering
+            Continue Ordering
           </button>
         </div>
         </div>
