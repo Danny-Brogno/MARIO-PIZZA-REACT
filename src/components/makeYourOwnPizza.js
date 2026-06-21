@@ -4,7 +4,6 @@ import { useNav } from '../context/NavContext.js';
 import makeYourOwnPizza from '../img/14.jpg';
 
 export const MakeYourOwnPizza = () => {
-  // NEW: Added cartItems to our context properties destructured hook
   const { setCurrentPage, cartItems, setCartItems } = useNav();
   
   const ingredients = [
@@ -30,7 +29,6 @@ export const MakeYourOwnPizza = () => {
     { name: "Artichokes", price: 3 }
   ];
   
-  // USESTATE HOOK
   const [selected, setSelected] = useState([]);
   const [showSummary, setShowSummary] = useState(false);
   
@@ -46,22 +44,23 @@ export const MakeYourOwnPizza = () => {
     }
   };
   
-  // 1. Calculate the current customized pizza price base (£5)
-  const pizzaPrice = selected.reduce((acc, curr) => acc + curr.price, 5);
+  // 1. Calculate the cost of the ingredients alone
+  const toppingsTotal = selected.reduce((acc, curr) => acc + curr.price, 0);
 
-  // 2. NEW: Calculate the subtotal value of items ALREADY sitting in the cart
+  // 2. NEW: Determine if the £5 base price applies (Free if toppings are £10 or more)
+  const basePrice = toppingsTotal >= 10 ? 0 : 5;
+
+  // 3. Final Pizza Price calculation
+  const pizzaPrice = toppingsTotal + basePrice;
+
+  // 4. Calculate the subtotal of items already sitting in the cart
   const existingCartSubtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
-  // 3. NEW: Double-check the cumulative global total (Cart + Current Custom Build)
+  // 5. Double-check the cumulative global total for delivery logic
   const combinedTotal = existingCartSubtotal + pizzaPrice;
-
-  // 4. NEW: Compute overlay delivery status based on the combined basket health
   const overlayDeliveryFee = combinedTotal >= 10 ? 0 : 5;
-  
-  // 5. NEW: Grand total shown on overlay is the custom pizza price + the delivery fee (if any)
   const overlayGrandTotal = pizzaPrice + overlayDeliveryFee;
 
-  // LOGIC TO SAVE THE SELECTION TO GLOBAL STATE
   const handleGoToCart = () => {
     const customPizzaItem = {
       id: `custom-${Date.now()}`,
@@ -82,9 +81,13 @@ export const MakeYourOwnPizza = () => {
         <h3> MAKE YOUR OWN PIZZA!</h3>
         <h5>Selected: {selected.length} / 5</h5>
 
-        {/* Funny but clear delivery fee condition notice header */}
-        <h3 style={{ color: 'var(--pizza-red, #d62828)', textAlign: 'center', margin: '15px 0', fontWeight: 'bold' }}>
-          🚚 Spend £10 or more for FREE delivery! Under £10? That'll be a £5 delivery fee, lazy bones! 😉
+        {/* Updated notice banner to include the cool pizza base deal */}
+        <h3 className="promos-and-infos-1">
+          🚚 Spend £10 or more total for FREE delivery!
+        </h3>
+        
+        <h3 className="promos-and-infos-2">
+          ⭐ BONUS: Spend £10 or more ON TOPPINGS and the £5 pizza base becomes completely FREE! ⭐
         </h3>
         
         <div className="inside-container">
@@ -105,11 +108,7 @@ export const MakeYourOwnPizza = () => {
                   {selected.some(s => s.name === ing.name) ? '✅ ' : '⬜ '}
                   {ing.name}
                 </span>
-                
-                <span>
-                  £{ing.price}
-                </span>
-                
+                <span>£{ing.price}</span>
               </li>
             ))}
           </ul>
@@ -117,20 +116,22 @@ export const MakeYourOwnPizza = () => {
           <div className="image-wrapper" style={{ width: '70%', position: 'relative' }}>
             <img src={makeYourOwnPizza} alt="pizza" style={{ width: '100%', height: '100%' }} />
             
-            {/* THE OVERLAY LAYER */}
             {showSummary && (
               <div className="summary-overlay">
                 <div className="summary-content">
                   <h4>YOUR SELECTION</h4>
                   <hr />
                   
-                  {/* STATIC BASE PRICE ROW */}
+                  {/* DYNAMIC PIZZA BASE ROW */}
                   <div className="summary-line">
                     <span>Pizza base</span>
-                    <span>£5</span>
+                    {basePrice === 0 ? (
+                      <span style={{ color: 'green', fontWeight: 'bold' }}>FREE Reward!</span>
+                    ) : (
+                      <span>£5</span>
+                    )}
                   </div>
                   
-                  {/* DYNAMIC INGREDIENT ROWS */}
                   {selected.map((s, i) => (
                     <div key={i} className="summary-line">
                       <span>{s.name}</span>
@@ -138,11 +139,10 @@ export const MakeYourOwnPizza = () => {
                     </div>
                   ))}
                   
-                  {/* DYNAMIC GLOBAL SYSTEM DELIVERY FEE ROW */}
                   <div className="summary-line" style={{ fontStyle: 'italic' }}>
                     <span>Delivery Fee</span>
                     {overlayDeliveryFee === 0 ? (
-                      <span style={{ color: 'green', fontWeight: 'bold' }}>FREE (Cart qualification)</span>
+                      <span style={{ color: 'green', fontWeight: 'bold' }}>FREE</span>
                     ) : (
                       <span style={{ color: '#d62828' }}>+£5</span>
                     )}
@@ -153,7 +153,7 @@ export const MakeYourOwnPizza = () => {
                     <strong>TOTAL</strong>
                     <strong>£{overlayGrandTotal}</strong>
                   </div>
-                  {/* Applied global state logic handler here */}
+                  
                   <button className="checkout-btn" onClick={handleGoToCart}>GO TO CART</button>
                   <button onClick={() => setShowSummary(false)} className="close-btn">EDIT</button>
                 </div>

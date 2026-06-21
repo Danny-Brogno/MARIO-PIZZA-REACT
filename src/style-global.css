@@ -707,6 +707,7 @@ section.make-your-own-pizza h3 {
   font-size: 3rem;
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 section.make-your-own-pizza h5 {
@@ -729,29 +730,27 @@ section.make-your-own-pizza div.inside-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Ensures both sides are the same height */
-  height: 35rem; /* Define the height here instead of the section */
+  align-items: stretch;
+  height: 35rem; 
   gap: 20px;
 }
 
 section.make-your-own-pizza div.inside-container img {
-  object-fit: cover; /* Keeps image proportions correct */
+  object-fit: cover;
   border-radius: 10px;
-  /* Fix for Firefox clipped corners */
   display: block;
 }
 
 section.make-your-own-pizza div.inside-container ul {
   width: 30%;
-  height: 100%; /* Changed from 42rem to 100% of parent (35rem) */
-  overflow-y: auto; /* Scroll only if needed */
+  height: 100%;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   border: 2px solid var(--pizza-green);
   border-right: none;
-  /* Added padding so the last item doesn't touch the border */
   padding: 10px; 
-  box-sizing: border-box; /* Crucial so border doesn't add to height */
+  box-sizing: border-box;
 }
 
 section.make-your-own-pizza div.inside-container ul::-webkit-scrollbar {
@@ -865,6 +864,23 @@ section.make-your-own-pizza .close-btn:hover {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+section.make-your-own-pizza .outer-container h3.make-your-own-pizza-title {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+}
+
+section.make-your-own-pizza .outer-container h3.promos-and-infos-1 {
+  color: var(--pizza-green);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+section.make-your-own-pizza .outer-container h3.promos-and-infos-2 {
+  color: var(--pizza-green);
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* MAKE YOUR OWN PIZZA - END */

@@ -73,6 +73,7 @@
 
 #cart-page .cart-populated .cart-item-card .element-ordered .name-and-price p {
   font-size: 1.4rem;
+  text-align: center;
 }
 
 #cart-page .cart-populated .cart-item-card .element-ordered .quantity-container span {
