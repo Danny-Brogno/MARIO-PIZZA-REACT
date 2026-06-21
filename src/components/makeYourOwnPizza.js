@@ -4,8 +4,8 @@ import { useNav } from '../context/NavContext.js';
 import makeYourOwnPizza from '../img/14.jpg';
 
 export const MakeYourOwnPizza = () => {
-  // Pulling logic handlers from global context
-  const { setCurrentPage, setCartItems } = useNav();
+  // NEW: Added cartItems to our context properties destructured hook
+  const { setCurrentPage, cartItems, setCartItems } = useNav();
   
   const ingredients = [
     { name: "Italian sausages", price: 2 },
@@ -46,17 +46,30 @@ export const MakeYourOwnPizza = () => {
     }
   };
   
-  // Calculate Total starting from a baseline price of £5
-  const total = selected.reduce((acc, curr) => acc + curr.price, 5);
+  // 1. Calculate the current customized pizza price base (£5)
+  const pizzaPrice = selected.reduce((acc, curr) => acc + curr.price, 5);
+
+  // 2. NEW: Calculate the subtotal value of items ALREADY sitting in the cart
+  const existingCartSubtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+
+  // 3. NEW: Double-check the cumulative global total (Cart + Current Custom Build)
+  const combinedTotal = existingCartSubtotal + pizzaPrice;
+
+  // 4. NEW: Compute overlay delivery status based on the combined basket health
+  const overlayDeliveryFee = combinedTotal >= 10 ? 0 : 5;
+  
+  // 5. NEW: Grand total shown on overlay is the custom pizza price + the delivery fee (if any)
+  const overlayGrandTotal = pizzaPrice + overlayDeliveryFee;
 
   // LOGIC TO SAVE THE SELECTION TO GLOBAL STATE
   const handleGoToCart = () => {
     const customPizzaItem = {
       id: `custom-${Date.now()}`,
       name: "Personalised pizza",
-      price: total,
+      price: pizzaPrice, 
       image: makeYourOwnPizza,
-      quantity: 1
+      quantity: 1,
+      ingredientsList: selected.map(i => i.name)
     };
 
     setCartItems(prev => [...prev, customPizzaItem]);
@@ -68,6 +81,11 @@ export const MakeYourOwnPizza = () => {
       <div className="outer-container">
         <h3> MAKE YOUR OWN PIZZA!</h3>
         <h5>Selected: {selected.length} / 5</h5>
+
+        {/* Funny but clear delivery fee condition notice header */}
+        <h3 style={{ color: 'var(--pizza-red, #d62828)', textAlign: 'center', margin: '15px 0', fontWeight: 'bold' }}>
+          🚚 Spend £10 or more for FREE delivery! Under £10? That'll be a £5 delivery fee, lazy bones! 😉
+        </h3>
         
         <div className="inside-container">
           <ul style={{ listStyle: 'none', cursor: 'pointer' }}>
@@ -120,10 +138,20 @@ export const MakeYourOwnPizza = () => {
                     </div>
                   ))}
                   
+                  {/* DYNAMIC GLOBAL SYSTEM DELIVERY FEE ROW */}
+                  <div className="summary-line" style={{ fontStyle: 'italic' }}>
+                    <span>Delivery Fee</span>
+                    {overlayDeliveryFee === 0 ? (
+                      <span style={{ color: 'green', fontWeight: 'bold' }}>FREE (Cart qualification)</span>
+                    ) : (
+                      <span style={{ color: '#d62828' }}>+£5</span>
+                    )}
+                  </div>
+                  
                   <hr />
                   <div className="summary-total">
                     <strong>TOTAL</strong>
-                    <strong>£{total}</strong>
+                    <strong>£{overlayGrandTotal}</strong>
                   </div>
                   {/* Applied global state logic handler here */}
                   <button className="checkout-btn" onClick={handleGoToCart}>GO TO CART</button>
