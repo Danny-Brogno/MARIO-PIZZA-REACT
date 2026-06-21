@@ -90,11 +90,19 @@ export const MakeYourOwnPizza = () => {
         <h5>Selected: {selected.length} / 5</h5>
 
         <h3 className="promos-and-infos-1">
-          <i>🚚</i> &nbsp; Spend £10 or more total for FREE delivery! &nbsp; <i>🚚</i>
+          <i className="fa-solid fa-truck"></i>
+          &nbsp;
+          <span>Spend £10 or more total for FREE delivery!</span>
+          &nbsp;
+          <i className="fa-solid fa-truck"></i>
         </h3>
         
         <h3 className="promos-and-infos-2">
-          ⭐ BONUS: Spend £10 or more ON TOPPINGS and the £5 pizza base becomes completely FREE! ⭐
+          <i className="fa-solid fa-star"></i>
+          &nbsp;
+          <span>BONUS: Spend £10 or more ON TOPPINGS and the £5 pizza base becomes completely FREE!</span>
+          &nbsp;
+          <i className="fa-solid fa-star"></i>
         </h3>
         
         <div className="inside-container">

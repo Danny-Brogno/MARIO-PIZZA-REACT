@@ -879,18 +879,49 @@ section.make-your-own-pizza .outer-container h3.make-your-own-pizza-title {
   margin-top: 3rem;
 }
 
+/* FIRST ICON - TRUCK */
 section.make-your-own-pizza .outer-container h3.promos-and-infos-1 {
-  color: var(--pizza-green);
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
+section.make-your-own-pizza .outer-container h3.promos-and-infos-1 i {
+  color: var(--pizza-red);
+  animation: smoothBounce 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+}
+
+@keyframes smoothBounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+/* SECOND ICON - STAR */
 section.make-your-own-pizza .outer-container h3.promos-and-infos-2 {
-  color: var(--pizza-green);
   font-size: 2rem;
   margin-bottom: 2rem;
 }
 
+section.make-your-own-pizza .outer-container h3.promos-and-infos-2 i {
+  color: var(--pizza-yellow);
+  animation: rotation 4s linear infinite;
+}
+
+@keyframes rotation {
+  0% {text-shadow: 0 0 var(--pizza-dark);}
+  25% {text-shadow: 1px 0 var(--pizza-red), 2px 0 var(--pizza-red), 3px 0 var(--pizza-red), 4px 0 var(--pizza-red), 5px 0 var(--pizza-red); }
+  50% {text-shadow: 0 0 purple;}
+  75% {text-shadow: -1px 0 var(--pizza-green), -2px 0 var(--pizza-green), -3px 0 var(--pizza-green), -4px 0 var(--pizza-green), -5px 0 var(--pizza-green); }
+  100% {text-shadow: 0 0 gold;}
+
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(-360deg);}
+}
+
+/* MESSAGES */
 section.make-your-own-pizza .summary-line span:nth-child(2).free-message {
   color: forestgreen;
 }
