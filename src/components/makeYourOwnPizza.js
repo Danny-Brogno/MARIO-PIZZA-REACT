@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNav } from '../context/NavContext.js';
 
 import makeYourOwnPizza from '../img/14.jpg';
 
 export const MakeYourOwnPizza = () => {
+  
   const { setCurrentPage, cartItems, setCartItems } = useNav();
   
   const ingredients = [
@@ -83,16 +84,49 @@ export const MakeYourOwnPizza = () => {
     setCurrentPage("cart");
   };
   
+  const [animate, setAnimate] = useState(false);
+  const targetRef = useRef(null);
+
+  useEffect(() => {
+
+    // Set up the Intersection Observer inside the hook
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // If the element is visible in the viewport
+        if (entry.isIntersecting) {
+          setAnimate(true); 
+          // Once it animates, we can stop observing it
+          if (targetRef.current) observer.unobserve(targetRef.current);
+        }
+      },
+      {
+        threshold: 0.4, // Triggers when 40% of the element is visible on screen
+      }
+    );
+
+    // Start observing the target element
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    // Cleanup observer on component unmount
+    return () => {
+      if (targetRef.current) observer.disconnect();
+    };
+  }, []);
+  
   return (
     <section className="make-your-own-pizza">
       <div className="outer-container">
-        <h3 className="make-your-own-pizza-title"> MAKE YOUR OWN PIZZA!</h3>
+        <h3 className="make-your-own-pizza-title">
+          MAKE YOUR OWN PIZZA
+        </h3>
         <h5>Selected: {selected.length} / 5</h5>
 
-        <h3 className="promos-and-infos-1">
+        <h3 ref={targetRef} className="promos-and-infos-1">
           <i className="fa-solid fa-truck"></i>
           &nbsp;
-          <span>Spend £10 or more total for FREE delivery!</span>
+          <span className={`${animate ? 'animate-typing' : ''}`}>Spend £10 or more total for FREE delivery!</span>
           &nbsp;
           <i className="fa-solid fa-truck"></i>
         </h3>
@@ -100,7 +134,7 @@ export const MakeYourOwnPizza = () => {
         <h3 className="promos-and-infos-2">
           <i className="fa-solid fa-star"></i>
           &nbsp;
-          <span>BONUS: Spend £10 or more ON TOPPINGS and the £5 pizza base becomes completely FREE!</span>
+          <span className={`${animate ? 'animate-typing' : ''}`}>BONUS: Spend £10 or more ON TOPPINGS and the £5 pizza base becomes completely FREE!</span>
           &nbsp;
           <i className="fa-solid fa-star"></i>
         </h3>

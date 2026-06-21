@@ -921,6 +921,54 @@ section.make-your-own-pizza .outer-container h3.promos-and-infos-2 i {
   to {transform: rotateY(-360deg);}
 }
 
+/* ANIMATE TEXT WHEN IN VIEWPORT - START */
+section.make-your-own-pizza .outer-container h3.promos-and-infos-1,
+section.make-your-own-pizza .outer-container h3.promos-and-infos-2 {
+  display: block;
+  width: 100%;
+  overflow: visible !important;
+}
+
+/* Styles that trigger ONLY when scrolled into view */
+section.make-your-own-pizza .outer-container h3.promos-and-infos-1 span.animate-typing,
+section.make-your-own-pizza .outer-container h3.promos-and-infos-2 span.animate-typing {
+  display: inline-block;
+  vertical-align: bottom;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  font-size: 1.6rem; 
+}
+
+/* TARGET STRING 1: 42 Characters */
+section.make-your-own-pizza .outer-container h3.promos-and-infos-1 span.animate-typing {
+  letter-spacing: 3px;
+  animation: typing-string-1 5s steps(42) forwards, cursor .4s step-end infinite alternate;
+}
+
+/* TARGET STRING 2: 82 Characters */
+section.make-your-own-pizza .outer-container h3.promos-and-infos-2 span.animate-typing {
+  letter-spacing: 1.5px;
+  animation: typing-string-2 5s steps(82) forwards, cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% { border-color: transparent; }
+}
+
+/* Explicitly scale to the content length, not parent percentage */
+@keyframes typing-string-1 {
+  from { width: 0; }
+  to { width: 33rem; } /* Gives enough width for the 42 character string */
+}
+
+@keyframes typing-string-2 {
+  from { width: 0; }
+  to { width: 64rem; } /* Gives enough width for the 82 character string */
+}
+
+/* ANIMATE TEXT WHEN IN VIEWPORT - END */
+
 /* MESSAGES */
 section.make-your-own-pizza .summary-line span:nth-child(2).free-message {
   color: forestgreen;
