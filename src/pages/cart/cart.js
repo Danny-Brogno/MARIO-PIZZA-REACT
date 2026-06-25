@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNav } from '../../context/NavContext.js';
 
 import { CartEmpty } from '../../components/cart-empty.js'; 
@@ -8,7 +8,27 @@ import { CartItemsList } from '../../components/cart-items-list.js';
 import '../../style-global.css';
 import '../../style-cart.css';
 
+// FAVICON
+import faviconCartPage from '../../img/favicon-cart.png';
+
+// --------------------------
 export const Cart = () => {
+  
+  useEffect(() => {
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+
+    // Set Title
+    document.title = "Mario Pizza | Cart";
+
+    // Set Favicon
+    const link = document.querySelector("link[rel~='icon']");
+    if (link) {
+      link.href = faviconCartPage;
+    }
+  }, []);
+
   const { cartItems } = useNav();
 
   return (

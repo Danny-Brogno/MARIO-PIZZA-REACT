@@ -10,9 +10,9 @@ import '../../style-global.css';
 import '../../style-contact.css';
 
 // FAVICON
-import faviconContactPage from '../../img/favicon-aboutUs.png';
+import faviconContactPage from '../../img/favicon-contact.png';
 
-
+// --------------------------
 export const ContactPage = () => {
   
   useEffect(() => {

@@ -936,7 +936,7 @@ section.make-your-own-pizza .outer-container h3.promos-and-infos-2 span.animate-
   vertical-align: bottom;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid black;
+  border-right: 3px solid var(--pizza-dark);
   font-size: 1.6rem; 
 }
 
@@ -959,12 +959,12 @@ section.make-your-own-pizza .outer-container h3.promos-and-infos-2 span.animate-
 /* Explicitly scale to the content length, not parent percentage */
 @keyframes typing-string-1 {
   from { width: 0; }
-  to { width: 33rem; } /* Gives enough width for the 42 character string */
+  to { width: 33rem; }
 }
 
 @keyframes typing-string-2 {
   from { width: 0; }
-  to { width: 64rem; } /* Gives enough width for the 82 character string */
+  to { width: 64rem; } 
 }
 
 /* ANIMATE TEXT WHEN IN VIEWPORT - END */

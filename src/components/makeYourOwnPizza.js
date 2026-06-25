@@ -88,6 +88,9 @@ export const MakeYourOwnPizza = () => {
   const targetRef = useRef(null);
 
   useEffect(() => {
+    
+    // Snapshot the mutable ref value into a static local variable
+    const currentTarget = targetRef.current;
 
     // Set up the Intersection Observer inside the hook
     const observer = new IntersectionObserver(
@@ -95,8 +98,8 @@ export const MakeYourOwnPizza = () => {
         // If the element is visible in the viewport
         if (entry.isIntersecting) {
           setAnimate(true); 
-          // Once it animates, we can stop observing it
-          if (targetRef.current) observer.unobserve(targetRef.current);
+          // Use currentTarget here instead of targetRef.current
+          if (currentTarget) observer.unobserve(currentTarget);
         }
       },
       {
@@ -104,16 +107,17 @@ export const MakeYourOwnPizza = () => {
       }
     );
 
-    // Start observing the target element
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
+    // Start observing using our snapshot variable
+    if (currentTarget) {
+      observer.observe(currentTarget);
     }
 
-    // Cleanup observer on component unmount
+    // Cleanup observer safely on component unmount
     return () => {
-      if (targetRef.current) observer.disconnect();
+      // Use currentTarget here instead of targetRef.current
+      if (currentTarget) observer.disconnect();
     };
-  }, []);
+  }, []); // Empty dependency array ensures this runs once on mount
   
   return (
     <section className="make-your-own-pizza">

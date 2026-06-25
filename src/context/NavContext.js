@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState } from 'react';
 const NavContext = createContext();
 
 export const NavProvider = ({ children }) => {
+  
   const [currentPage, setCurrentPage] = useState("homepage");
   // Global cart state holding an array of pizza objects
   const [cartItems, setCartItems] = useState([]);

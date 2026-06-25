@@ -3,7 +3,7 @@ import aboutPizza1 from '../img/favicon-aboutUs.png';
 import aboutPizza2 from '../img/favicon-homepage.png';
 import aboutPizza3 from '../img/favicon-contact.png'; 
 import aboutPizza4 from '../img/favicon-orderOnline.png';
-import aboutPizza5 from '../img/favicon-random1.png'; 
+import aboutPizza5 from '../img/favicon-cart.png'; 
 import aboutPizza6 from '../img/favicon-random2.png';
 import pizzaBackground from '../img/about-us-under-header-image.png';
 

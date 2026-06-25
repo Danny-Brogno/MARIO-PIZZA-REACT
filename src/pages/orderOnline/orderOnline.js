@@ -11,9 +11,9 @@ import '../../style-global.css';
 import '../../style-orderOnline.css';
 
 // FAVICON
-import faviconOrderOnlinePage from '../../img/favicon-homepage.png';
+import faviconOrderOnlinePage from '../../img/favicon-orderOnline.png';
 
-
+// --------------------------
 export const OrderOnline = () => {
   
   useEffect(() => {
