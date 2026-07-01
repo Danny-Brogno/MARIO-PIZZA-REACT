@@ -30,26 +30,28 @@ export const ContactMap = () => {
             </li>
             
             <li>
-              Via della Chiesa 8
+              Rainbow Road
             </li>
             
             <li>
-              87100
+              0000
             </li>
             
             <li>
-              Cosenza
+              Mario Island
             </li>
           </ul>
           
           <ul>
 
             <li>
-              Directions from Highway A2: take the Cosenza sud exit and go towards the "sopra elevata". Then take Viale Giacomo Mancini, going southbound. The fifth block on the left is Via della Chiesa.
+              Directions from Highway A2: take the Cosenza sud exit and go towards the "sopra elevata".
+              Then take Viale Giacomo Mancini, going southbound. The fifth block on the left is Mario Island.
             </li>
             
             <li>
-              Directions with the bus: if you come from downtown Cosenza, take the 69 bus going towards Piazza dei Bruzi and get off at the "Chiesa" stop (9 stops). If you come from Rende, take the 68 bus going towards Arcavacata and get off at the "Chiesa" stop (12 stops).
+              Directions with the bus: if you come from downtown Yoshi Island, take the 69 bus going towards the haunted house and get off at the Vanilla Dome stop (9 stops).
+              If you come from Chocolate Island, take the 68 bus going towards Butter Bridge and get off at the Doughnuts Plains stop (12 stops).
             </li>
 
           </ul>
