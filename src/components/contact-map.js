@@ -45,13 +45,13 @@ export const ContactMap = () => {
           <ul>
 
             <li>
-              Directions from Highway A2: take the Cosenza sud exit and go towards the "sopra elevata".
-              Then take Viale Giacomo Mancini, going southbound. The fifth block on the left is Mario Island.
+              Directions from Highway A2: take the Chocolate Island exit and go towards the Doughnuts Plains.
+              Then take the forest of Illusions, going southbound. The fifth block on the left is Mario Pizza.
             </li>
             
             <li>
-              Directions with the bus: if you come from downtown Yoshi Island, take the 69 bus going towards the haunted house and get off at the Vanilla Dome stop (9 stops).
-              If you come from Chocolate Island, take the 68 bus going towards Butter Bridge and get off at the Doughnuts Plains stop (12 stops).
+              Directions with the bus: if you come from downtown Yoshi Island, take the 69 bus going towards the Ghost House and get off at the Vanilla Dome stop (9 stops).
+              If you come from Yoshi Island, take the 68 bus going towards Butter Bridge and get off at the Bowser Castle stop (12 stops).
             </li>
 
           </ul>
