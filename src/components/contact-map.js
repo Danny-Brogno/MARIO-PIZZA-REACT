@@ -30,11 +30,11 @@ export const ContactMap = () => {
             </li>
             
             <li>
-              Rainbow Road
+              53 Rainbow Road
             </li>
             
             <li>
-              0000
+              1234
             </li>
             
             <li>
