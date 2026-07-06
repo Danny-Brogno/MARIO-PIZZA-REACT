@@ -38,7 +38,7 @@ export const ContactMap = () => {
             </li>
             
             <li>
-              Mario Island
+              Yoshi Island
             </li>
           </ul>
           
