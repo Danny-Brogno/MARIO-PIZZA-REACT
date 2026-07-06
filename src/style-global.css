@@ -68,13 +68,6 @@ body {
   -moz-osx-font-smoothing: grayscale !important; /* For Firefox */
 }
 
-body {
-  font-family: "Oregano", cursive;
-  font-style: normal;
-  background-color: var(--pizza-beige);
-  color: var(--pizza-dark);
-}
-
 body::-webkit-scrollbar {
   width: 15px;
 }
