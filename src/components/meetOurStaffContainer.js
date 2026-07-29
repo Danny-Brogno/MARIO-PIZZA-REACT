@@ -56,7 +56,7 @@ export const MeetOurStaffContainer = () => {
               <img src={luigi} alt="luigi" onClick={() => handleImageClick(luigi)} />
               <h3>Luigi</h3>
               <p>
-                Precision meets pure speed. Luigi handles dough, firing artisan pies quickly before racing through traffic so every delivery arrives as fast as the wind.
+                Precision meets pure speed. Luigi handles dough, firing artisan pies quickly before racing through traffic so every delivery arrives as fast as the wind (guaranteed)!
               </p>
             </div>
             
