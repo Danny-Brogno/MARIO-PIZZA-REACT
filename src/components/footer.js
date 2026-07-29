@@ -19,7 +19,7 @@ export const Footer = () => {
         
         <div className="top-footer">
           <h3>
-            &copy; 2026 Danny Brogno. All Rights Reserved.
+            &copy; 2026 Mario Pizza. All Rights Reserved.
           </h3>
         </div>
         
@@ -66,25 +66,33 @@ export const Footer = () => {
           </li>
           
           <li>
-            <i className="fa-brands fa-instagram"></i>
+            <a href="http://facebook.com/danny.brogno" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
           </li>
           
           <li>
-            <i className="fa-brands fa-linkedin"></i>
+            <a href="http://facebook.com/danny.brogno" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
           </li>
           
           <li>
-            <i className="fa-brands fa-x-twitter"></i>
+            <a href="http://facebook.com/danny.brogno" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-x-twitter"></i>
+            </a>
           </li>
           
           <li>
-            <i className="fa-brands fa-tiktok"></i>
+            <a href="http://facebook.com/danny.brogno" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-tiktok"></i>
+            </a>
           </li>
         </ul>
         
         <div className="copy-right">
           <p>
-          
+            
           </p>
         </div>
 
