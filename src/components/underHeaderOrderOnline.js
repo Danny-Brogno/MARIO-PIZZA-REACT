@@ -71,7 +71,7 @@ export const UnderHeaderOrderOnline = () => {
   return (
     <div className="under-header-orderOnline" style={{ position: 'relative' }}>
       <h1>ORDER ONLINE</h1>
-
+      <h2>Pizzas</h2>
       {/* SIMPLE CART ICON LINK (TOP RIGHT INLINE NAVIGATION) */}
       <div className="cart-icon"
         onClick={() => setCurrentPage("cart")}
