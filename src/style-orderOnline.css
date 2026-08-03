@@ -17,12 +17,36 @@
   margin: 2rem 0rem;
 }
 
-#order-online-page .under-header-orderOnline h2 {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  margin: 2rem 0rem;
+/* RAINBOW ANIMATION START */
+
+#order-online-page .rainbow-demo {
+  padding: 2rem 0rem;
+  display:flex;
+  justify-content:center;
 }
+
+#order-online-page .rainbow-text span {
+  display:inline-block;
+  font-size:5rem;
+  font-weight:800;
+  animation:rainbowWave 2s ease-in-out infinite;
+  animation-delay:var(--d);
+}
+
+@keyframes rainbowWave{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+#order-online-page .rainbow-text span:nth-child(1){color:var(--pizza-red);}
+#order-online-page .rainbow-text span:nth-child(2){color:var(--pizza-yellow);}
+#order-online-page .rainbow-text span:nth-child(3){color:var(--pizza-green);}
+#order-online-page .rainbow-text span:nth-child(4){color:var(--pizza-dark);}
+#order-online-page .rainbow-text span:nth-child(5){color:var(--pizza-red);}
+#order-online-page .rainbow-text span:nth-child(6){color:var(--pizza-yellow);}
+#order-online-page .rainbow-text span:nth-child(7){color:var(--pizza-green);}
+
+/* RAINBOW ANIMATION END */
 
 #order-online-page .under-header-orderOnline .cart-icon {
   width: 90%;

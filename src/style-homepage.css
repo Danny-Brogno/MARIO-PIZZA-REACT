@@ -387,17 +387,6 @@
     4px 0 6px -1px rgba(9, 23, 54, 0.15);
 }
 
-/* #homepage .three-box-container-homepage .top div i {
-  display: flex;
-  justify-content: center;
-  background-color: var(--color-sidebar-top-box);
-  color: var(--normal-white);
-  font-size: 2.5em;
-  border-radius: 50%;
-  padding: 1em;
-  margin-top: 1em;
-} */
-
 #homepage .three-box-container-homepage .top div img {
   display: flex;
   justify-content: center;
@@ -771,6 +760,9 @@
     width: 100%;
     min-height: initial;
     height:initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #homepage .jumbotron-static-image section .container-right {
@@ -785,6 +777,11 @@
     width: 100%;
     padding: 1em 0em;
     border: none;
+  }
+  
+  #homepage .jumbotron-static-image section .container-left img {
+    width: 40rem;
+    height: 20rem;
   }
   
   /* JUMBOTRON STATIC IMAGE - END */

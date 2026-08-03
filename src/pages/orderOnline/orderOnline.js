@@ -5,6 +5,8 @@ import { UnderHeaderOrderOnline } from "../../components/underHeaderOrderOnline.
 import { Banner1 } from "../../components/banner1.js";
 import { MakeYourOwnPizza } from "../../components/makeYourOwnPizza.js";
 import { Banner2 } from "../../components/banner2.js";
+import { Sides } from "../../components/sides.js";
+import { Drinks } from "../../components/drinks.js";
 
 // CSS
 import '../../style-global.css';
@@ -37,6 +39,8 @@ export const OrderOnline = () => {
       <Banner1 />
       <MakeYourOwnPizza />
       <Banner2 />
+      <Sides />
+      <Drinks />
     </div>
   )
 }

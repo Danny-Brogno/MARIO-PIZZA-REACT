@@ -11,8 +11,8 @@ import { Banner2 } from "../../components/banner2.js";
 import { JumbotronStaticImage } from "../../components/jumbotronStaticImage.js";
 
 // CSS
-import '../../style-global.css';
 import '../../style-homepage.css';
+import '../../style-global.css';
 
 // FAVICON
 import faviconHomepage from '../../img/favicon-homepage.png';

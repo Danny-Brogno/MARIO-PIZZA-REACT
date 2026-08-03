@@ -71,7 +71,18 @@ export const UnderHeaderOrderOnline = () => {
   return (
     <div className="under-header-orderOnline" style={{ position: 'relative' }}>
       <h1>ORDER ONLINE</h1>
-      <h2>Pizzas</h2>
+      
+      <div className="rainbow-demo">
+        <div className="rainbow-text">
+          <span style={{ "--d": "0s" }}>P</span>
+          <span style={{ "--d": ".1s" }}>I</span>
+          <span style={{ "--d": ".2s" }}>Z</span>
+          <span style={{ "--d": ".3s" }}>Z</span>
+          <span style={{ "--d": ".4s" }}>A</span>
+          <span style={{ "--d": ".5s" }}>S</span>
+        </div>
+      </div>
+
       {/* SIMPLE CART ICON LINK (TOP RIGHT INLINE NAVIGATION) */}
       <div className="cart-icon"
         onClick={() => setCurrentPage("cart")}
