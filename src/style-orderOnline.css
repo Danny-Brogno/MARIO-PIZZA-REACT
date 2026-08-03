@@ -19,16 +19,16 @@
 
 /* RAINBOW ANIMATION START */
 
-#order-online-page .rainbow-demo {
+#order-online-page .under-header-orderOnline .rainbow-demo {
   padding: 2rem 0rem;
   display:flex;
   justify-content:center;
 }
 
-#order-online-page .rainbow-text span {
+#order-online-page .under-header-orderOnline .rainbow-text span {
   display:inline-block;
-  font-size:5rem;
-  font-weight:800;
+  font-size: 3rem;
+  font-weight: 800;
   animation:rainbowWave 2s ease-in-out infinite;
   animation-delay:var(--d);
 }
@@ -38,13 +38,13 @@
   50%{transform:translateY(-10px);}
 }
 
-#order-online-page .rainbow-text span:nth-child(1){color:var(--pizza-red);}
-#order-online-page .rainbow-text span:nth-child(2){color:var(--pizza-yellow);}
-#order-online-page .rainbow-text span:nth-child(3){color:var(--pizza-green);}
-#order-online-page .rainbow-text span:nth-child(4){color:var(--pizza-dark);}
-#order-online-page .rainbow-text span:nth-child(5){color:var(--pizza-red);}
-#order-online-page .rainbow-text span:nth-child(6){color:var(--pizza-yellow);}
-#order-online-page .rainbow-text span:nth-child(7){color:var(--pizza-green);}
+#order-online-page .under-header-orderOnline .rainbow-text span:nth-child(1){color:var(--pizza-red);}
+#order-online-page .under-header-orderOnline .rainbow-text span:nth-child(2){color:var(--pizza-yellow);}
+#order-online-page .under-header-orderOnline .rainbow-text span:nth-child(3){color:var(--pizza-green);}
+#order-online-page .under-header-orderOnline .rainbow-text span:nth-child(4){color:var(--pizza-dark);}
+#order-online-page .under-header-orderOnline .rainbow-text span:nth-child(5){color:var(--pizza-red);}
+#order-online-page .under-header-orderOnline .rainbow-text span:nth-child(6){color:var(--pizza-yellow);}
+#order-online-page .under-header-orderOnline .rainbow-text span:nth-child(7){color:var(--pizza-green);}
 
 /* RAINBOW ANIMATION END */
 
