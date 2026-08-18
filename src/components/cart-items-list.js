@@ -100,8 +100,11 @@ export const CartItemsList = ({ items }) => {
             <span className="text-warning">£{grandTotal.toFixed(2)}</span>
           </div>
           
-          <button className="my-button-cart btn btn-warning w-100 py-3 mb-3 fw-bold tracking-wide text-uppercase width100 height3rem">
-            Proceed To Checkout
+          <button 
+            className="my-button-cart btn btn-outline-light w-100 py-2 fw-bold text-uppercase width100 height3rem" 
+            onClick={() => setCurrentPage("summary")}
+          >
+            Summary
           </button>
 
           {/* CONTINUE ORDERING BUTTON BACK TO ORDER ONLINE */}

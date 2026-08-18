@@ -4,12 +4,16 @@ import { NavProvider, useNav } from './context/NavContext.js';
 // ELEMENTS THAT ARE IN EVERY PAGE
 import { Header } from './components/header.js';
 import { Footer } from './components/footer.js';
+
 // OTHER PAGES
 import { HomePage } from './pages/homepage/homepage.js';
 import { ContactPage } from "./pages/contact/contact.js";
 import { AboutUs } from "./pages/aboutUs/aboutUs.js";
 import { OrderOnline } from "./pages/orderOnline/orderOnline.js";
+
+// ORDER ONLINE PAGES
 import { Cart } from "./pages/cart/cart.js";
+import { Summary } from './pages/summary/summary.js';
 
 function AppContent() {
   const { currentPage } = useNav();
@@ -19,11 +23,15 @@ function AppContent() {
 
       <Header /> 
       
+      {/* 4 main pages that can be rendered */}
       {currentPage === "homepage" && <HomePage />}
       {currentPage === "contact" && <ContactPage />}
       {currentPage === "aboutUs" && <AboutUs />}
       {currentPage === "orderOnline" && <OrderOnline />}
+      
+      {/* Order online pages */}
       {currentPage === "cart" && <Cart />}
+      {currentPage === "summary" && <Summary />}
       
       <Footer />
       

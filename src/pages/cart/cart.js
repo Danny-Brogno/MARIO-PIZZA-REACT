@@ -7,6 +7,7 @@ import { CartItemsList } from '../../components/cart-items-list.js';
 // CSS
 import '../../style-global.css';
 import '../../style-cart.css';
+import '../../style-summary.css';
 
 // FAVICON
 import faviconCartPage from '../../img/favicon-cart.png';
