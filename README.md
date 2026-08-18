@@ -1,70 +1,183 @@
-# Getting Started with Create React App
+# MARIO PIZZA WEBSITE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A high-performance, fully responsive web application built for **Mario's Pizza**, a local pizzeria. Built with React, Vite, CSS3, and modern frontend tools, this application serves as an interactive online ordering platform and digital storefront, allowing customers to explore the menu, build custom pizzas, manage cart items, and interact with the restaurant.
 
-## Available Scripts
+**Frontend Repo:** [https://github.com/Danny-Brogno/MARIO-PIZZA-REACT.git](https://github.com/Danny-Brogno/MARIO-PIZZA-REACT.git)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Future Improvements](#future-improvements)
+- [Credits](#credits)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Overview
 
-### `npm test`
+### Motivation
+Local restaurants often rely on third-party food delivery services with heavy fees or static menu PDFs that lack engagement. I built this project to provide a dedicated, modern, and interactive digital storefront for Mario's Pizza, allowing customers to easily explore menu items, build custom pizzas, and interact with the business online.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Objective
+This application addresses key digital needs for small dining establishments:
+* **Interactive Ordering Experience:** Features a custom pizza builder ("Make Your Own Pizza") alongside standard menu items, giving users full control over their selections.
+* **Customer Engagement & Information:** Provides clear navigation for special promotions, staff introductions, location details, menu downloads, and customer feedback.
+* **Seamless Cart State Management:** Implemented centralized context management (`NavContext`) to track items added to the cart across different sections and calculate real-time totals.
 
-### `npm run build`
+### Learning Outcomes
+* **React State & Context Management:** Structured global state using React Context to handle cart item additions, removals, and component-level updates.
+* **Modular Component Architecture:** Designed a reusable suite of frontend components (carousels, banners, cart displays, and menu item listings).
+* **Responsive Styling & UI/UX Design:** Implemented page-specific CSS and responsive layouts to deliver a clean mobile, tablet, and desktop viewing experience.
+* **Modern Bundling with Vite:** Utilized Vite for fast local development, hot module replacement (HMR), and optimized production builds.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Responsive Design:** Seamless layout adaptivity across Desktop, Tablet, and Mobile devices.
+- **Custom Pizza Builder:** Interactive interface enabling customers to select custom pizza toppings and sizes.
+- **Cart Management:** Full cart functionality allowing users to add, review, and adjust menu items before checkout.
+- **Interactive Promotions & Carousels:** Dynamic banners, promotional displays, staff showcases, and interactive feedback components.
+- **Menu PDF Access:** Embedded access to the downloadable restaurant menu directly from the public assets.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Frontend
+- **React.js** (Client-side UI library)
+- **Vite** (Build tool & development server)
+- **CSS3** (Custom styling and responsive layouts)
+- **HTML5** (Semantic structure & PDF asset serving)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Tools & Hosting
+- **Git & GitHub** (Version control & repository management)
+- **Atom** (IDE / Code Editor)
+- **npm** (Package management)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Architecture
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```text
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+├── .gitattributes
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── README.md
+├── public
+│   ├── Mario_Pizza_Menu.pdf
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── App.js
+    ├── App.test.js
+    ├── index.js
+    ├── reportWebVitals.js
+    ├── setupTests.js
+    ├── style-aboutUs.css
+    ├── style-cart.css
+    ├── style-contact.css
+    ├── style-global.css
+    ├── style-homepage.css
+    ├── style-orderOnline.css
+    ├── style-summary.css
+    ├── components
+    │   ├── banner1.js
+    │   ├── banner2.js
+    │   ├── cart-empty.js
+    │   ├── cart-items-list.js
+    │   ├── contact-form.js
+    │   ├── contact-map.js
+    │   ├── drinks.js
+    │   ├── footer.js
+    │   ├── header.js
+    │   ├── jumbotron.js
+    │   ├── jumbotronScrollingCarousel.js
+    │   ├── jumbotronStaticImage.js
+    │   ├── makeYourOwnPizza.js
+    │   ├── meetOurStaffContainer.js
+    │   ├── sides.js
+    │   ├── template.js
+    │   ├── threeBoxContainerAboutUs.js
+    │   ├── threeBoxContainerHomepage.js
+    │   ├── underHeaderAboutUs.js
+    │   ├── underHeaderHomepage.js
+    │   └── underHeaderOrderOnline.js
+    ├── context
+    │   └── NavContext.js
+    ├── img
+    │   └── [assets...]
+    └── pages
+        ├── aboutUs
+        │   └── aboutUs.js
+        ├── cart
+        │   └── cart.js
+        ├── contact
+        │   └── contact.js
+        ├── homepage
+        │   └── homepage.js
+        ├── orderOnline
+        │   └── orderOnline.js
+        └── summary
+            └── summary.js
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Installation
 
-### Analyzing the Bundle Size
+Clone the Repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+From your terminal run these commands:
 
-### Making a Progressive Web App
+```bash
+git clone git clone https://github.com/Danny-Brogno/MARIO-PIZZA-REACT.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+cd MARIO-PIZZA-REACT
+```
 
-### Advanced Configuration
+## Install Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm install
+```
 
-### Deployment
+## Run Development Server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm start
+```
 
-### `npm run build` fails to minify
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Browse Menu & Promotions: Explore the home page carousel, special promotions, and staff introductions.
+
+Customize Pizza: Navigate to the "Order Online" section to use the "Make Your Own Pizza" feature.
+
+Manage Cart: Add items to your order, view itemized totals in the cart, and proceed to the order summary section.
+
+Contact & Information: Access restaurant location details, send messages through the contact form, or download the full PDF menu.
+
+## Future Improvements
+
+Implement user authentication for saved delivery addresses and order history.
+
+Add unit and integration testing.
+
+## Credits
+Developer: Danny Brogno
+
+GitHub: https://github.com/Danny-Brogno
+
+## License
+This project is licensed under the MIT License.
