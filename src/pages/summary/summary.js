@@ -1,11 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNav } from '../../context/NavContext.js';
 
-
-
-
-
-
 // CSS
 import '../../style-global.css';
 import '../../style-summary.css';
