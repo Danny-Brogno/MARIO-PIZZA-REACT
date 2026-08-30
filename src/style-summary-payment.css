@@ -1,0 +1,170 @@
+/* SUMMARY PAGE START */
+/* SUMMARY PAGE START */
+/* SUMMARY PAGE START */
+
+.summary-page .summary-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-page .summary-header h1 {
+  font-size: 3rem;
+  margin: 2rem 0rem;
+}
+
+.summary-page .summary-header p {
+  font-size: 2rem;
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+.summary-page .summary-content h2 {
+  width: 90%;
+  margin: 0 auto 2rem auto;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.summary-page .summary-content ul {
+  width: 90%;
+  /* Removed fixed height so cards don't force empty vertical stretching */
+  min-height: 20rem; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start; /* Keeps cards anchored cleanly at the top */
+  overflow-x: auto; 
+  overflow-y: hidden; 
+  white-space: nowrap;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.summary-page .summary-content ul li.summary-item {
+  flex: 0 0 14rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 1rem;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  /* Let each card size naturally to its content plus image height */
+  height: fit-content;
+  font-size: 1.4rem;
+}
+
+.summary-page .summary-content ul li.summary-item .summary-item-image {
+  width: 100%;
+}
+
+.summary-page .summary-content ul li.summary-item .summary-item-image img {
+  width: 100%;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.summary-page .summary-content ul li.summary-item .danny {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+  /* Replaced space-between with a modest gap so title and price stay together */
+  gap: 0.75rem; 
+}
+
+.summary-page .summary-content ul li.summary-item .summary-item-details {
+  white-space: normal; 
+}
+
+.summary-page .summary-content ul li.summary-item .summary-item-pricing {
+  margin-top: 0.25rem;
+}
+
+/* COST BREAKDOWN */
+
+.summary-page .summary-cost-breakdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.summary-page .summary-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.summary-page .summary-actions .my-button-first.one {
+  background-color: var(--pizza-red);
+  color: var(--pizza-beige);
+}
+
+.summary-page .summary-actions .my-button-first.one:hover {
+  background-color: var(--pizza-yellow) !important;
+  color: var(--pizza-red) !important;
+}
+
+.summary-page .summary-actions .my-button-first.two {
+  background-color: var(--pizza-green);
+  color: var(--pizza-yellow);
+  margin-left: 2rem;
+}
+
+.summary-page .summary-actions .my-button-first.two:hover {
+  background-color: var(--pizza-yellow) !important;
+  color: var(--pizza-green) !important;
+}
+
+/* SUMMARY PAGE END */
+/* SUMMARY PAGE END */
+/* SUMMARY PAGE END */
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* PAYMENT PAGE START */
+/* PAYMENT PAGE START */
+/* PAYMENT PAGE START */
+
+.payment-page .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.payment-page .modal-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.payment-page .modal-success h3 {
+  color: #2e7d32;
+}
+
+.payment-page .modal-error h3 {
+  color: #d32f2f;
+}
+
+/* PAYMENT PAGE END */
+/* PAYMENT PAGE END */
+/* PAYMENT PAGE END */

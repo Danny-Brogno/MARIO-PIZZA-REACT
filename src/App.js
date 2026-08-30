@@ -14,6 +14,7 @@ import { OrderOnline } from "./pages/orderOnline/orderOnline.js";
 // ORDER ONLINE PAGES
 import { Cart } from "./pages/cart/cart.js";
 import { Summary } from './pages/summary/summary.js';
+import { Payment } from './pages/payment/payment.js';
 
 function AppContent() {
   const { currentPage } = useNav();
@@ -32,6 +33,7 @@ function AppContent() {
       {/* Order online pages */}
       {currentPage === "cart" && <Cart />}
       {currentPage === "summary" && <Summary />}
+      {currentPage === "payment" && <Payment />}
       
       <Footer />
       
