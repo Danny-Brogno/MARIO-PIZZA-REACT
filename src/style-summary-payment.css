@@ -94,9 +94,18 @@
   font-size: 1.5rem;
 }
 
+.summary-page .summary-cost-breakdown h2{
+  margin-top: 3rem;
+}
+
+.summary-page .summary-cost-breakdown .summary-row:nth-child(3) {
+  margin: 1.5rem 0rem;
+}
+
 .summary-page .summary-actions {
   display: flex;
   justify-content: center;
+  margin: 4rem 0rem;
 }
 
 .summary-page .summary-actions .my-button-first.one {

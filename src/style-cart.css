@@ -139,6 +139,26 @@
   font-size: 1.3rem;
 }
 
+#cart-page .my-button-cart.one {
+  background-color: var(--pizza-red);
+  color: var(--pizza-beige);
+}
+
+#cart-page .my-button-cart.one:hover {
+  background-color: var(--pizza-yellow) !important;
+  color: var(--pizza-red) !important;
+}
+
+#cart-page .my-button-cart.two {
+  background-color: var(--pizza-green);
+  color: var(--pizza-yellow);
+}
+
+#cart-page .my-button-cart.two:hover {
+  background-color: var(--pizza-yellow) !important;
+  color: var(--pizza-green) !important;
+}
+
 #cart-page .my-button-cart:hover {
   background-color: var(--pizza-red) !important;
   color: var(--pizza-yellow) !important;
